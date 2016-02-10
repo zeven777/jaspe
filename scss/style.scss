@@ -1,0 +1,64 @@
+
+@import 'vars';
+@import 'mixins';
+
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSansRounded-700.eot');
+  src: url('../fonts/MuseoSansRounded-700.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MuseoSansRounded-700.woff2') format('woff2'),
+  url('../fonts/MuseoSansRounded-700.woff') format('woff'),
+  url('../fonts/MuseoSansRounded-700.ttf') format('truetype'),
+  url('../fonts/MuseoSansRounded-700.svg#MuseoSansRounded-700') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+body {
+  padding-top: 0px !important;
+  font-size: 16px;
+  font-family: $body-font;
+  color : $marron;
+}
+
+.right{
+  float : right;
+}
+
+h1{
+  font-family: $title-font;
+  font-size: 25px;
+}
+
+h3{
+   font-family: $title-font;
+   font-size: 13px;
+}
+
+.container{
+  width : 1178px;
+}
+
+
+@import 'header';
+@import 'home';
+@import 'lading';
+@import 'forms';
+@import 'transitions';
+
+
+@media (max-width: 1200px) {
+  @import 'lg/common';
+}
+
+@media (max-width: 991px) {
+  @import 'md/common';
+}
+
+@media (max-width: 767px) {
+  @import 'xs/common';
+}
+
