@@ -829,10 +829,10 @@ hr {
   .main:before {
     content: " ";
     display: block;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 80%;
-    top: 20%;
+    height: 50%;
+    top: 50%;
     background: #ffedbc; }
 
   .center-middle {
