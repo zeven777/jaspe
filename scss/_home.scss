@@ -1,155 +1,142 @@
-//--- home
+.banner{
 
-*::-webkit-input-placeholder {
-  color: $marron;
-  text-align: center;
-}
-*:-moz-placeholder {
-  color: $marron;
-  text-align: center;
-}
-*::-moz-placeholder {
-  color: $marron;
-  text-align: center;
-}
-*:-ms-input-placeholder {
-  color: $marron;
-  text-align: center;
+   height : 690px;
+   display : block;
+   width: 100%;
+
+   text-align: center;
+
+   line-height: 690px;
+
+   padding-top: 30px;
+
+   img{
+    vertical-align: middle;
+   }
+
+   &.home{
+
+     background: $rosado;
+
+   }
+
 }
 
-.main{
-  .globocont{
-    text-align: center;
+.page{
+  width: 100%;
+  position: relative;
+  display: block;
+  z-index: 1;
+  background: #fff;
+  @include transition();
+  &.expand{
+    transform: translate(-320px,0);
+    -webkit-transform: translate(-320px,0);
   }
-	.globo{
-      width : 530px;
-      height : 262px;
-      margin-top : 60px;
-      color : $white;
-      p{
-        padding-left: 45px;
-        padding-right: 20px;
-        font-size: 24px;
-        margin-top : -30px;
-        line-height: 180px;
-        vertical-align: middle;
-        b{
-          font-size : 14px;
-          margin-top : 15px;
-          display: inline-block;
-          line-height: 20px !important;
-          font-weight: normal;
-        }
-        span{
-          display: inline-block;
-          line-height: 150%;
-          vertical-align: middle;
-        }
-      }
+}
 
-      background-size: 530px 262px;
-      -webkit-background-size: 530px 262px;
-
-      @include pixel-ratio("md") {
-        background-image: url("../img/globo.png");
-      }
-
-      @include pixel-ratio("hd-2x") {
-        background-image: url("../img/2x/globo.png");
-      }
-
-      text-align: center;
-
-      .sabias{
-         display: inline-block;
-         margin-top : -30px;
-        &.gracias{
-          margin-left : 20px;
-        }
-      }
-
-    }
-  .inf{
-     margin : 25px 0;
-     font-size : 18px;
-  }
-  .mailform{
-    display: inline-block;
-    width : 419px;
-    height : 65px;
-    float : none;
-    margin : 0 auto;
-    padding : 12px 20px;
-    @include box-sizing();
-
-    background-size: 419px 65px;
-    -webkit-background-size: 419px 65px;
-
-    @include pixel-ratio("md") {
-      background-image: url("../img/bgmail.png");
-    }
-
-    @include pixel-ratio("hd-2x") {
-      background-image: url("../img/2x/bgmail.png");
-    }
-
-    input{
-      width : 65%;
-      border : 0;
-      background: transparent;
-      &:active, &:focus{
-        outline: none;
-        text-align: center;
-      }
-    }
-    button{
-      background-color : transparent;
-      width : 33%;
-      height : 41px;
-      padding : 0;
-      line-height: 41px;
-      background-size: 100% 41px;
-      -webkit-background-size: 100% 41px;
-      font-size : 18px;
-      color : $white;
-      &:active, &:focus{
-        outline : none;
-      }
-
-      &:hover{
-        color : $white;
-        transform: scale(1.06);
-        -webkit-transform: scale(1.06);
-      }
-
-      @include pixel-ratio("md") {
-        background-image: url("../img/btn-img.png");
-      }
-
-      @include pixel-ratio("hd-2x") {
-        background-image: url("../img/2x/btn-img.png");
-      }
-    }
-
-  }
-  .social{
-    margin-top : 45px;
+.prod{
     a{
       display: inline-block;
-      margin: 0 0 8px 0px;
-      width: 37px;
-      height: 37px;
-      line-height: 39px;
-      text-align: center;
-      vertical-align: middle;
-      color: $marron;
-      background: transparent;
-     @include radius(38px);
-      font-size : 22px;
       @include transition();
       &:hover{
-        background: $marron;
-        color : #ffedbc;
+        transform : scale(1.05);
+        -webkit-transform : scale(1.05);
+      }
+    }
+}
+
+.blog, .destacados, .testimonio{
+  padding-top: 60px;
+  img{
+    max-width: 104%;
+    height : auto;
+    display: block;
+  }
+}
+
+.testimonio{
+  h2{
+    margin-bottom: 30px;
+  }
+  a{
+    position: relative;
+    img{
+     @include transition();
+     display: block;
+     max-width: initial;
+    }
+    .hover{
+      opacity : 0;
+      margin-top: -250px;
+
+    }
+    &:hover{
+      .img-item{
+        opacity: 0;
+      }
+      .hover{
+        opacity: 1;
+
+      }
+    }
+  }
+}
+
+.menucat{
+  list-style: none;
+  padding : 50px 0 40px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 0 20px;
+    a{
+      width : 100px;
+      height : 124px;
+      display: inline-block;
+      background : url('../img/sprite.png') 0 0 no-repeat;
+      background-size: auto 250px;
+      -webkit-background-size: auto 250px;
+
+      @include pixel-ratio("md") {
+        background-image: url("../img/sprite.png");
+      }
+
+      @include pixel-ratio("hd-2x") {
+        background-image: url("../img/2x/sprite.png");        
+      }
+
+
+      text-indent: -9999px;
+      &:hover{
+        background-position : 0 -126px;
+      }
+      &.cocina{
+        background-position : -100px 0px;
+        &:hover{
+           background-position : -100px -126px;
+        }
+      }
+      &.industria{
+        background-position : -200px 0px;
+        &:hover{
+           background-position : -200px -126px;
+        }
+
+      }
+      &.metales{
+        background-position : -300px 0px;
+        &:hover{
+           background-position : -300px -126px;
+        }
+      }
+      &.extras{
+        background-position : -400px 0px;
+        &:hover{
+           background-position : -400px -126px;
+        }
       }
     }
   }

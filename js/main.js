@@ -9,8 +9,8 @@ $(document).ready(function(){
             $('.banner .slider img.active + img').addClass('next').addClass('in');
     };
 
-    $('.press').click(function(e){
-        $('.contmenu').toggleClass('expand');
+    $('.btn-menu').click(function(e){
+        $('.page').toggleClass('expand');
         e.preventDefault();
     });
     $('body').bind("webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd", function(){
@@ -21,5 +21,7 @@ $(document).ready(function(){
     });
     clearTimeout(timeout);
     timeout = setTimeout(doAnimate,5000);
+
+
 
 });

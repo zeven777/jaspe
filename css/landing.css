@@ -1,0 +1,273 @@
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSansRounded-700.eot");
+  src: url("../fonts/MuseoSansRounded-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansRounded-700.woff2") format("woff2"), url("../fonts/MuseoSansRounded-700.woff") format("woff"), url("../fonts/MuseoSansRounded-700.ttf") format("truetype"), url("../fonts/MuseoSansRounded-700.svg#MuseoSansRounded-700") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+body {
+  padding-top: 0px !important;
+  font-size: 16px;
+  font-family: "MyriadPro", sans-serif;
+  color: #be7a4d; }
+
+.right {
+  float: right; }
+
+h1 {
+  font-family: "MuseoSans", serif;
+  font-size: 25px; }
+
+h3 {
+  font-family: "MuseoSans", serif;
+  font-size: 13px; }
+
+.container {
+  width: 1178px; }
+
+.header {
+  margin-bottom: -75px; }
+
+.main .container {
+  height: 613px;
+  background: url("../img/bg.jpg") center no-repeat;
+  display: block; }
+
+.center-middle {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -332px; }
+  .center-middle .container .petcont {
+    margin-top: 75px; }
+  .center-middle .container .globocont {
+    margin-left: -40px; }
+  .center-middle .container .pet {
+    margin-left: -40px; }
+
+*::-webkit-input-placeholder {
+  color: #be7a4d;
+  text-align: center; }
+
+*:-moz-placeholder {
+  color: #be7a4d;
+  text-align: center; }
+
+*::-moz-placeholder {
+  color: #be7a4d;
+  text-align: center; }
+
+*:-ms-input-placeholder {
+  color: #be7a4d;
+  text-align: center; }
+
+.main .globocont {
+  text-align: center; }
+.main .globo {
+  width: 530px;
+  height: 262px;
+  margin-top: 60px;
+  color: #fff;
+  background-size: 530px 262px;
+  -webkit-background-size: 530px 262px;
+  text-align: center; }
+  .main .globo p {
+    padding-left: 45px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-top: -30px;
+    line-height: 180px;
+    vertical-align: middle; }
+    .main .globo p b {
+      font-size: 14px;
+      margin-top: 15px;
+      display: inline-block;
+      line-height: 20px !important;
+      font-weight: normal; }
+    .main .globo p span {
+      display: inline-block;
+      line-height: 150%;
+      vertical-align: middle; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+    .main .globo {
+      background-image: url("../img/globo.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .main .globo {
+      background-image: url("../img/2x/globo.png"); } }
+  .main .globo .sabias {
+    display: inline-block;
+    margin-top: -30px; }
+    .main .globo .sabias.gracias {
+      margin-left: 20px; }
+.main .inf {
+  margin: 25px 0;
+  font-size: 18px; }
+.main .mailform {
+  display: inline-block;
+  width: 419px;
+  height: 65px;
+  float: none;
+  margin: 0 auto;
+  padding: 12px 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: 419px 65px;
+  -webkit-background-size: 419px 65px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+    .main .mailform {
+      background-image: url("../img/bgmail.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .main .mailform {
+      background-image: url("../img/2x/bgmail.png"); } }
+  .main .mailform input {
+    width: 65%;
+    border: 0;
+    background: transparent; }
+    .main .mailform input:active, .main .mailform input:focus {
+      outline: none;
+      text-align: center; }
+  .main .mailform button {
+    background-color: transparent;
+    width: 33%;
+    height: 41px;
+    padding: 0;
+    line-height: 41px;
+    background-size: 100% 41px;
+    -webkit-background-size: 100% 41px;
+    font-size: 18px;
+    color: #fff; }
+    .main .mailform button:active, .main .mailform button:focus {
+      outline: none; }
+    .main .mailform button:hover {
+      color: #fff;
+      transform: scale(1.06);
+      -webkit-transform: scale(1.06); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+      .main .mailform button {
+        background-image: url("../img/btn-img.png"); } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .main .mailform button {
+        background-image: url("../img/2x/btn-img.png"); } }
+.main .social {
+  margin-top: 45px; }
+  .main .social a {
+    display: inline-block;
+    margin: 0 0 8px 0px;
+    width: 37px;
+    height: 37px;
+    line-height: 39px;
+    text-align: center;
+    vertical-align: middle;
+    color: #be7a4d;
+    background: transparent;
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    -ms-border-radius: 38px;
+    -o-border-radius: 38px;
+    border-radius: 38px;
+    font-size: 22px;
+    -webkit-transition: 0.15s;
+    transition: 0.15s; }
+    .main .social a:hover {
+      background: #be7a4d;
+      color: #ffedbc; }
+
+.logo {
+  width: 186px;
+  height: 79px;
+  margin-left: 30px;
+  background-size: 100%;
+  -webkit-background-size: 100%;
+  vertical-align: middle;
+  text-indent: -9999px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+    .logo {
+      background-image: url("../img/logo.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .logo {
+      background-image: url("../img/2x/logo.png"); } }
+
+@media (max-width: 1200px) and (max-width: 1170px) {
+  .center-middle .container {
+    width: 100%;
+    background-size: 100%;
+    -webkit-background-size: 100%; }
+
+  .social {
+    font-size: 14px; }
+    .social a {
+      margin: 0 -5px; } }
+@media (max-width: 1200px) and (max-width: 1024px) {
+  .center-middle .container {
+    width: 100%;
+    background-size: 103% 613px;
+    -webkit-background-size: 103% 613px;
+    background-position: center top; }
+    .center-middle .container .globocont {
+      margin-left: 0; }
+
+  .main .globo {
+    width: 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%; }
+
+  .pet {
+    max-width: 517px;
+    width: 130%;
+    height: auto; }
+
+  .main .container {
+    height: auto;
+    min-height: 613px; }
+
+  .social span {
+    width: 100%;
+    display: inline-block; } }
+@media (max-width: 767px) {
+  .main:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    background: #ffedbc; }
+
+  .center-middle {
+    position: relative;
+    margin: 0; }
+    .center-middle .container {
+      padding: 0; }
+      .center-middle .container .petcont {
+        text-align: center;
+        padding: 0; }
+      .center-middle .container .pet {
+        margin: -20px 0 0 0;
+        display: inline-block;
+        width: 100%;
+        max-width: 400px; }
+      .center-middle .container .globocont {
+        padding: 0;
+        text-align: center; }
+        .center-middle .container .globocont .globo {
+          max-width: 530px;
+          display: inline-block; }
+          .center-middle .container .globocont .globo p {
+            line-height: 200px;
+            margin-top: -15; }
+          .center-middle .container .globocont .globo .sabias {
+            width: 180px;
+            height: auto; }
+            .center-middle .container .globocont .globo .sabias.gracias {
+              margin-top: -20px; }
+        .center-middle .container .globocont .inf, .center-middle .container .globocont .social {
+          padding: 0 15px; }
+          .center-middle .container .globocont .inf br, .center-middle .container .globocont .social br {
+            display: none; }
+      .center-middle .container .mailform {
+        width: 100%;
+        max-width: 419px;
+        background-size: 100% 65px;
+        -webkit-background-size: 100% 65px; } }
+
+/*# sourceMappingURL=landing.css.map */
