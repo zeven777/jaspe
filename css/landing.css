@@ -7,7 +7,7 @@
 body {
   padding-top: 0px !important;
   font-size: 16px;
-  font-family: "MyriadPro", sans-serif;
+  font-family: "MuseoSans-300", sans-serif;
   color: #be7a4d; }
 
 .right {
@@ -186,88 +186,5 @@ h3 {
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .logo {
       background-image: url("../img/2x/logo.png"); } }
-
-@media (max-width: 1200px) and (max-width: 1170px) {
-  .center-middle .container {
-    width: 100%;
-    background-size: 100%;
-    -webkit-background-size: 100%; }
-
-  .social {
-    font-size: 14px; }
-    .social a {
-      margin: 0 -5px; } }
-@media (max-width: 1200px) and (max-width: 1024px) {
-  .center-middle .container {
-    width: 100%;
-    background-size: 103% 613px;
-    -webkit-background-size: 103% 613px;
-    background-position: center top; }
-    .center-middle .container .globocont {
-      margin-left: 0; }
-
-  .main .globo {
-    width: 100%;
-    background-size: 100% 100%;
-    -webkit-background-size: 100% 100%; }
-
-  .pet {
-    max-width: 517px;
-    width: 130%;
-    height: auto; }
-
-  .main .container {
-    height: auto;
-    min-height: 613px; }
-
-  .social span {
-    width: 100%;
-    display: inline-block; } }
-@media (max-width: 767px) {
-  .main:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 50%;
-    background: #ffedbc; }
-
-  .center-middle {
-    position: relative;
-    margin: 0; }
-    .center-middle .container {
-      padding: 0; }
-      .center-middle .container .petcont {
-        text-align: center;
-        padding: 0; }
-      .center-middle .container .pet {
-        margin: -20px 0 0 0;
-        display: inline-block;
-        width: 100%;
-        max-width: 400px; }
-      .center-middle .container .globocont {
-        padding: 0;
-        text-align: center; }
-        .center-middle .container .globocont .globo {
-          max-width: 530px;
-          display: inline-block; }
-          .center-middle .container .globocont .globo p {
-            line-height: 200px;
-            margin-top: -15; }
-          .center-middle .container .globocont .globo .sabias {
-            width: 180px;
-            height: auto; }
-            .center-middle .container .globocont .globo .sabias.gracias {
-              margin-top: -20px; }
-        .center-middle .container .globocont .inf, .center-middle .container .globocont .social {
-          padding: 0 15px; }
-          .center-middle .container .globocont .inf br, .center-middle .container .globocont .social br {
-            display: none; }
-      .center-middle .container .mailform {
-        width: 100%;
-        max-width: 419px;
-        background-size: 100% 65px;
-        -webkit-background-size: 100% 65px; } }
 
 /*# sourceMappingURL=landing.css.map */
