@@ -51,6 +51,10 @@ body {
   float : right;
 }
 
+.center-block{
+  float: initial;
+}
+
 h1{
   font-family: $title-font;
   font-size: 25px;
@@ -81,6 +85,7 @@ h3{
 @import 'home';
 @import 'layout';
 @import 'forms';
+@import 'secundarias';
 @import 'transitions';
 
 

@@ -27,6 +27,9 @@ body {
 .right {
   float: right; }
 
+.center-block {
+  float: initial; }
+
 h1 {
   font-family: "MuseoSans", serif;
   font-size: 25px; }
@@ -55,6 +58,10 @@ h3 {
     vertical-align: middle; }
   .banner.home {
     background: #fef4ea; }
+  .banner.nosotros {
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-repeat: no-repeat; }
   .banner.productos {
     height: auto;
     line-height: initial;
@@ -69,71 +76,6 @@ h3 {
     right: 0;
     z-index: -1; }
 
-.masprod {
-  background: #fff;
-  position: relative;
-  z-index: 0;
-  text-align: center;
-  margin-bottom: -70px;
-  padding-bottom: 70px; }
-  .masprod h3 {
-    padding: 60px 0;
-    display: inline-block;
-    font-size: 36px;
-    font-family: "MuseoSans-300", sans-serif; }
-
-.detalle-cont p {
-  font-size: 18px;
-  line-height: 160%;
-  margin-bottom: 30px; }
-.detalle-cont .pro-title {
-  padding-top: 130px; }
-  .detalle-cont .pro-title img {
-    margin-bottom: 60px; }
-  .detalle-cont .pro-title h1 {
-    font-size: 40px;
-    font-family: "MuseoSans-100", sans-serif;
-    margin-bottom: 60px; }
-.detalle-cont .pro-cont img {
-  margin-bottom: 40px; }
-.detalle-cont .caract p {
-  text-align: left; }
-.detalle-cont .valora:after {
-  display: none !important; }
-.detalle-cont .item {
-  padding-bottom: 40px;
-  text-align: center;
-  margin-bottom: 30px; }
-  .detalle-cont .item:after {
-    content: " ";
-    height: 1px;
-    background: #ccc;
-    width: 70%;
-    display: inline-block;
-    margin-bottom: -30px; }
-  .detalle-cont .item img {
-    margin-bottom: 30px; }
-.detalle-cont .post {
-  padding-top: 30px; }
-  .detalle-cont .post h4 {
-    font-size: 18px;
-    font-family: "MuseoSans", serif;
-    text-align: left; }
-    .detalle-cont .post h4 span.fecha {
-      font-family: "MuseoSans-100", sans-serif;
-      font-size: 14px; }
-    .detalle-cont .post h4 span.rate {
-      width: 100%;
-      padding-top: 5px;
-      display: inline-block; }
-      .detalle-cont .post h4 span.rate i.fa {
-        color: #e9e9e9; }
-        .detalle-cont .post h4 span.rate i.fa.bit {
-          color: #ff8400; }
-  .detalle-cont .post p {
-    font-size: 16px;
-    text-align: left; }
-
 .page {
   width: 100%;
   position: relative;
@@ -145,41 +87,6 @@ h3 {
   .page.expand {
     transform: translate(-320px, 0);
     -webkit-transform: translate(-320px, 0); }
-
-.prod a {
-  display: inline-block;
-  -webkit-transition: 0.15s;
-  transition: 0.15s; }
-  .prod a:hover {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05); }
-
-.blog, .destacados, .testimonio {
-  padding-top: 60px; }
-  .blog img, .destacados img, .testimonio img {
-    max-width: 104%;
-    height: auto;
-    display: block; }
-
-.productos .prod {
-  margin-bottom: 20px; }
-
-.testimonio h2 {
-  margin-bottom: 30px; }
-.testimonio a {
-  position: relative; }
-  .testimonio a img {
-    -webkit-transition: 0.15s;
-    transition: 0.15s;
-    display: block;
-    max-width: initial; }
-  .testimonio a .hover {
-    opacity: 0;
-    margin-top: -250px; }
-  .testimonio a:hover .img-item {
-    opacity: 0; }
-  .testimonio a:hover .hover {
-    opacity: 1; }
 
 .menucat {
   list-style: none;
@@ -903,6 +810,126 @@ hr {
   border: 0;
   border-top: solid 1px #ccc; }
 
+.masprod {
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  margin-bottom: -70px;
+  padding-bottom: 70px; }
+  .masprod h3 {
+    padding: 60px 0;
+    display: inline-block;
+    font-size: 36px;
+    font-family: "MuseoSans-300", sans-serif; }
+
+.detalle-cont p {
+  font-size: 18px;
+  line-height: 160%;
+  margin-bottom: 30px; }
+.detalle-cont .pro-title {
+  padding-top: 130px; }
+  .detalle-cont .pro-title img {
+    margin-bottom: 60px; }
+  .detalle-cont .pro-title h1 {
+    font-size: 40px;
+    font-family: "MuseoSans-100", sans-serif;
+    margin-bottom: 60px; }
+.detalle-cont .pro-cont img {
+  margin-bottom: 40px; }
+.detalle-cont .caract p {
+  text-align: left; }
+.detalle-cont .valora:after {
+  display: none !important; }
+.detalle-cont .item {
+  padding-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px; }
+  .detalle-cont .item:after {
+    content: " ";
+    height: 1px;
+    background: #ccc;
+    width: 70%;
+    display: inline-block;
+    margin-bottom: -30px; }
+  .detalle-cont .item img {
+    margin-bottom: 30px; }
+.detalle-cont .post {
+  padding-top: 30px; }
+  .detalle-cont .post h4 {
+    font-size: 18px;
+    font-family: "MuseoSans", serif;
+    text-align: left; }
+    .detalle-cont .post h4 span.fecha {
+      font-family: "MuseoSans-100", sans-serif;
+      font-size: 14px; }
+    .detalle-cont .post h4 span.rate {
+      width: 100%;
+      padding-top: 5px;
+      display: inline-block; }
+      .detalle-cont .post h4 span.rate i.fa {
+        color: #e9e9e9; }
+        .detalle-cont .post h4 span.rate i.fa.bit {
+          color: #ff8400; }
+  .detalle-cont .post p {
+    font-size: 16px;
+    text-align: left; }
+
+.prod a {
+  display: inline-block;
+  -webkit-transition: 0.15s;
+  transition: 0.15s; }
+  .prod a:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); }
+
+.blog, .destacados, .testimonio {
+  padding-top: 60px; }
+  .blog img, .destacados img, .testimonio img {
+    max-width: 104%;
+    height: auto;
+    display: block; }
+
+.productos .prod {
+  margin-bottom: 20px; }
+
+.testimonio h2 {
+  margin-bottom: 30px; }
+.testimonio a {
+  position: relative; }
+  .testimonio a img {
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+    display: block;
+    max-width: initial; }
+  .testimonio a .hover {
+    opacity: 0;
+    margin-top: -250px; }
+  .testimonio a:hover .img-item {
+    opacity: 0; }
+  .testimonio a:hover .hover {
+    opacity: 1; }
+
+.nosotros .text {
+  vertical-align: middle;
+  display: inline-block; }
+.nosotros .text-cont {
+  height: 460px;
+  line-height: 460px; }
+.nosotros img.titlenos {
+  margin: 80px 0;
+  max-width: 100%; }
+.nosotros p {
+  font-size: 18px;
+  width: 80%;
+  line-height: 150%;
+  text-align: center; }
+.nosotros h1 {
+  font-family: "MuseoSans-300", sans-serif;
+  font-size: 38px;
+  line-height: 150%;
+  margin-bottom: 50px; }
+
 .goin {
   animation: goin 0.3s ease-in-out;
   -webkit-animation: goin 0.3s ease-in-out;
@@ -1005,5 +1032,9 @@ hr {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@media (max-width: 991px) {
+  .banner.nosotros {
+    background-size: auto 100%;
+    -webkit-background-size: auto 100%; } }
 
 /*# sourceMappingURL=style.css.map */

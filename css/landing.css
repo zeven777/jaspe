@@ -187,4 +187,9 @@ h3 {
     .logo {
       background-image: url("../img/2x/logo.png"); } }
 
+@media (max-width: 991px) {
+  .banner.nosotros {
+    background-size: auto 100%;
+    -webkit-background-size: auto 100%; } }
+
 /*# sourceMappingURL=landing.css.map */
