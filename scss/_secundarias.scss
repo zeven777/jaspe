@@ -157,6 +157,13 @@
     }
   }
 }
+
+.hagamos{
+  p{
+    width: 100% !important;
+  }
+}
+
 .nosotros{
 
   .text{
@@ -185,4 +192,78 @@
     line-height: 150%;
     margin-bottom: 50px;
   }
+
+
+    .h1{
+      font-size: 40px;
+      font-family: $body-font-lt;
+      margin : 100px 0 20px 0;
+    }
+
+  .mision{
+    padding-top: 100px;
+    
+
+    .imgs{
+      &.izq{
+        margin-right: -100px;
+        //margin-left: 100px;
+      }
+      &.der{
+        margin-left: -200px;
+        float: right;
+        margin-right: 60px;
+      }
+    }
+    h3{
+      font-size: 38px;
+      font-family: $body-font;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+    .info{
+      margin-top: 25%;
+      padding : 30px 50px;
+      background-color: #50a131;
+      color : #fff;
+      text-align: left;
+      &.der{
+        float: right;
+      }
+      p{
+        width: 100%;
+        text-align: left;
+        line-height: 160%;
+      }
+    }
+  }
+
 }
+
+.contacto{
+  a{
+    color : #333;
+  }
+  .info{
+    p{
+      font-size: 18px;
+      line-height: 150%;
+      padding : 0 30px;
+    }
+    padding-bottom: 100px;
+  }
+  .info2{
+    padding : 100px 0;
+  }
+    .imgs{
+      &.izq{
+        margin-right: -7%;
+      }
+      &.der{
+        margin-left: -7%;
+        margin-top: 20%;
+      }
+    }
+}
+
+

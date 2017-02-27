@@ -62,12 +62,13 @@ h3 {
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     background-repeat: no-repeat; }
-  .banner.productos {
+  .banner.productos, .banner.contacto {
     height: auto;
     line-height: initial;
     padding: 160px 0 50px 0; }
-    .banner.productos h1 {
+    .banner.productos h1, .banner.contacto h1 {
       font-size: 45px;
+      font-family: "MuseoSans-300", sans-serif;
       font-weight: normal; }
   .banner.detalle {
     position: fixed;
@@ -910,6 +911,9 @@ hr {
   .testimonio a:hover .hover {
     opacity: 1; }
 
+.hagamos p {
+  width: 100% !important; }
+
 .nosotros .text {
   vertical-align: middle;
   display: inline-block; }
@@ -929,6 +933,51 @@ hr {
   font-size: 38px;
   line-height: 150%;
   margin-bottom: 50px; }
+.nosotros .h1 {
+  font-size: 40px;
+  font-family: "MuseoSans-100", sans-serif;
+  margin: 100px 0 20px 0; }
+.nosotros .mision {
+  padding-top: 100px; }
+  .nosotros .mision .imgs.izq {
+    margin-right: -100px; }
+  .nosotros .mision .imgs.der {
+    margin-left: -200px;
+    float: right;
+    margin-right: 60px; }
+  .nosotros .mision h3 {
+    font-size: 38px;
+    font-family: "MuseoSans-300", sans-serif;
+    font-weight: normal;
+    margin-bottom: 25px; }
+  .nosotros .mision .info {
+    margin-top: 25%;
+    padding: 30px 50px;
+    background-color: #50a131;
+    color: #fff;
+    text-align: left; }
+    .nosotros .mision .info.der {
+      float: right; }
+    .nosotros .mision .info p {
+      width: 100%;
+      text-align: left;
+      line-height: 160%; }
+
+.contacto a {
+  color: #333; }
+.contacto .info {
+  padding-bottom: 100px; }
+  .contacto .info p {
+    font-size: 18px;
+    line-height: 150%;
+    padding: 0 30px; }
+.contacto .info2 {
+  padding: 100px 0; }
+.contacto .imgs.izq {
+  margin-right: -7%; }
+.contacto .imgs.der {
+  margin-left: -7%;
+  margin-top: 20%; }
 
 .goin {
   animation: goin 0.3s ease-in-out;

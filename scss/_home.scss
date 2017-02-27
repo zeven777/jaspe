@@ -26,12 +26,12 @@
       background-repeat: no-repeat;
    }
 
-   &.productos{
+   &.productos, &.contacto{
     height : auto;
     line-height: initial;
     h1{
       font-size: 45px;
-      //font-family: $body-font;
+      font-family: $body-font;
       font-weight: normal;
     }
     padding : 160px 0 50px 0;
