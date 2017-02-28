@@ -1,0 +1,57 @@
+fields:
+  username:
+    type: string[100]
+    legend: Usuario
+    rules:
+      - required
+      - alpha_num
+      - >
+        unique:admin,username
+  password:
+    type: string[100]
+    legend: >
+      Contrase&ntilde;a
+    role: password
+    rules:
+      - required_if_create
+  email:
+    type: string[255]
+    legend: >
+      Correo Electr&oacute;nico
+    rules:
+      - required
+      - email
+      - >
+        unique:admin,email
+  tipo:
+    type: enum
+    legend: >
+      Tipo de Operador
+    default: user
+    role: radios
+    options:
+      - sadmin
+      - admin
+      - user
+    labels:
+      sadmin: Superadministrador
+      admin: Administrador
+      user: Operador
+    rules:
+      - required
+  permisos:
+    type: credentials
+    legend: Privilegios
+    tab:
+      - admin
+      - user
+    rules:
+      - >
+        required_if:tipo,user
+setup:
+  type: text
+  title: Operadores
+  tabulate: tipo
+  head:
+    - username
+    - email

@@ -1,0 +1,1 @@
+{{ HTML::style('img/favicon.png',['rel' => 'shortcut icon', 'type' => 'image/png']) }}

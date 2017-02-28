@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|jpe?g|png|gif|pdf|flv|ttf|ttc|otf|svg|eot|woff|woff2)$">
+        Header set Cache-Control "private"
+    </FilesMatch>
+</IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

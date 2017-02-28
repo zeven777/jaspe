@@ -1,0 +1,59 @@
+// Colours
+$azul:          #3980a3;
+$error:         #f00;
+$error-bg:      #f2dede;
+$brand-color:   #ffffff;
+
+$success:       #390;
+$success-bg:    #d0e9c6;
+
+$info:          #39f;
+$info-bg:       #eaf5ff;
+
+$warning:       #ff0;
+$warning-bg:    #ffffe5;
+
+$black:         #000;
+$white:         #fff;
+$text:          #5b5b5b;
+$title:         #000;
+
+// Background Login Colors
+$first-color:   #9f9f9f; // #74a7bf
+$second-color:  #e7e7e7; // #dce9ef
+$third-color:   #9f9f9f; // #76a8bf
+
+// Paths
+$img:           'img/';
+$project-img:   '../../../../img/';
+$sprite:        'img/sprite.png';
+$fonts:         '../fonts/';
+
+// Typography
+/*@font-face {
+    font-family: 'kefaregular';
+    src: url('fonts/kefa-regular.eot');
+    src: url('fonts/kefa-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kefa-regular.woff') format('woff'),
+         url('fonts/kefa-regular.ttf') format('truetype'),
+         url('fonts/kefa-regular.svg#kefaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+$body-font:     'Open Sans';
+$title-font:    'Open Sans';

@@ -1,0 +1,15 @@
+/nbproject/
+/.idea/
+/files/
+/nob/app/config/config.php
+/nob/app/config/schema.php
+/nob/app/config/system.php
+/nob/app/config/gallery.php
+/nob/project/system.yaml
+/nob/bootstrap/compiled.php
+/nob/composer.phar
+/nob/.env.*.php
+/nob/.env.php
+/nob/vendor/
+.DS_Store
+Thumbs.db

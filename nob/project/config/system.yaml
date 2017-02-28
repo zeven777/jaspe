@@ -1,0 +1,12 @@
+editable:
+  - keywords
+  - description
+  - facebook
+  - twitter
+  - fbadmins
+  - email_contact
+textarea:
+  - keywords
+  - description
+boolean:
+datetime:
