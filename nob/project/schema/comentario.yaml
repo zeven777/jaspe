@@ -1,5 +1,5 @@
 fields:
-  categoria:
+  producto:
     type: relationship
     rules:
       - required
@@ -47,51 +47,14 @@ fields:
       inactive: >
         Borrador
     translatable: no
-  highlighted:
-    type: enum
-    legend: >
-      Destacado
-    default: >
-      no
-    role: radios
-    options:
-      - >
-        yes
-      - >
-        no
-    labels:
-      yes: >
-        S&iacute;
-      no: >
-        No
-    translatable: no
 setup:
   type: multifile
-  title: Productos
+  title: >
+    Comentarios de Producto
   head:
+    - producto
     - nombre
-  translatable: yes
-  image:
-    rules:
-      - image
-      - >
-        mimes:png
-      - >
-        image_size:>=588,>=373
-    params:
-      maxlength: 1
-      accept: png
-      output: png
-      limit: 1
-      retinable: 2x
-    info: >
-      Resoluci&oacute;n recomendada: 1176x746 p&iacute;xeles.
-      Solo im&aacute;genes PNG con Fondo Transparente.
-  sizes:
-    - e600x600
-    - c588x373
-    - c417x263
-    - a140x140
+    - contenido
   legend:
     field: status
     values:
@@ -105,4 +68,4 @@ setup:
         P&uacute;blico
       inactive: >
         Borrador
-order: 30
+order: 35

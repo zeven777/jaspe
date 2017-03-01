@@ -1,0 +1,52 @@
+
+@import 'vars';
+@import 'mixins';
+
+.nb-icon{
+  width : 100px;
+  height : 124px;
+  display: inline-block;
+  background : url('../img/sprite.png') 0 0 no-repeat;
+  background-size: auto 250px;
+  -webkit-background-size: auto 250px;
+
+  @include pixel-ratio("md") {
+    background-image: url("../img/sprite.png");
+  }
+  @include pixel-ratio("hd-2x") {
+    background-image: url("../img/2x/sprite.png");
+  }
+
+  text-indent: -9999px;
+  &.bano {
+    background-position: 0 0;
+    &:hover {
+      background-position: 0 -126px;
+    }
+  }
+  &.cocina{
+    background-position : -100px 0px;
+    &:hover{
+      background-position : -100px -126px;
+    }
+  }
+  &.industria{
+    background-position : -200px 0px;
+    &:hover{
+      background-position : -200px -126px;
+    }
+
+  }
+  &.metales{
+    background-position : -300px 0px;
+    &:hover{
+      background-position : -300px -126px;
+    }
+  }
+  &.extras{
+    background-position : -400px 0px;
+    &:hover{
+      background-position : -400px -126px;
+    }
+  }
+}

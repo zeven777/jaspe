@@ -21,6 +21,12 @@
 
 Route::get('/',['as'=>'home','uses'=>'Home_MainController@index']);
 
+Route::get('/productos/{slug?}',['as'=>'products.list','uses'=>'Productos_MainController@index']);
+
+Route::get('/producto/{slug}',['as'=>'products.detail','uses'=>'Productos_DetailController@index']);
+
+Route::get('/nosotros',['as'=>'about.us','uses'=>'Nosotros_MainController@index']);
+
 Route::post('/sendmail',['as'=>'sendmail','uses'=>'Sendmail_MainController@index']);
 
 /*

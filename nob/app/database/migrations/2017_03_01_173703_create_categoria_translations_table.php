@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductoTable extends Migration
+class CreateCategoriaTranslationsTable extends Migration
 {
 
     /**
@@ -13,16 +13,16 @@ class CreateProductoTable extends Migration
      */
     public function up()
     {
-        Schema::create('producto', function(Blueprint $table)
+        Schema::create('categoria_translations', function(Blueprint $table)
         {
             $table->bigIncrements('id');
-            $table->bigInteger('categoria_id')->unsigned()->nullable();
+            $table->bigInteger('categoria_id')->unsigned();
+            $table->string('locale', 20);
             $table->string('slug', 255);
             $table->string('nombre', 255);
-            $table->bigInteger('ordered')->unsigned()->default(999999999999999999);
-            $table->enum('highlighted', array('yes','no'))->default('no')->index();
-            $table->string('status', 100)->default('inactive')->index();
-            $table->timestamps();
+            $table->timestamp('created_at')->default('1970-01-01 00:00:01');
+            $table->timestamp('updated_at')->default('1970-01-01 00:00:01');
+            $table->unique(['categoria_id','locale']);
             $table->foreign('categoria_id')
                   ->references('id')
                   ->on('categoria')
@@ -38,7 +38,7 @@ class CreateProductoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('producto');
+        Schema::drop('categoria_translations');
     }
 
 }

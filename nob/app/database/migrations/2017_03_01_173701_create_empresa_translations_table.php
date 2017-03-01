@@ -21,7 +21,8 @@ class CreateEmpresaTranslationsTable extends Migration
             $table->string('slug', 255);
             $table->string('titulo', 255);
             $table->text('contenido');
-            $table->timestamps();
+            $table->timestamp('created_at')->default('1970-01-01 00:00:01');
+            $table->timestamp('updated_at')->default('1970-01-01 00:00:01');
             $table->unique(['empresa_id','locale']);
             $table->foreign('empresa_id')
                   ->references('id')

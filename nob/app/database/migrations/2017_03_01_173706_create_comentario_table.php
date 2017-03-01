@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTestimonioTable extends Migration
+class CreateComentarioTable extends Migration
 {
 
     /**
@@ -13,15 +13,24 @@ class CreateTestimonioTable extends Migration
      */
     public function up()
     {
-        Schema::create('testimonio', function(Blueprint $table)
+        Schema::create('comentario', function(Blueprint $table)
         {
             $table->bigIncrements('id');
+            $table->bigInteger('producto_id')->unsigned()->nullable();
             $table->string('slug', 255);
             $table->string('nombre', 255);
+            $table->text('descripcion');
+            $table->text('caracteristicas');
+            $table->text('tip');
             $table->bigInteger('ordered')->unsigned()->default(999999999999999999);
             $table->enum('highlighted', array('yes','no'))->default('no')->index();
             $table->string('status', 100)->default('inactive')->index();
-            $table->timestamps();
+            $table->timestamp('created_at')->default('1970-01-01 00:00:01');
+            $table->timestamp('updated_at')->default('1970-01-01 00:00:01');
+            $table->foreign('producto_id')
+                  ->references('id')
+                  ->on('producto')
+                  ->onDelete('cascade');
         });
     }
 
@@ -33,7 +42,7 @@ class CreateTestimonioTable extends Migration
      */
     public function down()
     {
-        Schema::drop('testimonio');
+        Schema::drop('comentario');
     }
 
 }

@@ -22,7 +22,8 @@ class CreateBlogTranslationsTable extends Migration
             $table->string('titulo', 1024);
             $table->text('contenido');
             $table->string('tag', 2048);
-            $table->timestamps();
+            $table->timestamp('created_at')->default('1970-01-01 00:00:01');
+            $table->timestamp('updated_at')->default('1970-01-01 00:00:01');
             $table->unique(['blog_id','locale']);
             $table->foreign('blog_id')
                   ->references('id')

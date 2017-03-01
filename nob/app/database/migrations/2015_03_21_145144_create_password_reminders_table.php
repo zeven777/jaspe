@@ -17,7 +17,7 @@ class CreatePasswordRemindersTable extends Migration
         {
             $table->string('email')->index();
             $table->string('token')->index();
-            $table->timestamp('created_at');
+            $table->timestamp('created_at')->default('1970-01-01 00:00:01');
         });
     }
 

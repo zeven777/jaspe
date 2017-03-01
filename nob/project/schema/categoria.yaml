@@ -12,11 +12,13 @@ fields:
     type: module
     module: icons
     icons:
-      mac: Portables
-      desktop: Escritorio
-      ipod: On The Go
-      iphone: iPhone
-      watch: Watch
+      bano: >
+        Ba&ntilde;o
+      cocina: Cocina
+      industria: Industria
+      metales: Metales
+      extras: Extras
+    iconlabel: no
     css: >
       css/nob.css
     rules:
