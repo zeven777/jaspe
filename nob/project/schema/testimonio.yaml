@@ -1,0 +1,74 @@
+fields:
+  slug:
+    type: string[255]
+    role: slug
+    slug: nombre
+    behavior: hidden
+  nombre:
+    type: string[255]
+    rules:
+      - required
+  status:
+    type: enum
+    legend: >
+      Estado
+    default: inactive
+    role: radios
+    options:
+      - active
+      - inactive
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
+    translatable: no
+setup:
+  type: multifile
+  title: Testimonio
+  head:
+    - nombre
+  image:
+    rules:
+      - image
+      - >
+        mimes:png
+      - >
+        image_size:>=173,>=250
+      - >
+        image_size:<=600,<=600
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      limit: 1
+      retinable: 2x
+    info: |
+      Resoluci&oacute;n recomendada: 702x1000 p&iacute;xeles.
+
+      El lienzo debe contener 2 im&aacute;genes (346x500 c/u):
+
+      1. El avatar
+      2. El mensaje
+  sizes:
+    - e600x600
+    - c173x250
+    - c173x250
+    - a140x140
+  legend:
+    field: status
+    values:
+      - active
+      - inactive
+    colors:
+      active: success
+      inactive: danger
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
+  order:
+    field: id
+    type: desc
+order: 50

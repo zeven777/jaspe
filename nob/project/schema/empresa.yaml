@@ -1,0 +1,25 @@
+fields:
+  slug:
+    type: string[255]
+    role: slug
+    slug: titulo
+    behavior: hidden
+  titulo:
+    type: string[255]
+    legend: >
+      T&iacute;tulo
+    rules:
+      - required
+  contenido:
+    type: text
+    legend: >
+      Contenido
+    rules:
+      - required
+setup:
+  type: text
+  title: >
+    Nosotros
+  head: titulo
+  translatable: yes
+order: 15

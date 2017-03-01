@@ -7,7 +7,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => '',
+            'database'  => 'jaspe',
             'username'  => 'homestead',
             'password'  => 'secret',
             'charset'   => 'utf8',

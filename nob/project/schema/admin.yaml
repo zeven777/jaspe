@@ -47,7 +47,7 @@ fields:
       - user
     rules:
       - >
-        required_if:tipo,user
+        required_if:tipo,admin,user
 setup:
   type: text
   title: Operadores

@@ -20,11 +20,19 @@
 
     @include('web.commons.header')
 
+    <div class="page">
+
 @yield('content')
-    @include('web.commons.footer')
+        @include('web.commons.footer')
+
+    </div>
 
     <div class="clear"></div>
 @yield('script')
+
+    {{ HTML::script('js/plugins.js') }}
+    {{ HTML::script('js/main.js') }}
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

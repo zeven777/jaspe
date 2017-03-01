@@ -1,23 +1,35 @@
-    <header>
+    <nav class="menu-main">
 
-        <div class="container">
+        <ul class="menu-foot">
 
-            <h6>{{ link_to_route('home',$project,null,['id'=>'logo']) }}</h6>
+            <u>Productos</u>
 
-            <nav>
+            <li><a href="">Baño</a></li>
 
-                <a href="javascript:;">menu</a>
+            <li><a href="" class="cocina">Cocina</a></li>
 
-                <ul>
+            <li><a href="" class="industria">Industria</a></li>
 
-@foreach( p_config('menu') as $m => $s )
-                <li><a href="{{ url($s['url']) }}">{{ array_key_exists('label',$s) ? $s['label'] : ucfirst($m) }}</a></li>
+            <li><a href="" class="metales">Metales</a></li>
 
-@endforeach
-                </ul>
+            <li><a href="" class="extras">Extras</a></li>
 
-            </nav>
+        </ul>
 
-        </div>
+        <ul class="menu-foot">
 
-    </header>
+            <u>Jaspe</u>
+
+            <li><a href="">Nosotros</a></li>
+
+            <li><a href="">Misión Visión</a></li>
+
+            <li><a href="">La fabrica</a></li>
+
+            <li><a href="">Ser distribuidor</a></li>
+
+            <li><a href="">Contacto</a></li>
+
+        </ul>
+
+    </nav>

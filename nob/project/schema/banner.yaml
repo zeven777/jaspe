@@ -1,0 +1,36 @@
+fields:
+  titulo:
+    type: string[1024]
+    legend: >
+      T&iacute;tulo
+    rules:
+      - required
+setup:
+  type: multifile
+  head:
+    - titulo
+  translatable: yes
+  image:
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:>=667,>=447
+      - >
+        image_size:<=700,<=700
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      retinable: 2x
+      limit: 1
+    info: |
+      Resoluci&oacute;n recomendada: 1334x894 p&iacute;xeles
+
+      Resoluci&oacute;n m&aacute;xima: 1400x1400 p&iacute;xeles
+  sizes:
+    - e700x700
+    - c667x447
+    - a140x140
+order: 10

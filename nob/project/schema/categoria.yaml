@@ -1,0 +1,32 @@
+fields:
+  slug:
+    type: string[255]
+    role: slug
+    slug: nombre
+    behavior: hidden
+  nombre:
+    type: string[255]
+    rules:
+      - required
+  icon:
+    type: module
+    module: icons
+    icons:
+      mac: Portables
+      desktop: Escritorio
+      ipod: On The Go
+      iphone: iPhone
+      watch: Watch
+    css: >
+      css/nob.css
+    rules:
+      - required
+    translatable: no
+setup:
+  type: text
+  title: >
+    Categor&iacute;as
+  head:
+    - nombre
+  translatable: yes
+order: 20
