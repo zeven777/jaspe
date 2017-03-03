@@ -21,7 +21,7 @@ class Base_Categoria extends NobBase
 
     protected $rules = [
         'nombre' => 'required',
-        'icon' => 'required'
+        'icon' => 'required|unique:categoria,icon'
     ];
 
     protected $stable = 'producto';

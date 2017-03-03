@@ -1,13 +1,13 @@
-@for( $i = 1; $i <= 4; $i++ )
+@foreach( $products as $product )
                 <div class="col-md-3 col-xs-6 prod">
 
                     <a href="">
 
                         <picture>
 
-                            <source srcset="{{ retina_url("img", "pro{$i}.jpg", 2) }}" />
+                            <source srcset="{{ $product->image->getUrlRetinableImages(3) }}" />
 
-                            <img src="{{ url("img/pro{$i}.jpg") }}" alt="Jaspe" />
+                            <img src="{{ $product->image->getImage(3) }}" alt="{{ $product->nombre }}" />
 
                         </picture>
 
@@ -15,4 +15,4 @@
 
                 </div>
 
-@endfor
+@endforeach

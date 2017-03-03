@@ -4,16 +4,14 @@
 
                 <div class="col-md-3 col-xs-12 text-center">
 
-                    <h6 class="logo"><a href="">logo</a></h6>
+                    <h6 class="logo"><a href="{{ route('home') }}">logo</a></h6>
 
                     <p class="social">
 
-                        <a href="#" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+@foreach( ['facebook', 'twitter', 'instagram'] as $socialNet )
+                        <a href="{{ p_system($socialNet, $lang) }}" class="{{ $socialNet }}" target="_blank"><i class="fa fa-{{ $socialNet }}"></i></a>
 
-                        <a href="#" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-
-                        <a href="#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-
+@endforeach
                     </p>
 
                 </div>
@@ -26,16 +24,10 @@
 
                             <u>Productos</u>
 
-                            <li><a href="">Baño</a></li>
+@foreach( $categories as $category )
+                            <li><a href="{{ route('products.list',[$category->slug]) }}" class="{{ $category->icon }}">{{ $category->nombre }}</a></li>
 
-                            <li><a href="" class="cocina">Cocina</a></li>
-
-                            <li><a href="" class="industria">Industria</a></li>
-
-                            <li><a href="" class="metales">Metales</a></li>
-
-                            <li><a href="" class="extras">Extras</a></li>
-
+@endforeach
                         </ul>
 
                     </div>
@@ -46,15 +38,13 @@
 
                             <u>Jaspe</u>
 
-                            <li><a href="">Nosotros</a></li>
+@foreach( $enterprises as $enterprise )
+                            <li><a href="{{ route('about.us') }}#{{ $enterprise->slug }}">{{ $enterprise->titulo }}</a></li>
 
-                            <li><a href="">Misión Visión</a></li>
+@endforeach
+                            <li><a href="javascript:;">Ser distribuidor</a></li>
 
-                            <li><a href="">La fabrica</a></li>
-
-                            <li><a href="">Ser distribuidor</a></li>
-
-                            <li><a href="">Contacto</a></li>
+                            <li><a href="{{ route('contact') }}">Contacto</a></li>
 
                         </ul>
 

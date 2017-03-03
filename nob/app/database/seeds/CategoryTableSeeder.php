@@ -20,7 +20,8 @@ class CategoryTableSeeder extends NobSeeder
         {
             Categoria::createRow([
                 'icon'   => $icon,
-                'nombre' => $name
+                'nombre' => $name,
+                'status' => 'active'
             ]);
         }
     }

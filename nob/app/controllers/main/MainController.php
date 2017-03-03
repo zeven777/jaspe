@@ -72,11 +72,20 @@ class Main_MainController extends Controller
 
         $this->data['lang'] = $this->translate;
 
+        $this->getModules();
+
         $this->data = array_merge_recursive($this->data, $this->og->all);
 
         if( $this->model ) $this->getMetaTags($this->model);
 
         return View::make($this->view,$this->data);
+    }
+
+    public function getModules()
+    {
+        $this->data['categories'] = Categoria::getCategories();
+
+        $this->data['enterprises'] = Empresa::getEnterprises();
     }
 
     public function getMetaSection($lang)

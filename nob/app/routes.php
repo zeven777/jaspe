@@ -27,6 +27,8 @@ Route::get('/producto/{slug}',['as'=>'products.detail','uses'=>'Productos_Detail
 
 Route::get('/nosotros',['as'=>'about.us','uses'=>'Nosotros_MainController@index']);
 
+Route::get('/contacto',['as'=>'contact','uses'=>'Contacto_MainController@index']);
+
 Route::post('/sendmail',['as'=>'sendmail','uses'=>'Sendmail_MainController@index']);
 
 /*

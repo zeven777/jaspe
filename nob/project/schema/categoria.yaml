@@ -23,6 +23,23 @@ fields:
       css/nob.css
     rules:
       - required
+      - >
+        unique:categoria,icon
+    translatable: no
+  status:
+    type: enum
+    legend: >
+      Estado
+    default: inactive
+    role: radios
+    options:
+      - active
+      - inactive
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
     translatable: no
 setup:
   type: text
@@ -31,4 +48,17 @@ setup:
   head:
     - nombre
   translatable: yes
+  legend:
+    field: status
+    values:
+      - active
+      - inactive
+    colors:
+      active: success
+      inactive: danger
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
 order: 20

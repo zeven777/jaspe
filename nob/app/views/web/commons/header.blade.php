@@ -4,31 +4,23 @@
 
             <u>Productos</u>
 
-            <li><a href="">Baño</a></li>
+@foreach( $categories as $category )
+            <li><a href="{{ route('products.list',[$category->slug]) }}" class="{{ $category->icon }}">{{ $category->nombre }}</a></li>
 
-            <li><a href="" class="cocina">Cocina</a></li>
-
-            <li><a href="" class="industria">Industria</a></li>
-
-            <li><a href="" class="metales">Metales</a></li>
-
-            <li><a href="" class="extras">Extras</a></li>
-
+@endforeach
         </ul>
 
         <ul class="menu-foot">
 
             <u>Jaspe</u>
 
-            <li><a href="">Nosotros</a></li>
+@foreach( $enterprises as $enterprise )
+            <li><a href="{{ route('about.us') }}#{{ $enterprise->slug }}">{{ $enterprise->titulo }}</a></li>
 
-            <li><a href="">Misión Visión</a></li>
+@endforeach
+            <li><a href="javascript:;">Ser distribuidor</a></li>
 
-            <li><a href="">La fabrica</a></li>
-
-            <li><a href="">Ser distribuidor</a></li>
-
-            <li><a href="">Contacto</a></li>
+            <li><a href="{{ route('contact') }}">Contacto</a></li>
 
         </ul>
 

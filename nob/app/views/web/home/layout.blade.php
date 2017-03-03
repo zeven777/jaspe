@@ -12,16 +12,10 @@
 
                     <ul class="menucat">
 
-                        <li><a href="">Baño</a></li>
+@foreach( $categories as $category )
+                        <li><a href="{{ route('products.list',[$category->slug]) }}" class="{{ $category->icon }}">{{ $category->nombre }}</a></li>
 
-                        <li><a href="" class="cocina">Cocina</a></li>
-
-                        <li><a href="" class="industria">Industria</a></li>
-
-                        <li><a href="" class="metales">Metales</a></li>
-
-                        <li><a href="" class="extras">Extras</a></li>
-
+@endforeach
                     </ul>
 
                 </div>

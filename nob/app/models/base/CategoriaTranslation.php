@@ -13,6 +13,6 @@ class Base_CategoriaTranslation extends NobBase
 
     protected $rules = [
         'nombre' => 'required',
-        'icon' => 'required'
+        'icon' => 'required|unique:categoria,icon'
     ];
 }

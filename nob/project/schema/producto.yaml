@@ -77,7 +77,7 @@ setup:
       - >
         mimes:png
       - >
-        image_size:>=588,>=373
+        image_size:>=400,>=400
     params:
       maxlength: 1
       accept: png
@@ -85,12 +85,13 @@ setup:
       limit: 1
       retinable: 2x
     info: >
-      Resoluci&oacute;n recomendada: 1176x746 p&iacute;xeles.
+      Resoluci&oacute;n recomendada: 800x800 p&iacute;xeles.
       Solo im&aacute;genes PNG con Fondo Transparente.
   sizes:
     - e600x600
-    - c588x373
-    - c417x263
+    - c400x400
+    - c350x350
+    - c270x390
     - a140x140
   legend:
     field: status
