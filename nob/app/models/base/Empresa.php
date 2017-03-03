@@ -16,6 +16,7 @@ class Base_Empresa extends NobBase
 
     protected $fillable = [
         'highlighted',
+        'posicion',
         'status'
     ];
 

@@ -10,13 +10,7 @@
 
                 <div class="col-xs-12">
 
-                    <ul class="menucat">
-
-@foreach( $categories as $category )
-                        <li><a href="{{ route('products.list',[$category->slug]) }}" class="{{ $category->icon }}">{{ $category->nombre }}</a></li>
-
-@endforeach
-                    </ul>
+                    @include('web.commons.products.menu-category')
 
                 </div>
 

@@ -7,20 +7,17 @@ class Base_Comentario extends NobBase
     protected $table = 'comentario';
 
     protected $fillable = [
-        'slug',
         'nombre',
-        'descripcion',
-        'caracteristicas',
-        'tip',
+        'comentario',
+        'rank',
         'status'
     ];
 
     protected $rules = [
         'producto' => 'required',
         'nombre' => 'required',
-        'descripcion' => 'required',
-        'caracteristicas' => 'required',
-        'tip' => 'required'
+        'comentario' => 'required',
+        'rank' => 'required'
     ];
 
     protected $rtable = 'producto';

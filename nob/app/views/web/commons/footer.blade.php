@@ -20,33 +20,13 @@
 
                     <div class="col-md-6">
 
-                        <ul class="row menu-foot">
-
-                            <u>Productos</u>
-
-@foreach( $categories as $category )
-                            <li><a href="{{ route('products.list',[$category->slug]) }}" class="{{ $category->icon }}">{{ $category->nombre }}</a></li>
-
-@endforeach
-                        </ul>
+                        @include('web.commons.products.menu-foot')
 
                     </div>
 
                     <div class="col-md-6">
 
-                        <ul class="row menu-foot">
-
-                            <u>Jaspe</u>
-
-@foreach( $enterprises as $enterprise )
-                            <li><a href="{{ route('about.us') }}#{{ $enterprise->slug }}">{{ $enterprise->titulo }}</a></li>
-
-@endforeach
-                            <li><a href="javascript:;">Ser distribuidor</a></li>
-
-                            <li><a href="{{ route('contact') }}">Contacto</a></li>
-
-                        </ul>
+                        @include('web.commons.about.menu-foot')
 
                     </div>
 
@@ -54,23 +34,7 @@
 
                 <div class="col-md-4 col-xs-12">
 
-                    <form action="//jaspe.us12.list-manage.com/subscribe/post?u=1c7e0ec3819394a1e78e869c5&amp;id=a201824f38"
-                          method="post"
-                          id="mc-embedded-subscribe-form"
-                          name="mc-embedded-subscribe-form"
-                          target="_self"
-                          class="form-mail" novalidate>
-
-                        <h3>Para fanatic@s de la limpiesa</h3>
-
-                        <p>No te pierdas todas nuestras novedades, regalos y consejos.</p>
-
-                        <input type="email" name="EMAIL" placeholder="Email aquí"/>
-
-                        <button type="submit" class="btn" name="subscribe">Enviar</button>
-
-                    </form>
-
+                    @include('forms.suscribe.form')
 
                 </div>
 

@@ -8,7 +8,10 @@ class Productos_MainController extends Main_MainController
 
     public $view = "web.productos.layout";
 
-    public function index()
+    public $paginate = 12;
+
+    public function index($category = null)
     {
+        $this->data['products'] = Producto::getProducts($this->paginate, $category);
     }
 }

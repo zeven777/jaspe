@@ -14,10 +14,44 @@ fields:
     type: text
     legend: >
       Contenido
-    class: ''
-    role: default
     rules:
       - required
+  highlighted:
+    type: enum
+    legend: >
+      Destacar como primer item
+    default: >
+      no
+    role: radios
+    options:
+      - >
+        yes
+      - >
+        no
+    labels:
+      yes: >
+        S&iacute;
+      no: >
+        No
+    translatable: no
+  posicion:
+    type: enum
+    legend: >
+      Posici&oacute;n
+    default: left
+    role: radios
+    options:
+      - left
+      - right
+    labels:
+      left: >
+        Izquierda
+      right: >
+        Derecha
+    tab:
+      - >
+        no
+    translatable: no
   status:
     type: enum
     legend: >
@@ -34,11 +68,39 @@ fields:
         Borrador
     translatable: no
 setup:
-  type: text
+  type: multifile
   title: >
     Nosotros
   head: titulo
   translatable: yes
+  tabulate: highlighted
+  image:
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:>=456,>=460
+      - >
+        image_size:<=800,<=800
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      retinable: 2x
+      limit: 1
+    info: |
+      Resoluciones recomendadas:
+
+      1. 920x920 p&iacute;xeles (1er item)
+      2. 912x1276 p&iacute;xeles (Item a la Izquierda)
+      3. 1368x978 p&iacute;xeles (Item a la Derecha)
+
+      Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles
+  sizes:
+    - e800x800
+    - p456x460
+    - a140x140
   legend:
     field: status
     values:

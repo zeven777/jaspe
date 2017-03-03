@@ -17,11 +17,9 @@ class CreateComentarioTable extends Migration
         {
             $table->bigIncrements('id');
             $table->bigInteger('producto_id')->unsigned()->nullable();
-            $table->string('slug', 255);
             $table->string('nombre', 255);
-            $table->text('descripcion');
-            $table->text('caracteristicas');
-            $table->text('tip');
+            $table->text('comentario');
+            $table->tinyInteger('rank')->unsigned()->default(0);
             $table->bigInteger('ordered')->unsigned()->default(999999999999999999);
             $table->enum('highlighted', array('yes','no'))->default('no')->index();
             $table->string('status', 100)->default('inactive')->index();

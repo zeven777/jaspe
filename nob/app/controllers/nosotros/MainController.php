@@ -10,5 +10,8 @@ class Nosotros_MainController extends Main_MainController
 
     public function index()
     {
+        $this->data['firstAbout'] = Empresa::getFirstAbout();
+
+        $this->data['allAbouts'] = Empresa::getAllAbouts();
     }
 }

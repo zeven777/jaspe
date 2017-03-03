@@ -16,6 +16,7 @@ class CreateEmpresaTable extends Migration
         Schema::create('empresa', function(Blueprint $table)
         {
             $table->bigIncrements('id');
+            $table->string('posicion', 100)->default('left')->index();
             $table->bigInteger('ordered')->unsigned()->default(999999999999999999);
             $table->enum('highlighted', array('yes','no'))->default('no')->index();
             $table->string('status', 100)->default('inactive')->index();

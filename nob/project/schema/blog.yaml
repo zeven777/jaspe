@@ -60,18 +60,22 @@ setup:
       - >
         mimes:jpeg,png
       - >
-        image_size:>=800,>=480
+        image_size:>=740,>=720
+      - >
+        image_size:<=800,<=800
     params:
       maxlength: 1
       accept: jpg|jpeg|png
       output: jpg
+      retinable: 2x
       limit: 1
-    info: >
-      Resoluci&oacute;n recomendada: 800x480 p&iacute;xeles
+    info: |
+      Resoluci&oacute;n recomendada: 1480x1440 p&iacute;xeles
+
+      Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles
   sizes:
     - e800x800
-    - c800x480
-    - c400x240
-    - c283x212
+    - c740x720
+    - c370x360
     - a140x140
 order: 40

@@ -8,7 +8,14 @@ class Productos_DetailController extends Main_MainController
 
     public $view = "web.productos.detail.layout";
 
-    public function index()
+    public $paginate = 4;
+
+    public function index($slug)
     {
+        $product = Producto::getProduct($slug);
+
+        $this->data['product'] = $product;
+
+        $this->data['products'] = Producto::getProducts($this->paginate, $product->categoria->slug);
     }
 }

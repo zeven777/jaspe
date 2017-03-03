@@ -28,4 +28,10 @@ return array(
 
     'timezone' => 'America/La_Paz',
 
+    'providers' => array(
+
+        'Barryvdh\Debugbar\ServiceProvider',
+
+    ),
+
 );

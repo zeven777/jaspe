@@ -2,6 +2,18 @@
 
 class Empresa extends Base_Empresa
 {
+    protected $with = ['translations'];
+
+    public static function getFirstAbout()
+    {
+        return static::isLocaleTranslated()->hasImages()->highlighted()->active()->first();
+    }
+
+    public static function getAllAbouts()
+    {
+        return static::isLocaleTranslated()->hasImages()->unhighlighted()->active()->get();
+    }
+
     public static function getEnterprises()
     {
         return static::getItems();

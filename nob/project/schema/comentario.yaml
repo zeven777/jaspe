@@ -3,33 +3,29 @@ fields:
     type: relationship
     rules:
       - required
-  slug:
-    type: string[255]
-    role: slug
-    slug: nombre
-    behavior: hidden
   nombre:
     type: string[255]
     rules:
       - required
-  descripcion:
+  comentario:
     type: text
     legend: >
       Descripci&oacute;n
-    rules:
-      - required
-  caracteristicas:
-    type: text
-    legend: >
-      Caracter&iacute;sticas
-    rules:
-      - required
-  tip:
-    type: text
-    legend: >
-      Tips (Sab&iacute;as que)
     class: ''
     role: default
+    rules:
+      - required
+  rank:
+    type: integer
+    legend: >
+      Puntuaci&oacute;n (Estrellas)
+    role: radios
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
     rules:
       - required
   status:
@@ -46,7 +42,6 @@ fields:
         P&uacute;blico
       inactive: >
         Borrador
-    translatable: no
 setup:
   type: multifile
   title: >
@@ -54,7 +49,7 @@ setup:
   head:
     - producto
     - nombre
-    - contenido
+    - rank
   legend:
     field: status
     values:

@@ -15,8 +15,8 @@ class Base_Categoria extends NobBase
 
     protected $fillable = [
         'icon',
-        'highlighted',
-        'status'
+        'status',
+        'highlighted'
     ];
 
     protected $rules = [
