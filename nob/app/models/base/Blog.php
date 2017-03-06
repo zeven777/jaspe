@@ -6,6 +6,8 @@ class Base_Blog extends NobBase
 {
     use \Nob\Admin\Model\Translatable\Translatable;    
 
+    use \Nob\Admin\Model\Traits\FileTrait;    
+
     protected $table = 'blog';
 
     public $translatedAttributes = [

@@ -74,7 +74,7 @@
 
                     <div class="col-md-12">
 
-                        <h3>Tambi&eacute;n podr&iacute;a interesarte</h3>
+                        <h3>{{ p_system('productos_otros_titulo', $lang) }}</h3>
 
                     </div>
 

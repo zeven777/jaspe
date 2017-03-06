@@ -8,5 +8,7 @@ editable:
 textarea:
   - keywords
   - description
+  - productos_banner_titulo
+  - nosotros_footer_contenido
 boolean:
 datetime:

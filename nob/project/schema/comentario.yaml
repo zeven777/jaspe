@@ -43,7 +43,7 @@ fields:
       inactive: >
         Borrador
 setup:
-  type: multifile
+  type: text
   title: >
     Comentarios de Producto
   head:

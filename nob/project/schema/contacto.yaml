@@ -1,0 +1,88 @@
+fields:
+  titulo:
+    type: text
+    legend: >
+      T&iacutE;tulo
+    class: tinymce-title
+    rules:
+      - required
+  contenido:
+    type: text
+    rules:
+      - required
+  mapa:
+    type: module
+    module: maps
+    legend: >
+      Ubicaci&oacute;n Satelital
+    setup:
+      size:
+        w: 30
+        h: 58
+      icon: >
+        img/maps.png
+      center:
+        w: 15
+        h: 58
+  status:
+    type: enum
+    legend: >
+      Estado
+    default: inactive
+    role: radios
+    options:
+      - active
+      - inactive
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
+setup:
+  type: multifile
+  title: >
+    Contacto
+  head:
+    - titulo
+  map_center:
+    latitude: 10
+    longitude: -65
+    zoom: 5
+  image:
+    rules:
+      - required
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:>=684,>=456
+      - >
+        image_size:<=700,<=6700
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      retinable: 2x
+      limit: 1
+    info: |
+      Resoluci&oacute;n recomendada: 1368x912 p&iacute;xeles
+
+      Resoluci&oacute;n m&aacute;xima: 1400x1400 p&iacute;xeles
+  sizes:
+    - e700x700
+    - c684x456
+    - a140x140
+  legend:
+    field: status
+    values:
+      - active
+      - inactive
+    colors:
+      active: success
+      inactive: danger
+    labels:
+      active: >
+        P&uacute;blico
+      inactive: >
+        Borrador
+order: 60

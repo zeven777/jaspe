@@ -1,18 +1,4 @@
-@for( $i = 1; $i <= 3; $i++ )
-                <div class="col-md-4 col-xs-12 prod">
+@foreach( $blogs as $blog )
+                @include('web.home.item.blog')
 
-                    <a href="">
-
-                        <picture>
-
-                            <source srcset="{{ retina_url("img", "bl{$i}.jpg", 2) }}" />
-
-                            <img src="{{ url("img/bl{$i}.jpg") }}" alt="Jaspe" />
-
-                        </picture>
-
-                    </a>
-
-                </div>
-
-@endfor
+@endforeach

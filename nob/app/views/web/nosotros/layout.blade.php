@@ -47,23 +47,15 @@
 @endforeach
                 <div class="col-md-8 center-block text-center hagamos">
 
-                    <h2 class="h1">
-                        Hagamos algo grande, justos
-                    </h2>
+                    <h2 class="h1">{{ p_system('nosotros_footer_titulo',$lang) }}</h2>
 
                     <p>
-                        Interesado en distribuir nuestros productos? Nuevas ideas? No dudes en contactarnos!
-                        Si quieres formar parte de nuestro equipo, acércate! Nos encantaría escuchar de tí :)
-                    </p><p>
-
-                        Tenemos mucho para ofrecer y más para lograr unidos.
+                        {{ text2htmlbr(p_system('nosotros_footer_contenido',$lang),'</p> <p>') }}
                     </p>
 
                 </div>
 
-
             </div>
-
 
         </section>
 @stop

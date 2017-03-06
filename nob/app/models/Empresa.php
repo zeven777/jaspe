@@ -2,7 +2,7 @@
 
 class Empresa extends Base_Empresa
 {
-    protected $with = ['translations'];
+    protected $with = ['translations','images','image'];
 
     public static function getFirstAbout()
     {

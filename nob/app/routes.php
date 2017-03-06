@@ -25,6 +25,10 @@ Route::get('/productos/{slug?}',['as'=>'products.list','uses'=>'Productos_MainCo
 
 Route::get('/producto/{slug}',['as'=>'products.detail','uses'=>'Productos_DetailController@index']);
 
+Route::get('/blog',['as'=>'blog.list','uses'=>'Blog_ListController@index']);
+
+Route::get('/blog/{slug}',['as'=>'blog.detail','uses'=>'Blog_DetailController@index']);
+
 Route::get('/nosotros',['as'=>'about.us','uses'=>'Nosotros_MainController@index']);
 
 Route::get('/contacto',['as'=>'contact','uses'=>'Contacto_MainController@index']);

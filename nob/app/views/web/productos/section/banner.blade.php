@@ -1,8 +1,7 @@
         <aside class="banner productos">
 
             <h1>
-                Te presentamos toda nuestra línea<br/>
-                de productos, diseñados para tí!
+                {{ text2htmlbr( p_system('productos_banner_titulo', $lang) ) }}
             </h1>
 
         </aside>

@@ -16,6 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call('CategoryTableSeeder');
 
         $this->call('ProductsTableSeeder');
+
+        $this->call('CommentsTableSeeder');
+
+        $this->call('BlogTableSeeder');
+
+        $this->call('StaffTableSeeder');
     }
 
 }

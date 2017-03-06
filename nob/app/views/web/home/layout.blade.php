@@ -16,19 +16,22 @@
 
                 <div class="clearfix"></div>
 
+@if( $products->count() > 0 )
                 @include('web.home.section.products')
 
+@endif
             </div>
 
+@if( $blogs->count() > 0 )
             <div class="blog">
 
                 <div class="container">
 
                     <div class="col-md-12">
 
-                        <h2>Blog</h2>
+                        <h2>{{ p_system('inicio_blog_titulo', $lang) }}</h2>
 
-                        <p>Trucos, tips y todo lo que siempre quisiste saber</p>
+                        <p>{{ p_system('inicio_blog_subtitulo', $lang) }}</p>
 
                     </div>
 
@@ -40,15 +43,17 @@
 
             </div>
 
+@endif
+@if( $hproducts->count() > 0 )
             <div class="destacados">
 
                 <div class="container">
 
                     <div class="col-md-12">
 
-                        <h2>Destacados</h2>
+                        <h2>{{ p_system('inicio_productos_destacados_titulo', $lang) }}</h2>
 
-                        <p>Productos para todos los usos</p>
+                        <p>{{ p_system('inicio_productos_destacados_subtitulo', $lang) }}</p>
 
                     </div>
 
@@ -60,13 +65,15 @@
 
             </div>
 
+@endif
+@if( $testimonials->count() > 0 )
             <div class="testimonio">
 
                 <div class="container">
 
                     <div class="col-md-12">
 
-                        <h2>En tus palabras</h2>
+                        <h2>{{ p_system('inicio_testimonios_titulo', $lang) }}</h2>
 
                     </div>
 
@@ -78,5 +85,6 @@
 
             </div>
 
+@endif
         </section>
 @stop

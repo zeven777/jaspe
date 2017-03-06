@@ -10,5 +10,8 @@ class Contacto_MainController extends Main_MainController
 
     public function index()
     {
+        $this->data['staff'] = Personal::getStaff();
+
+        $this->data['contact'] = Contacto::getContact();
     }
 }

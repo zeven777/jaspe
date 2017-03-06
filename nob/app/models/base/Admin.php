@@ -4,6 +4,8 @@ use Nob\Admin\Model\NobBase;
 
 class Base_Admin extends NobBase
 {
+    use \Nob\Admin\Model\Traits\FileTrait;    
+
     protected $table = 'admin';
 
     protected $fillable = [

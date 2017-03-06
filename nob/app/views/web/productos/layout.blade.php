@@ -16,8 +16,16 @@
 
                 <div class="clearfix"></div>
 
+@if( $products->count() > 0 )
                 @include('web.home.section.products')
 
+                <div class="text-center">
+
+                    {{ $products->links() }}
+
+                </div>
+
+@endif
             </div>
 
         </section>

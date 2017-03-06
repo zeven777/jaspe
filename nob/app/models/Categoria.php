@@ -2,6 +2,8 @@
 
 class Categoria extends Base_Categoria
 {
+    protected $with = ['translations'];
+
     public static function getCategories()
     {
         return static::getItems();

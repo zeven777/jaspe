@@ -2,6 +2,8 @@
 
 class Producto extends Base_Producto
 {
+    protected $with = ['comentario', 'translations','images','image'];
+
     public static function getProduct($slug)
     {
         return static::whereHas('translations',function($q) use ($slug)

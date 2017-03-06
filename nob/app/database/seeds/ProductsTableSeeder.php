@@ -21,15 +21,11 @@ class ProductsTableSeeder extends NobSeeder
                     'categoria'       => $category->getKey(),
                     'nombre'          => $faker->sentence(3),
                     'descripcion'     => $faker->text(200),
-                    'caracteristicas' => '<p><strong>'.$faker->sentence(2).'</strong><br /> '.$faker->text(100).'</p>',
+                    'caracteristicas' => '<p><strong>'.$faker->sentence(2).'</strong><br /> '.$faker->text(100).'</p>'
+                                        .'<p><strong>'.$faker->sentence(2).'</strong><br /> '.$faker->text(100).'</p>',
                     'tip'             => $faker->text(100),
                     'status'          => 'active'
                 ]);
-
-                if( $product->messages instanceof \Illuminate\Support\MessageBag )
-                {
-                    print_r($product->messages->getMessages());
-                }
 
                 if( $product->model instanceof \Nob\Admin\Model\NobBase )
                 {

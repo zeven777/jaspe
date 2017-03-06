@@ -5,11 +5,11 @@
     "license": "MIT",
     "require": {
         "laravel/framework": "4.2.*",
-        "nob/command": "dev-master",
+        "nob/command": "1.0.*",
         "nob/admin": "2.0.*"
     },
     "require-dev": {
-        "fzaninotto/faker": "1.5.*@dev",
+        "fzaninotto/faker": "1.6.*",
         "barryvdh/laravel-debugbar": "~1.8"
     },
     "repositories": [
