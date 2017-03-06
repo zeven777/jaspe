@@ -139,4 +139,14 @@ $(function(){
             }
         });
     });
+
+    $('body').on('click','[data-toggle="clipboard"]',function(e){
+        e.preventDefault();
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(this).data('text')).select();
+        document.execCommand("copy");
+        notification('Copiado al portapapeles');
+        $temp.remove();
+    });
 });

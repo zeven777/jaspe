@@ -21,6 +21,7 @@ class CreateFileTable extends Migration
             $table->integer('size')->unsigned();
             $table->string('foot', 1024);
             $table->enum('type', array('image','file'))->default('image');
+            $table->string('text', 10)->default('no')->index();
             $table->enum('highlighted', array('yes','no'))->default('no');
             $table->timestamp('created_at')->default('1970-01-01 00:00:01');
             $table->timestamp('updated_at')->default('1970-01-01 00:00:01');

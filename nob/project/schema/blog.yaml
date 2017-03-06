@@ -55,7 +55,6 @@ setup:
         Borrador
   image:
     rules:
-      - required
       - image
       - >
         mimes:jpeg,png
@@ -77,4 +76,29 @@ setup:
     - e600x600
     - c370x360
     - a140x140
+  text:
+    title: >
+      Im&aacute;genes Texto Enriquecido
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:>=320,>=240
+      - >
+        image_size:<=800,<=800
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      retinable: 2x
+      limit: 1
+    info: |
+      Resoluci&oacute;n m&iacute;nima: 640x480 p&iacute;xeles
+
+      Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles
+    sizes:
+      - e800x800
+      - p320x240
+      - a140x140
 order: 40
