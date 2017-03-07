@@ -55,9 +55,9 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => '',
-            'username'  => '',
-            'password'  => '',
+            'database'  => 'jaspe_db',
+            'username'  => 'jaspe',
+            'password'  => '7PwvBdDJzFvSBwyt',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
