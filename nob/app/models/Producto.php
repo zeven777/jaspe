@@ -17,9 +17,9 @@ class Producto extends Base_Producto
         })->hasImages()->active()->first();
     }
 
-    public static function getProducts($paginate = false, $category = null)
+    public static function getProducts($paginate = false, $current = null)
     {
-        return static::getItems($paginate, false, $category);
+        return static::getItems($paginate, false, $current);
     }
 
     public static function getHighlightedProducts($paginate = false)
@@ -27,17 +27,19 @@ class Producto extends Base_Producto
         return static::getItems($paginate, true);
     }
 
-    public static function getItems($paginate = false, $highlighted = false, $category = null)
+    public static function getItems($paginate = false, $highlighted = false, $current = null)
     {
-        $items = static::whereHas('categoria',function($q) use ($category)
+        $items = static::whereHas('categoria',function($q) use ($current)
         {
             $q->isLocaleTranslated()->active();
 
-            if( $category ) $q->whereHas('translations',function($q) use ($category)
+            if( $current ) $q->whereHas('translations',function($q) use ($current)
             {
-                $q->where('slug',$category);
+                $q->where('slug',$current->categoria->slug);
             });
         })->isLocaleTranslated()->active();
+
+        if( $current ) $items->where('id','<>', $current->getKey());
 
         if( $highlighted ) $items->highlighted();
 
