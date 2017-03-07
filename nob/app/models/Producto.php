@@ -35,11 +35,13 @@ class Producto extends Base_Producto
 
             if( $current ) $q->whereHas('translations',function($q) use ($current)
             {
-                $q->where('slug',$current->categoria->slug);
+                $slug = $current instanceof \Illuminate\Database\Eloquent\Model ? $current->categoria->slug : $current;
+
+                $q->where('slug',$slug);
             });
         })->isLocaleTranslated()->active();
 
-        if( $current ) $items->where('id','<>', $current->getKey());
+        if( $current instanceof \Illuminate\Database\Eloquent\Model ) $items->where('id','<>', $current->getKey());
 
         if( $highlighted ) $items->highlighted();
 
