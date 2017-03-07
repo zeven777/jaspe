@@ -15,7 +15,7 @@ class ProductsTableSeeder extends NobSeeder
 
         foreach( $categories as $category )
         {
-            for( $i = 0; $i < 5; $i++ )
+            for( $i = 1; $i <= 4; $i++ )
             {
                 $product = Producto::createRow([
                     'categoria'       => $category->getKey(),
@@ -24,12 +24,13 @@ class ProductsTableSeeder extends NobSeeder
                     'caracteristicas' => '<p><strong>'.$faker->sentence(2).'</strong><br /> '.$faker->text(100).'</p>'
                                         .'<p><strong>'.$faker->sentence(2).'</strong><br /> '.$faker->text(100).'</p>',
                     'tip'             => $faker->text(100),
-                    'status'          => 'active'
+                    'status'          => 'active',
+                    'highlighted'     => 'yes'
                 ]);
 
                 if( $product->model instanceof \Nob\Admin\Model\NobBase )
                 {
-                    $this->generateFiles(1,400,400,$faker,$product->model);
+                    $this->generateFiles(1,400,400,$faker,$product->model, 'jpg', public_path("img/2x/pro{$i}.jpg"));
                 }
             }
         }

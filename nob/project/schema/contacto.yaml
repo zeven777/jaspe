@@ -2,7 +2,7 @@ fields:
   titulo:
     type: text
     legend: >
-      T&iacutE;tulo
+      T&iacute;tulo
     class: tinymce-title
     rules:
       - required

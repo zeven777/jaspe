@@ -75,18 +75,20 @@ setup:
     rules:
       - image
       - >
-        mimes:png
+        mimes:jpeg,png
       - >
         image_size:>=400,>=400
+      - >
+        image_size:<=600,<=600
     params:
       maxlength: 1
-      accept: png
-      output: png
+      accept: jpg|jpeg|png
+      output: jpg
       limit: 1
       retinable: 2x
     info: >
       Resoluci&oacute;n recomendada: 800x800 p&iacute;xeles.
-      Solo im&aacute;genes PNG con Fondo Transparente.
+      Resoluci&oacute;n m&aacute;xima: 1200x1200 p&iacute;xeles.
   sizes:
     - e600x600
     - c400x400
