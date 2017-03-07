@@ -77,9 +77,9 @@ setup:
       - >
         mimes:jpeg,png
       - >
-        image_size:>=400,>=400
+        image_size:>=680,>=754
       - >
-        image_size:<=600,<=600
+        image_size:<=800,<=800
     params:
       maxlength: 1
       accept: jpg|jpeg|png
@@ -87,10 +87,11 @@ setup:
       limit: 1
       retinable: 2x
     info: >
-      Resoluci&oacute;n recomendada: 800x800 p&iacute;xeles.
-      Resoluci&oacute;n m&aacute;xima: 1200x1200 p&iacute;xeles.
+      Resoluci&oacute;n recomendada: 1360x1508 p&iacute;xeles.
+      Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles.
+      Las im&aacute;genes deben ser agrupadas en un lienzo de 1360x1508 p&iacute;xeles
   sizes:
-    - e600x600
+    - e800x800
     - c400x400
     - c350x350
     - c270x390
