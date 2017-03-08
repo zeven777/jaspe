@@ -88,9 +88,10 @@ setup:
       accept: jpg|jpeg|png
       output: jpg
       retinable: 2x
+      cropped: no
       limit: 1
     info: |
-      Resoluciones recomendadas:
+      Resoluciones exactas:
 
       1. 920x920 p&iacute;xeles (1er item)
       2. 912x1276 p&iacute;xeles (Item a la Izquierda)

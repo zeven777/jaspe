@@ -575,11 +575,11 @@
         },
         {
             "name": "nob/admin",
-            "version": "v2.0.63",
+            "version": "v2.0.64",
             "source": {
                 "type": "git",
                 "url": "https://dctrndrk@bitbucket.org/dctrndrk/admin.git",
-                "reference": "6e085dd1183283fa630edc7e9971d7f250abc3c2"
+                "reference": "34f1d3aaf4933b33b588df2011974c7e4542066b"
             },
             "require": {
                 "ezyang/htmlpurifier": "4.7.*",
@@ -614,7 +614,7 @@
                 "laravel",
                 "nob"
             ],
-            "time": "2017-03-07 14:06:47"
+            "time": "2017-03-08 17:10:52"
         },
         {
             "name": "nob/command",
