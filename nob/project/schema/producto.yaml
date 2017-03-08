@@ -12,6 +12,15 @@ fields:
     type: string[255]
     rules:
       - required
+  color:
+    type: colorpicker
+    legend: >
+      Color de Fondo
+    default: >
+      #fff0e1
+    rules:
+      - required
+    translatable: no
   descripcion:
     type: text
     legend: >

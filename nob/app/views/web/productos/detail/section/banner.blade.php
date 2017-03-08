@@ -1,4 +1,4 @@
-        <aside class="banner detalle" style="background-color: #fff0e1;">
+        <aside class="banner detalle" style="background-color: {{ $product->getBackgroundColor() }};">
 
             <picture>
 

@@ -19,6 +19,7 @@ class Base_Producto extends NobBase
     ];
 
     protected $fillable = [
+        'color',
         'status',
         'highlighted'
     ];
@@ -26,6 +27,7 @@ class Base_Producto extends NobBase
     protected $rules = [
         'categoria' => 'required',
         'nombre' => 'required',
+        'color' => 'required',
         'descripcion' => 'required',
         'caracteristicas' => 'required',
         'tip' => 'required'

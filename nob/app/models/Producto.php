@@ -49,4 +49,9 @@ class Producto extends Base_Producto
 
         return $items;
     }
+
+    public function getBackgroundColor()
+    {
+        return ! empty( $this->color ) ? $this->color : '#fff0e1';
+    }
 }

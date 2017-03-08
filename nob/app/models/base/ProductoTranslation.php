@@ -17,6 +17,7 @@ class Base_ProductoTranslation extends NobBase
     protected $rules = [
         'categoria' => 'required',
         'nombre' => 'required',
+        'color' => 'required',
         'descripcion' => 'required',
         'caracteristicas' => 'required',
         'tip' => 'required'
