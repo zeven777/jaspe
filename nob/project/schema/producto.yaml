@@ -86,7 +86,7 @@ setup:
       - >
         mimes:jpeg,png
       - >
-        image_size:>=680,>=754
+        image_size:>=655,>=390
       - >
         image_size:<=800,<=800
     params:
@@ -96,15 +96,37 @@ setup:
       limit: 1
       retinable: 2x
     info: >
-      Resoluci&oacute;n recomendada: 1360x1508 p&iacute;xeles.
+      Resoluci&oacute;n recomendada: 1310x780 p&iacute;xeles.
       Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles.
-      Las im&aacute;genes deben ser agrupadas en un lienzo de 1360x1508 p&iacute;xeles
+      Las im&aacute;genes deben ser agrupadas en un lienzo de 1310x780 p&iacute;xeles.
   sizes:
     - e800x800
-    - c400x400
     - c350x350
     - c270x390
     - a140x140
+  text:
+    title: >
+      Banner del Producto
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:>=1600,>=1600
+      - >
+        image_size:<=2000,<=2000
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      limit: 1
+    info: >
+      Resoluci&oacute;n m&iacute;nima: 1600x1600 p&iacute;xeles.
+      Resoluci&oacute;n m&aacute;xima: 2000x2000 p&iacute;xeles.
+    sizes:
+      - e2000x2000
+      - p1600x1600
+      - a140x140
   legend:
     field: status
     values:

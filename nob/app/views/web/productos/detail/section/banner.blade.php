@@ -1,11 +1,4 @@
-        <aside class="banner detalle" style="background-color: {{ $product->getBackgroundColor() }};">
-
-            <picture>
-
-                <source srcset="{{ $product->image->getUrlRetinableImages(1) }}" />
-
-                <img src="{{ $product->image->getImage(1) }}" alt="{{ $product->nombre }}"/>
-
-            </picture>
-
+        <aside class="banner detalle" style="background-image: url('{{
+            $product->imageText->getImage(1)
+        }}'); background-color: {{ $product->getBackgroundColor() }}">
         </aside>

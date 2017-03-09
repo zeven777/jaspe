@@ -1,6 +1,6 @@
-            <div class="col-md-6 col-xs-12 prod">
+            <div class="col-sm-6 col-xs-12 prod">
 
-                <a href="javascript:;">
+                <a href="{{ route('blog.detail',$blog->slug) }}">
 
                     <picture>
 

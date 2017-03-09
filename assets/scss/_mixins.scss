@@ -181,4 +181,8 @@
 @include prefixer(transition-delay, unquote($delay));
 }
 
+@mixin bgSize($value: cover) {
+  @include prefixer(background-size, $value, webkit moz);
+}
+
 @import "pixel-ratio/base";

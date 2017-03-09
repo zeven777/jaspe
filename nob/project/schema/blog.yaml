@@ -53,6 +53,11 @@ setup:
         P&uacute;blico
       inactive: >
         Borrador
+  tinymce:
+    global:
+      content_css: >
+        css/blog.css
+      menubar: yes
   image:
     rules:
       - image
@@ -74,6 +79,7 @@ setup:
       Resoluci&oacute;n m&aacute;xima: 1200x1200 p&iacute;xeles
   sizes:
     - e600x600
+    - c560x400
     - c370x360
     - a140x140
   text:
@@ -88,15 +94,15 @@ setup:
       - >
         image_size:<=800,<=800
     params:
-      maxlength: 1
+      maxlength: 2
       accept: jpg|jpeg|png
       output: jpg
-      retinable: 2x
-      limit: 1
+      copyable: yes
+      limit: 3
     info: |
-      Resoluci&oacute;n m&iacute;nima: 640x480 p&iacute;xeles
+      Resoluci&oacute;n m&iacute;nima: 320x240 p&iacute;xeles
 
-      Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles
+      Resoluci&oacute;n m&aacute;xima: 800x800 p&iacute;xeles
     sizes:
       - e800x800
       - p320x240

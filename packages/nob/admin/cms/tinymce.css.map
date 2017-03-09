@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAgCA;GASG;AAGH,UAKC,GAJC,WAAW,EAAE,WAAW,EACxB,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,GAAG,EAChB,GAAG,EAAE,oJAAoJ;AAE3J,UAKC,GAJC,WAAW,EAAE,WAAW,EACxB,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,GAAG,EAChB,GAAG,EAAE,8JAA8J;ACnDrK,GAAI,GACF,OAAO,EAAE,KAAK",
+"sources": ["../scss/_vars.scss","../scss/tinymce.scss"],
+"names": [],
+"file": "tinymce.css"
+}

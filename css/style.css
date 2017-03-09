@@ -58,7 +58,7 @@ h3 {
     vertical-align: middle; }
   .banner.home {
     background: #fef4ea; }
-  .banner.nosotros {
+  .banner.nosotros, .banner.blog {
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     background-repeat: no-repeat; }
@@ -70,12 +70,29 @@ h3 {
       font-size: 45px;
       font-family: "MuseoSans-300", sans-serif;
       font-weight: normal; }
+  .banner.blog {
+    height: 360px;
+    padding: 160px 0 50px 0;
+    color: #fff; }
+    .banner.blog h1 {
+      font-size: 45px;
+      text-shadow: 0 0 2px #000; }
+  .banner.blog-detail {
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 600px; }
   .banner.detalle {
     position: fixed;
     height: 100%;
     width: 50%;
     right: 0;
-    z-index: -1; }
+    z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
 
 .page {
   width: 100%;
@@ -894,6 +911,13 @@ hr {
 .productos .prod {
   margin-bottom: 20px; }
 
+.blog.detail h2, .blog.detail h4 {
+  margin: 50px 0;
+  font-size: 38px;
+  color: #000;
+  font-family: "MuseoSans-300", sans-serif;
+  text-align: center; }
+
 .testimonio h2 {
   margin-bottom: 30px; }
 .testimonio a {
@@ -1081,6 +1105,10 @@ hr {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@media (max-width: 1366px) and (max-width: 1280px) {
+  .banner.blog {
+    background-size: auto 100%;
+    -webkit-background-size: auto 100%; } }
 @media (max-width: 991px) {
   .banner.nosotros {
     background-size: auto 100%;

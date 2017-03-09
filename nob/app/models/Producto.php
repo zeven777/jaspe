@@ -14,7 +14,7 @@ class Producto extends Base_Producto
                 'caracteristicas',
                 'tip'
             ]);
-        })->hasImages()->active()->first();
+        })->hasImages()->hasImagesText()->active()->first();
     }
 
     public static function getProducts($paginate = false, $current = null)
@@ -39,7 +39,7 @@ class Producto extends Base_Producto
 
                 $q->where('slug',$slug);
             });
-        })->isLocaleTranslated()->active();
+        })->isLocaleTranslated()->hasImages()->hasImagesText()->active();
 
         if( $current instanceof \Illuminate\Database\Eloquent\Model ) $items->where('id','<>', $current->getKey());
 

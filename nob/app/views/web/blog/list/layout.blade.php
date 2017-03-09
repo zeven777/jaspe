@@ -8,10 +8,8 @@
 
         <div class="container">
 
-@foreach( $blogs as $blog )
-            @include('web.blog.item.blog')
+            @include('web.blog.section.items')
 
-@endforeach
         </div>
 
     </section>

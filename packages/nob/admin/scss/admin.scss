@@ -366,7 +366,7 @@ span.input-group-addon {
     margin: 0 10px 10px 0;
     text-align: center;
     position: relative;
-    &.image {
+    &.image, &.text {
         width: 150px;
         height: 175px;
     }
@@ -375,10 +375,16 @@ span.input-group-addon {
         margin: 0;
         vertical-align: middle;
     }
-    a.edit {
+    a {
         display: inline-block;
-        margin-top: 4px;
         vertical-align: top;
+        &.edit {
+            margin-top: 4px;
+        }
+        &.clipboard {
+            margin: 4px 5px 0;
+            color: inherit;
+        }
     }
     .highlighted {
         position: absolute;

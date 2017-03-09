@@ -13,7 +13,7 @@ class Categoria extends Base_Categoria
     {
         $items = static::whereHas('producto',function($q)
         {
-            $q->isLocaleTranslated()->hasImages()->active();
+            $q->isLocaleTranslated()->hasImages()->hasImagesText()->active();
         })->isLocaleTranslated()->active();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();

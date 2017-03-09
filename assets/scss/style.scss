@@ -88,6 +88,9 @@ h3{
 @import 'secundarias';
 @import 'transitions';
 
+@media (max-width: 1366px) {
+  @import 'xg/common';
+}
 
 @media (max-width: 1200px) {
   @import 'lg/common';

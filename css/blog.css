@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSansRounded-700.eot");
+  src: url("../fonts/MuseoSansRounded-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansRounded-700.woff2") format("woff2"), url("../fonts/MuseoSansRounded-700.woff") format("woff"), url("../fonts/MuseoSansRounded-700.ttf") format("truetype"), url("../fonts/MuseoSansRounded-700.svg#MuseoSansRounded-700") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'MuseoSans-300';
+  src: url("../fonts/MuseoSansRounded-300.eot");
+  src: local("☺"), url("../fonts/MuseoSansRounded-300.woff") format("woff"), url("../fonts/MuseoSansRounded-300.ttf") format("truetype"), url("../fonts/MuseoSansRounded-300.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'MuseoSans-100';
+  src: url("../fonts/MuseoSansRounded-100.eot");
+  src: local("☺"), url("../fonts/MuseoSansRounded-100.woff") format("woff"), url("../fonts/MuseoSansRounded-100.ttf") format("truetype"), url("../fonts/MuseoSansRounded-100.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  padding-top: 0px !important;
+  font-size: 16px;
+  font-family: "MuseoSans-300", sans-serif;
+  color: #333;
+  overflow-x: hidden; }
+
+h4 {
+  font-size: 38px;
+  font-family: "MuseoSans-300", sans-serif; }
+
+/*# sourceMappingURL=blog.css.map */

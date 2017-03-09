@@ -109,9 +109,11 @@ span.input-group-addon { -webkit-border-radius: 0px; -ms-border-radius: 0px; bor
 .filefoot { background: rgba(0, 0, 0, 0.8); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CC000000', endColorstr='#CC000000'); bottom: 0; color: #FFFFFF; padding: 5px 0; position: absolute; text-align: center; width: 100%; z-index: 10; }
 
 .file-gallery .file { width: 100px; height: auto; line-height: 0; display: inline-block; vertical-align: top; margin: 0 10px 10px 0; text-align: center; position: relative; }
-.file-gallery .file.image { width: 150px; height: 175px; }
+.file-gallery .file.image, .file-gallery .file.text { width: 150px; height: 175px; }
 .file-gallery .file img { display: block; margin: 0; vertical-align: middle; }
-.file-gallery .file a.edit { display: inline-block; margin-top: 4px; vertical-align: top; }
+.file-gallery .file a { display: inline-block; vertical-align: top; }
+.file-gallery .file a.edit { margin-top: 4px; }
+.file-gallery .file a.clipboard { margin: 4px 5px 0; color: inherit; }
 .file-gallery .file .highlighted { position: absolute; top: 4px; right: 4px; background-color: inherit; padding: 3px; z-index: 50; -webkit-border-radius: 0 0 0 4px; -ms-border-radius: 0 0 0 4px; border-radius: 0 0 0 4px; }
 .file-gallery .file .highlighted i { cursor: pointer; }
 .file-gallery .file .highlighted .fa-star { color: #666; }
