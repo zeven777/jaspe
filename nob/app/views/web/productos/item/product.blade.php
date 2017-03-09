@@ -4,9 +4,9 @@
 
                         <picture>
 
-                            <source srcset="{{ $product->image->getUrlRetinableImages(2) }}" />
+                            <source srcset="{{ $product->images->first()->getUrlRetinableImages(1) }}" />
 
-                            <img src="{{ $product->image->getImage(2) }}" alt="{{ $product->nombre }}" />
+                            <img src="{{ $product->images->first()->getImage(1) }}" alt="{{ $product->nombre }}" />
 
                         </picture>
 
