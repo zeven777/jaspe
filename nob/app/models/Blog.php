@@ -26,7 +26,7 @@ class Blog extends Base_Blog
             $q->notEmpty(['titulo','contenido']);
 
             if( $current instanceof Model ) $q->where('slug','<>',$current->slug);
-        })->isLocaleTranslated()->active();
+        })->isLocaleTranslated()->hasImages()->active();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();
 
