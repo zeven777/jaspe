@@ -43,9 +43,9 @@ setup:
       - >
         mimes:jpeg,png
       - >
-        image_size:=3840,>=600
+        image_size:=1920,>=600
       - >
-        image_size:=3840,<=3840
+        image_size:=1920,<=1920
     params:
       maxlength: 1
       accept: jpg|jpeg|png
@@ -53,14 +53,14 @@ setup:
       cropped: no
       limit: 1
     info: |
-      Resoluci&oacute;n recomendada (Nosotros): 3840x690 p&iacute;xeles
+      Resoluci&oacute;n recomendada (Nosotros): 1920x690 p&iacute;xeles
 
-      Resoluci&oacute;n recomendada (Blog): 3840x600 p&iacute;xeles
+      Resoluci&oacute;n recomendada (Blog): 1920x600 p&iacute;xeles
 
-      Resoluci&oacute;n m&aacute;xima: 3840x3840 p&iacute;xeles
+      Resoluci&oacute;n m&aacute;xima: 1920x1920 p&iacute;xeles
   sizes:
-    - e3840x3840
-    - p3840x600
+    - e1920x1920
+    - p1920x600
     - a140x140
   legend:
     field: status
