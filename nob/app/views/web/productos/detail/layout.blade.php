@@ -24,13 +24,14 @@
 
                     </div>
 
+@if( $product->categoria->image )
                     <div class="pro-cont item col-md-10 text-center center-block">
 
                         <picture>
 
-                            <source srcset="{{ retina_url('img','ico-pro.png',2) }}" />
+                            <source srcset="{{ $product->categoria->image->getUrlRetinableImages(1) }}" />
 
-                            <img src="{{ url('img/ico-pro.png') }}" alt="{{ $product->categoria->nombre }}"/>
+                            <img src="{{ $product->categoria->image->getImage(1) }}" alt="{{ $product->categoria->nombre }}"/>
 
                         </picture>
 
@@ -38,6 +39,7 @@
 
                     </div>
 
+@endif
                     <div class="caract item col-md-10 text-center center-block">
 
                         {{ HTML::decode($product->caracteristicas) }}

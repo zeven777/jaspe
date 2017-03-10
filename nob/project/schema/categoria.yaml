@@ -42,12 +42,36 @@ fields:
         Borrador
     translatable: no
 setup:
-  type: text
+  type: multifile
   title: >
     Categor&iacute;as
   head:
     - nombre
   translatable: yes
+  image:
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:=220,=220
+      - >
+        image_size:<=600,<=600
+    params:
+      maxlength: 1
+      accept: png
+      output: png
+      retinable: 2x
+      cropped: no
+      limit: 1
+    info: |
+      Resoluci&oacute;n exacta: 440x440 p&iacute;xeles.
+
+      Formato permitido: PNG Transparente.
+  sizes:
+    - e600x600
+    - p220x220
+    - a140x140
   legend:
     field: status
     values:

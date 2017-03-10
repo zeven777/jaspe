@@ -2,7 +2,7 @@
 
 class Categoria extends Base_Categoria
 {
-    protected $with = ['translations'];
+    protected $with = ['translations','images','image'];
 
     public static function getCategories()
     {
