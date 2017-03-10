@@ -13,5 +13,7 @@ class Blog_ListController extends Main_MainController
     public function index()
     {
         $this->data['blogs'] = Blog::getBlogs($this->paginate);
+
+        $this->data['banner'] = Secundario::getBanner('blog');
     }
 }

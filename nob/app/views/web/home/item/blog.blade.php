@@ -1,12 +1,12 @@
                 <div class="col-md-4 col-xs-12 prod">
 
-                    <a href="javascript:;">
+                    <a href="{{ route('blog.detail',$blog->slug) }}">
 
                         <picture>
 
-                            <source srcset="{{ $blog->image->getUrlRetinableImages(1) }}" />
+                            <source srcset="{{ $blog->image->getUrlRetinableImages(3) }}" />
 
-                            <img src="{{ $blog->image->getImage(1) }}" alt="{{ $blog->titulo }}" />
+                            <img src="{{ $blog->image->getImage(3) }}" alt="{{ $blog->titulo }}" />
 
                         </picture>
 

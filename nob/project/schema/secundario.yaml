@@ -5,6 +5,18 @@ fields:
       T&iacute;tulo
     rules:
       - required
+  seccion:
+    type: enum
+    legend: >
+      Secci&oacute;n
+    default: nosotros
+    role: radios
+    options:
+      - nosotros
+      - blog
+    labels:
+      nosotros: Nosotros
+      blog: Blog
   status:
     type: enum
     legend: >
@@ -21,31 +33,34 @@ fields:
         Borrador
 setup:
   type: multifile
+  title: >
+    Banner Secundario
   head:
     - titulo
-  translatable: yes
   image:
     rules:
       - image
       - >
         mimes:jpeg,png
       - >
-        image_size:>=667,>=447
+        image_size:=3840,>=600
       - >
-        image_size:<=700,<=700
+        image_size:=3840,<=3840
     params:
       maxlength: 1
       accept: jpg|jpeg|png
       output: jpg
-      retinable: 2x
+      cropped: no
       limit: 1
     info: |
-      Resoluci&oacute;n recomendada: 1334x894 p&iacute;xeles
+      Resoluci&oacute;n recomendada (Nosotros): 3840x690 p&iacute;xeles
 
-      Resoluci&oacute;n m&aacute;xima: 1400x1400 p&iacute;xeles
+      Resoluci&oacute;n recomendada (Blog): 3840x600 p&iacute;xeles
+
+      Resoluci&oacute;n m&aacute;xima: 3840x3840 p&iacute;xeles
   sizes:
-    - e700x700
-    - c667x447
+    - e3840x3840
+    - p3840x600
     - a140x140
   legend:
     field: status
@@ -60,4 +75,4 @@ setup:
         P&uacute;blico
       inactive: >
         Borrador
-order: 10
+order: 12

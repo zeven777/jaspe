@@ -64,9 +64,9 @@ setup:
       - >
         mimes:jpeg,png
       - >
-        image_size:>=370,>=360
+        image_size:=1920,>=600
       - >
-        image_size:<=600,<=600
+        image_size:=1920,<=1920
     params:
       maxlength: 1
       accept: jpg|jpeg|png
@@ -74,11 +74,12 @@ setup:
       retinable: 2x
       limit: 1
     info: |
-      Resoluci&oacute;n recomendada: 740x720 p&iacute;xeles
+      Resoluci&oacute;n recomendada: 3840x1200 p&iacute;xeles
 
-      Resoluci&oacute;n m&aacute;xima: 1200x1200 p&iacute;xeles
+      Resoluci&oacute;n m&aacute;xima: 3840x3840 p&iacute;xeles
   sizes:
-    - e600x600
+    - e1920x1920
+    - c1920x600
     - c560x400
     - c370x360
     - a140x140

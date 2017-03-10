@@ -13,5 +13,7 @@ class Nosotros_MainController extends Main_MainController
         $this->data['firstAbout'] = Empresa::getFirstAbout();
 
         $this->data['allAbouts'] = Empresa::getAllAbouts();
+
+        $this->data['banner'] = Secundario::getBanner('nosotros');
     }
 }

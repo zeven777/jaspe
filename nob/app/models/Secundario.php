@@ -1,12 +1,12 @@
 <?php
 
-class Banner extends Base_Banner
+class Secundario extends Base_Secundario
 {
-    protected $with = ['images', 'image'];
+    protected $with = ['images','image'];
 
-    public static function getBanner()
+    public static function getBanner($section)
     {
-        return static::hasImages()->active()->random()->first();
+        return static::where('seccion',$section)->hasImages()->active()->random()->first();
     }
 
     public static function getItems($paginate = false)

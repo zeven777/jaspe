@@ -2,7 +2,7 @@
 @section('content')
     @include('web.commons.nav')
 
-    <aside class="banner blog-detail" style="background-image: url('{{ url('img/bannernos.jpg') }}');">
+    <aside class="banner blog-detail" style="background-image: url('{{ $blog->image->getImage(1) }}');">
     </aside>
 
     <section class="main blog detail">

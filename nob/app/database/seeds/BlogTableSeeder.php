@@ -22,7 +22,7 @@ class BlogTableSeeder extends NobSeeder
 
             if( $model->model instanceof \Nob\Admin\Model\NobBase )
             {
-                $this->generateFiles(1,400,400,$faker,$model->model, 'jpg' , public_path("img/2x/bl{$i}.jpg"));
+                $this->generateFiles(1,1920,600,$faker,$model->model, 'jpg' , public_path("assets/assets/blog/banner{$i}.jpg"));
             }
         }
     }

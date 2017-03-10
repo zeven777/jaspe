@@ -19,5 +19,7 @@ class Home_MainController extends Main_MainController
         $this->data['hproducts'] = Producto::getHighlightedProducts($this->paginate);
 
         $this->data['testimonials'] = Testimonio::getTestimonials(6);
+
+        $this->data['banner'] = Banner::getBanner();
     }
 }
