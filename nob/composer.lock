@@ -579,7 +579,7 @@
             "source": {
                 "type": "git",
                 "url": "https://dctrndrk@bitbucket.org/dctrndrk/admin.git",
-                "reference": "09769ad409b5bc9c3cd5d43c1107d3051a198165"
+                "reference": "c23948120b50da4708059e684ee9b85af4de49d2"
             },
             "require": {
                 "ezyang/htmlpurifier": "4.7.*",
@@ -614,7 +614,7 @@
                 "laravel",
                 "nob"
             ],
-            "time": "2017-03-09 21:59:29"
+            "time": "2017-03-10 05:04:53"
         },
         {
             "name": "nob/command",
