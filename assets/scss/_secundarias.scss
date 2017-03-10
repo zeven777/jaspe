@@ -139,6 +139,12 @@
       font-family: $body-font;
       text-align: center;
     }
+    .blog-content {
+      max-width: 800px;
+      img {
+        max-width: 100%;
+      }
+    }
   }
 }
 

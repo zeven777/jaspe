@@ -9,9 +9,11 @@
 
         <div class="container">
 
-            {{ HTML::decode($blog->contenido) }}
+            <div class="blog-content center-block">
 
-            <h2>Gracias por dejarnos tanto</h2>
+                {{ HTML::decode($blog->contenido) }}
+
+            </div>
 
             @include('web.blog.section.items')
 
