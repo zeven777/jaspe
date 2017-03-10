@@ -12,7 +12,9 @@ $(document).ready(function(){
     $('.btn-menu').click(function(e){
         $('.page').toggleClass('expand');
         e.preventDefault();
-        $('.banner.detalle > .before').css('height',$('.banner.detalle + .main.detalle > .container').height());
+        var height = $('.banner.detalle + .main.detalle > .container').height();
+        height = height - $(window).height();
+        $('.banner.detalle > .before').css('height',height);
     });
     $('body').bind("webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd", function(){
         $('.banner .slider img.active.out').removeClass('active').removeClass('out');
