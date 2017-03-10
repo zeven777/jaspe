@@ -37,14 +37,24 @@
 }
 
 body {
-  padding-top: 0px !important;
+  padding-top: 0 !important;
   font-size: 16px;
   font-family: $body-font;
   color : #333;
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 22px;
+  font-family: $body-font;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: $body-font;
+}
+
 h4 {
-  font-size: 38px;
+  font-size: 18px;
   font-family: $body-font;
 }

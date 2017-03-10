@@ -80,6 +80,11 @@ setup:
   head:
     - nombre
   translatable: yes
+  tinymce:
+    global:
+      content_css: >
+        css/blog.css
+      menubar: yes
   image:
     rules:
       - image
