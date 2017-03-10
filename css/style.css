@@ -93,6 +93,13 @@ h3 {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover; }
+    .banner.detalle .before {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      background-color: inherit; }
 
 .page {
   width: 100%;
@@ -105,6 +112,18 @@ h3 {
   .page.expand {
     transform: translate(-320px, 0);
     -webkit-transform: translate(-320px, 0); }
+    .page.expand .banner.detalle {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      z-index: -1;
+      max-height: 800px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover; }
 
 .menucat {
   list-style: none;

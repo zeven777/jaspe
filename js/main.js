@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('.btn-menu').click(function(e){
         $('.page').toggleClass('expand');
         e.preventDefault();
+        $('.banner.detalle > .before').css('height',$('.banner.detalle + .main.detalle > .container').height());
     });
     $('body').bind("webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd", function(){
         $('.banner .slider img.active.out').removeClass('active').removeClass('out');
@@ -22,6 +23,13 @@ $(document).ready(function(){
     clearTimeout(timeout);
     timeout = setTimeout(doAnimate,5000);
 
+    $('.banner.detalle').css('max-height',$(window).height());
 
+    $(window).resize(function(){
 
+        timeout = setTimeout(function(){
+            $('.banner.detalle').css('max-height',$(window).height());
+        },100);
+
+    });
 });

@@ -63,6 +63,14 @@
      background-repeat: no-repeat;
      @include bgSize();
 
+     .before {
+       content: " ";
+       position: absolute;
+       top: 100%;
+       width: 100%;
+       left: 0;
+       background-color: inherit;
+     }
    }
 
 }
@@ -80,6 +88,20 @@
   &.expand{
     transform: translate(-320px,0);
     -webkit-transform: translate(-320px,0);
+
+    .banner {
+      &.detalle{
+        position: absolute;
+        height : 100%;
+        width: 50%;
+        right: 0;
+        z-index: -1;
+        max-height: 800px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        @include bgSize();
+      }
+    }
   }
 }
 
