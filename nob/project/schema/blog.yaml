@@ -98,7 +98,7 @@ setup:
       maxlength: 2
       accept: jpg|jpeg|png
       output: jpg
-      copyable: yes
+      copyable: e
       limit: 3
     info: |
       Resoluci&oacute;n m&iacute;nima: 10x10 p&iacute;xeles
@@ -106,6 +106,5 @@ setup:
       Resoluci&oacute;n m&aacute;xima: 1600x1600 p&iacute;xeles
     sizes:
       - e1600x1600
-      - p10x10
       - a140x140
 order: 40
