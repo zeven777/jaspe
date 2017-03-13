@@ -18,13 +18,13 @@
 
                 <div class="col-md-5 col-xs-12">
 
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
 
                         @include('web.commons.products.menu-foot')
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
 
                         @include('web.commons.about.menu-foot')
 

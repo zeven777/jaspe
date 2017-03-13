@@ -191,5 +191,12 @@ h3 {
   .banner.nosotros {
     background-size: auto 100%;
     -webkit-background-size: auto 100%; } }
+@media (max-width: 767px) {
+  .banner {
+    height: auto;
+    line-height: initial;
+    padding: 90px 0 30px 0; }
+    .banner.productos h1 {
+      font-size: 30px; } }
 
 /*# sourceMappingURL=landing.css.map */
