@@ -6,6 +6,82 @@
       background-size: auto 100%; 
       -webkit-background-size: auto 100%; 
    }
+    &.detalle{
+    	position: relative !important;
+    	width: 100% !important;
+    	min-height : 500px; 
+    }
 
 
 }
+
+.nosotros p{
+	padding : 0 5px;
+	width: 100%;
+}
+
+.nosotros h1{
+	font-size: 30px;
+}
+
+.nosotros img{
+	max-width: 100%;
+}
+
+.nosotros .text-cont{
+	line-height: initial;
+	height: initial;
+}
+
+.nosotros .mision .imgs.izq{
+	margin-right: initial;
+	text-align: center;
+	img{
+		display: inline-block;
+	}
+}
+
+.nosotros .mision .imgs.der{
+	margin-left: initial;
+	margin-right: initial;
+	text-align: center;
+	img{
+		display: inline-block;
+	}
+}
+
+.nosotros .mision .info{
+	margin-top: -25%;
+}
+
+.contacto .imgs.der{
+	    margin-left: initial;
+    margin-top: -20%;
+    text-align: center;
+    img{
+    	display: inline-block;
+    	max-width: 100%;
+    }
+}
+
+.contacto .imgs.izq{
+	margin-right: initial;
+	text-align: center;
+	img{
+		display: inline-block;
+		max-width: 100%;
+	}
+}
+
+.detalle-cont .item{
+	padding-top: 0;
+	img{
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+	h1{
+		margin-bottom: 10px;
+	}
+}
+
+

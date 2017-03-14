@@ -1158,13 +1158,76 @@ hr {
 @media (max-width: 991px) {
   .banner.nosotros {
     background-size: auto 100%;
-    -webkit-background-size: auto 100%; } }
+    -webkit-background-size: auto 100%; }
+  .banner.detalle {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 500px; }
+
+  .nosotros p {
+    padding: 0 5px;
+    width: 100%; }
+
+  .nosotros h1 {
+    font-size: 30px; }
+
+  .nosotros img {
+    max-width: 100%; }
+
+  .nosotros .text-cont {
+    line-height: initial;
+    height: initial; }
+
+  .nosotros .mision .imgs.izq {
+    margin-right: initial;
+    text-align: center; }
+    .nosotros .mision .imgs.izq img {
+      display: inline-block; }
+
+  .nosotros .mision .imgs.der {
+    margin-left: initial;
+    margin-right: initial;
+    text-align: center; }
+    .nosotros .mision .imgs.der img {
+      display: inline-block; }
+
+  .nosotros .mision .info {
+    margin-top: -25%; }
+
+  .contacto .imgs.der {
+    margin-left: initial;
+    margin-top: -20%;
+    text-align: center; }
+    .contacto .imgs.der img {
+      display: inline-block;
+      max-width: 100%; }
+
+  .contacto .imgs.izq {
+    margin-right: initial;
+    text-align: center; }
+    .contacto .imgs.izq img {
+      display: inline-block;
+      max-width: 100%; }
+
+  .detalle-cont .item {
+    padding-top: 0; }
+    .detalle-cont .item img {
+      max-width: 100%;
+      margin-bottom: 0; }
+    .detalle-cont .item h1 {
+      margin-bottom: 10px; } }
 @media (max-width: 767px) {
   .banner {
     height: auto;
     line-height: initial;
     padding: 90px 0 30px 0; }
     .banner.productos h1 {
-      font-size: 30px; } }
+      font-size: 30px; }
+
+  .nosotros .mision .info {
+    padding: 20px; }
+
+  .nosotros .mision .info {
+    padding: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
