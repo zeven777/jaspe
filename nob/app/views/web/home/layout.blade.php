@@ -44,6 +44,28 @@
             </div>
 
 @endif
+@if( $hblogs->count() > 0 )
+            <div class="blog">
+
+                <div class="container">
+
+                    <div class="col-md-12">
+
+                        <h2>{{ p_system('inicio_blog_historia_titulo', $lang) }}</h2>
+
+                        <p>{{ p_system('inicio_blog_historia_subtitulo', $lang) }}</p>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    @include('web.home.section.blog-history')
+
+                </div>
+
+            </div>
+
+@endif
 @if( $hproducts->count() > 0 )
             <div class="destacados">
 

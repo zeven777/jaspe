@@ -19,14 +19,34 @@ class Blog extends Base_Blog
         return static::getItems($paginate, $current);
     }
 
-    public static function getItems($paginate = false, $current = null)
+    public static function getHistoryBlogs($paginate = false, $current = null)
     {
-        $items = static::whereHas('translations', function($q) use ($current)
+        return static::getItems($paginate, $current, [
+            'es' => 'historia',
+            'en' => 'history',
+        ]);
+    }
+
+    public static function getItems($paginate = false, $current = null, $tags = null)
+    {
+        $items = static::whereHas('translations', function($q) use ($current, $tags)
         {
             $q->notEmpty(['titulo','contenido']);
 
             if( $current instanceof Model ) $q->where('slug','<>',$current->slug);
-        })->isLocaleTranslated()->hasImages()->active();
+
+            if( ! empty($tags) ) $q->where(function($q) use ($tags)
+            {
+                $lang = app('session')->get('translate_language', app('config')->get('app.locale_default', 'es'));
+
+                if( array_key_exists($lang, (array) $tags) ) foreach( (array) $tags[$lang] as $i => $tag )
+                {
+                    $method = $i ? 'orWhere' : 'where';
+
+                    $q->$method('tag', 'like', '%' . $tag . '%');
+                }
+            });
+        })->isLocaleTranslated()->hasImages()->active()->latest();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();
 
