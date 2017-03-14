@@ -21,8 +21,7 @@
    }
 
    &.nosotros, &.blog{
-      background-size: 100% auto; 
-      -webkit-background-size: 100% auto; 
+     @include bgSize();
       background-repeat: no-repeat;
    }
 

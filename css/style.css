@@ -59,8 +59,9 @@ h3 {
   .banner.home {
     background: #fef4ea; }
   .banner.nosotros, .banner.blog {
-    background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat; }
   .banner.productos, .banner.contacto {
     height: auto;

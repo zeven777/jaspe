@@ -1,5 +1,5 @@
 @if( $firstAbout )
-                <div class="col-md-6 col-xs-12 text-center">
+                <div if="{{ $firstAbout->slug }}" class="col-md-6 col-xs-12 text-center">
 
                     <picture>
 

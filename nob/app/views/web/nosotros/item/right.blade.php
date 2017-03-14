@@ -1,4 +1,4 @@
-                <div class="mision col-md-12">
+                <div id="{{ $about->slug }}" class="mision col-md-12">
 
                     <div class="col-md-7 imgs der">
 

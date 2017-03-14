@@ -2,9 +2,11 @@
 @section('content')
         @include('web.commons.nav')
 
-        <aside class="banner nosotros" style="background-image: url('{{ url('img/bannernos.jpg') }}');">
+@if( $banner )
+        <aside class="banner nosotros" style="background-image: url('{{ $banner->image->getImage(1) }}');">
         </aside>
 
+@endif
         <section class="main nosotros">
 
             <div class="container">

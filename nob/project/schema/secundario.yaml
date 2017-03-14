@@ -60,7 +60,7 @@ setup:
       Resoluci&oacute;n m&aacute;xima: 3840x3840 p&iacute;xeles
   sizes:
     - e3840x3840
-    - p3840x600
+    - p3840x690
     - a140x140
   legend:
     field: status

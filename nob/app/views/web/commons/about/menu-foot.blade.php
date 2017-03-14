@@ -6,6 +6,8 @@
                             @include('web.commons.about.item.category')
 
 @endforeach
+                            <li><a href="{{ route('blog.list') }}">Blog</a></li>
+
                             <li><a href="javascript:;">Ser distribuidor</a></li>
 
                             <li><a href="{{ route('contact') }}">Contacto</a></li>
