@@ -50,7 +50,7 @@ setup:
       maxlength: 1
       accept: jpg|jpeg|png
       output: jpg
-      cropped: no
+#      cropped: no
       limit: 1
     info: |
       Resoluci&oacute;n recomendada (Nosotros): 3840x690 p&iacute;xeles
