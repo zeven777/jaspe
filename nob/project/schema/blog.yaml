@@ -39,6 +39,8 @@ setup:
   type: multifile
   head:
     - titulo
+  order:
+    type: desc
   translatable: yes
   legend:
     field: status
