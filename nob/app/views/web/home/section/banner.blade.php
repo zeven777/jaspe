@@ -1,5 +1,5 @@
 @if( $banner )
-        <aside class="banner home">
+        <aside class="banner home" style="background-color: {{ $banner->color }};">
 
             <picture>
 

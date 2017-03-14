@@ -5,6 +5,15 @@ fields:
       T&iacute;tulo
     rules:
       - required
+  color:
+    type: colorpicker
+    legend: >
+      Color de Fondo
+    default: >
+      #fff0e1
+    rules:
+      - required
+    translatable:  no
   status:
     type: enum
     legend: >
