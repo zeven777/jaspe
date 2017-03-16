@@ -13,13 +13,7 @@
 
                 <div class="col-md-12 col-xs-12 text-center">
 
-                    <picture>
-
-                        <source srcset="{{ retina_url('img', 'titlenos.jpg', 2) }}" />
-
-                        <img src="{{ url('img/titlenos.jpg') }}" alt="Jaspe" class="titlenos"/>
-
-                    </picture>
+                    <div class="h-titlenos">{{ text2htmlbr(p_system('nosotros_titulo',$lang)) }}</div>
 
                 </div>
 
@@ -37,9 +31,9 @@
                 @include('web.nosotros.item.' . $about->posicion)
 
 @if( $i == 0 )
-                <div class="col-md-6 center-block text-center">
+                <div class="text-center">
 
-                    <h2 class="h1">{{ p_system('nosotros_slogan',$lang) }}</h2>
+                    <h2 class="h1">{{ text2htmlbr(p_system('nosotros_slogan',$lang)) }}</h2>
 
                 </div>
 
@@ -52,7 +46,7 @@
                     <h2 class="h1">{{ p_system('nosotros_footer_titulo',$lang) }}</h2>
 
                     <p>
-                        {{ text2htmlbr(p_system('nosotros_footer_contenido',$lang),'</p> <p>') }}
+                        {{ text2htmlbr(p_system('nosotros_footer_contenido',$lang), '<br />', false) }}
                     </p>
 
                 </div>

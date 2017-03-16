@@ -1,0 +1,73 @@
+---
+keywords:
+  es:
+description:
+  es:
+facebook:
+  es: >
+    https://www.facebook.com/facebook-username
+twitter:
+  es: https://twitter.com/twitter-username
+instagram:
+  es: >
+    https://www.instagram.com/instagram-username
+fbadmins:
+  es: 1234567890
+google_analytics:
+  es: UA-XXXXX-X
+inicio_blog_titulo:
+  es: Blog
+inicio_blog_subtitulo:
+  es: >
+    Trucos, tips y todo lo que siempre
+    quisiste saber
+inicio_blog_historia_titulo:
+  es: Historias
+inicio_blog_historia_subtitulo:
+  es: Historia de vidas, historia de esponjas
+inicio_productos_destacados_titulo:
+  es: Destacados
+inicio_productos_destacados_subtitulo:
+  es: Productos para todos los usos
+inicio_testimonios_titulo:
+  es: En tus palabras
+productos_banner_titulo:
+  es: |
+    Te presentamos toda nuestra l&iacute;nea
+    de productos, dise&ntilde;ados para t&iacute;!
+productos_otros_titulo:
+  es: 'Tambi&eacute;n podr&iacute;a interesarte'
+nosotros_titulo:
+  es: |
+    Hace m&aacute;s de
+    30 a&ntilde;os
+nosotros_subtitulo:
+  es: >
+    ..y desde entonces cada vez que en tu
+    vida algo se ensucia, estamos a tu lado
+    para ayudarte a limpiarlo y seguir
+    adelante.
+nosotros_slogan:
+  es: |
+    El proceso de creaci&oacute;n de cada
+    esponja nace desde la selecci&oacute;n
+    de color y aroma para crear el
+    pan de espuma perfecto.
+nosotros_footer_titulo:
+  es: Hagamos algo grande, justos
+nosotros_footer_contenido:
+  es: |
+    Interesado en distribuir nuestros productos? Nuevas ideas? No dudes en contactarnos!
+    Si quieres formar parte de nuestro equipo, ac&eacute;rcate! Nos encantar&iacute;a escuchar de t&iacute; :)
+    
+    Tenemos mucho para ofrecer y m&aacute;s para lograr unidos.
+contacto_gerentes_titulo:
+  es: >
+    O si prefieres, puedes contactar a
+    nuestros gerentes de ventas
+suscripcion_titulo:
+  es: 'Para fan&aacute;tic@s de la limpieza'
+suscripcion_subtitulo:
+  es: >
+    No te pierdas todas nuestras novedades,
+    regalos y consejos.

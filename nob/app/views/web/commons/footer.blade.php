@@ -8,7 +8,7 @@
 
                     <p class="social">
 
-@foreach( ['facebook', 'twitter', 'instagram'] as $socialNet )
+@foreach( ['twitter', 'facebook', 'instagram'] as $socialNet )
                         <a href="{{ p_system($socialNet, $lang) }}" class="{{ $socialNet }}" target="_blank"><i class="fa fa-{{ $socialNet }}"></i></a>
 
 @endforeach

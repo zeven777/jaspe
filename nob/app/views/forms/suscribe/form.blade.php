@@ -5,12 +5,10 @@
                           target="_self"
                           class="form-mail" novalidate>
 
-                        <h3>Para fanatic@s de la limpiesa</h3>
+                        <h3>{{ p_system('suscripcion_titulo', $lang) }}</h3>
 
-                        <p>No te pierdas todas nuestras novedades, regalos y consejos.</p>
+                        <p>{{ p_system('suscripcion_subtitulo', $lang) }}</p>
 
-                        <input type="email" name="EMAIL" placeholder="Email aquí"/>
-
-                        <button type="submit" class="btn" name="subscribe">Enviar</button>
+                        <input type="email" name="EMAIL" placeholder="esponjoso@gmail.com"/>
 
                     </form>

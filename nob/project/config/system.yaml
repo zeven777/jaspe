@@ -9,6 +9,8 @@ textarea:
   - keywords
   - description
   - productos_banner_titulo
+  - nosotros_titulo
+  - nosotros_slogan
   - nosotros_footer_contenido
 boolean:
 datetime:

@@ -17,7 +17,7 @@ class CreateContactoTable extends Migration
         {
             $table->bigIncrements('id');
             $table->text('titulo');
-            $table->string('contenido', 255);
+            $table->text('contenido');
             $table->string('latitude', 20);
             $table->string('longitude', 20);
             $table->tinyInteger('zoom');

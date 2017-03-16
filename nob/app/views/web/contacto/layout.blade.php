@@ -37,7 +37,11 @@
 
                     <div class="col-md-6 imgs der">
 
-                        <img src="{{ $contact->getGoogleMapsStaticUrl() }}" alt="Jaspe" />
+                        <div class="mapa">
+
+                            <div id="map-canvas"></div>
+
+                        </div>
 
                     </div>
 
@@ -54,7 +58,7 @@
                 </div>
 
 @if( $staff->count() > 0 )
-                <div class="clearfix"></div>
+                <div id="distribuidor" class="clearfix"></div>
 
                 @include('web.contacto.section.staff')
 
@@ -64,4 +68,65 @@
         </section>
 
 @endif
+@stop
+@section('script')
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&language={{
+        $lang
+    }}&key={{ p_config('api.google.maps.key') }}"></script>
+    <style>
+        .mapa {
+            display: block;
+            width: 680px;
+            height:480px;
+        }
+        #map-canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        var googleMapsInitialized = false;
+        var marker;
+        var latLng;
+        var map;
+        var image;
+        var geocoder;
+        function initialize() {
+            if(googleMapsInitialized) return;
+            geocoder = new google.maps.Geocoder();
+            latLng = new google.maps.LatLng({{
+                $contact->latitude ?: 10
+            }},{{
+                $contact->longitude ?: -65
+            }});
+            map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: latLng,
+                zoom: {{
+                    $contact->zoom ?: 8
+                }},
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                    mapTypeIds: [
+                        google.maps.MapTypeId.ROADMAP,
+                        google.maps.MapTypeId.SATELLITE
+                    ]
+                }
+            });
+            image = {
+                url: "{{ url('img/map-jaspe.png') }}",
+                size: new google.maps.Size(51, 51),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(26,26)
+            };
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: false,
+                position: latLng,
+                icon: image
+            });
+
+            googleMapsInitialized = true;
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 @stop
