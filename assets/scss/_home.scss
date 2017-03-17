@@ -16,7 +16,9 @@
 
    &.home{
 
-     background: $rosado;
+     background-size: cover;
+
+     -webkit-background-size: cover;
 
    }
 
@@ -29,7 +31,7 @@
     height : auto;
     line-height: initial;
     h1{
-      font-size: 45px;
+      font-size: 50px;
       font-family: $body-font;
       font-weight: normal;
     }
@@ -40,8 +42,19 @@
     padding : 160px 0 50px 0;
     color: $white;
     h1 {
-      font-size: 45px;
-      text-shadow: 0 0 2px $black;
+      font-size: 50px;
+      font-weight: normal;
+      font-family: $body-font;
+      &:after{
+        display: inline-block;
+        content: " ";
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/smile.png");
+        background-size: 30px;
+        -webkit-background-size : 30px;
+        margin-left: 0px; 
+      }
     }
   }
   &.blog-detail {
@@ -75,6 +88,12 @@
 }
 
 
+.blog, .destacados, .testimonio{
+  p{
+    font-size: 20px;
+    font-family: $body-font-lt;
+  }
+}
 
 
 .page{
@@ -133,31 +152,31 @@
 
 
       text-indent: -9999px;
-      &:hover{
+      &:hover, &.active{
         background-position : 0 -126px;
       }
       &.cocina{
         background-position : -100px 0px;
-        &:hover{
+        &:hover, &.active{
            background-position : -100px -126px;
         }
       }
       &.industria{
         background-position : -200px 0px;
-        &:hover{
+        &:hover, &.active{
            background-position : -200px -126px;
         }
 
       }
       &.metales{
         background-position : -300px 0px;
-        &:hover{
+        &:hover, &.active{
            background-position : -300px -126px;
         }
       }
       &.extras{
         background-position : -400px 0px;
-        &:hover{
+        &:hover, &.active{
            background-position : -400px -126px;
         }
       }

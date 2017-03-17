@@ -6,6 +6,12 @@
   font-weight: 600;
   font-style: normal; }
 @font-face {
+  font-family: 'MuseoSans-500';
+  src: url("../fonts/museosansrounded-500-webfont.eot");
+  src: url("../fonts/museosansrounded-500-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosansrounded-500-webfont.woff2") format("woff2"), url("../fonts/museosansrounded-500-webfont.woff") format("woff"), url("../fonts/museosansrounded-500-webfont.ttf") format("truetype"), url("../fonts/museosansrounded-500-webfont.svg#museo_sans_rounded500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: 'MuseoSans-300';
   src: url("../fonts/MuseoSansRounded-300.eot");
   src: local("☺"), url("../fonts/MuseoSansRounded-300.woff") format("woff"), url("../fonts/MuseoSansRounded-300.ttf") format("truetype"), url("../fonts/MuseoSansRounded-300.svg") format("svg");
@@ -31,12 +37,12 @@ body {
   float: initial; }
 
 h1 {
-  font-family: "MuseoSans", serif;
+  font-family: "MuseoSans-500", serif;
   font-size: 25px; }
 
 h2 {
-  font-family: "MuseoSans", serif;
-  font-size: 26px;
+  font-family: "MuseoSans-500", serif;
+  font-size: 30px;
   margin-bottom: 15px;
   color: #ff5f5f; }
 
@@ -44,7 +50,7 @@ p {
   margin-bottom: 20px; }
 
 h3 {
-  font-family: "MuseoSans", serif;
+  font-family: "MuseoSans-500", serif;
   font-size: 20px; }
 
 .banner {
@@ -57,7 +63,8 @@ h3 {
   .banner img {
     vertical-align: middle; }
   .banner.home {
-    background: #fef4ea; }
+    background-size: cover;
+    -webkit-background-size: cover; }
   .banner.nosotros, .banner.blog {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -68,7 +75,7 @@ h3 {
     line-height: initial;
     padding: 160px 0 50px 0; }
     .banner.productos h1, .banner.contacto h1 {
-      font-size: 45px;
+      font-size: 50px;
       font-family: "MuseoSans-300", sans-serif;
       font-weight: normal; }
   .banner.blog {
@@ -76,8 +83,18 @@ h3 {
     padding: 160px 0 50px 0;
     color: #fff; }
     .banner.blog h1 {
-      font-size: 45px;
-      text-shadow: 0 0 2px #000; }
+      font-size: 50px;
+      font-weight: normal;
+      font-family: "MuseoSans-300", sans-serif; }
+      .banner.blog h1:after {
+        display: inline-block;
+        content: " ";
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/smile.png");
+        background-size: 30px;
+        -webkit-background-size: 30px;
+        margin-left: 0px; }
   .banner.blog-detail {
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
@@ -101,6 +118,10 @@ h3 {
       width: 100%;
       left: 0;
       background-color: inherit; }
+
+.blog p, .destacados p, .testimonio p {
+  font-size: 20px;
+  font-family: "MuseoSans-100", sans-serif; }
 
 .page {
   width: 100%;
@@ -149,23 +170,23 @@ h3 {
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .menucat li a {
           background-image: url("../img/2x/sprite.png"); } }
-      .menucat li a:hover {
+      .menucat li a:hover, .menucat li a.active {
         background-position: 0 -126px; }
       .menucat li a.cocina {
         background-position: -100px 0px; }
-        .menucat li a.cocina:hover {
+        .menucat li a.cocina:hover, .menucat li a.cocina.active {
           background-position: -100px -126px; }
       .menucat li a.industria {
         background-position: -200px 0px; }
-        .menucat li a.industria:hover {
+        .menucat li a.industria:hover, .menucat li a.industria.active {
           background-position: -200px -126px; }
       .menucat li a.metales {
         background-position: -300px 0px; }
-        .menucat li a.metales:hover {
+        .menucat li a.metales:hover, .menucat li a.metales.active {
           background-position: -300px -126px; }
       .menucat li a.extras {
         background-position: -400px 0px; }
-        .menucat li a.extras:hover {
+        .menucat li a.extras:hover, .menucat li a.extras.active {
           background-position: -400px -126px; }
 
 @media (max-width: 1200px) {
@@ -260,8 +281,7 @@ h3 {
     -webkit-transition: 0.15s;
     transition: 0.15s; }
     .social a:hover {
-      background: #4c4c4c;
-      color: #f1f1f1; }
+      color: #979797; }
 
 .footer {
   background: #f8f8f8;
@@ -279,7 +299,7 @@ h3 {
   margin-top: 20px; }
   .menu-foot u {
     text-decoration: none;
-    font-family: "MuseoSans", serif;
+    font-family: "MuseoSans-500", serif;
     font-size: 18px;
     margin-bottom: 15px;
     display: inline-block; }
@@ -287,7 +307,8 @@ h3 {
     color: #4c4c4c;
     font-size: 18px;
     margin-bottom: 15px;
-    display: inline-block; }
+    display: inline-block;
+    font-family: "MuseoSans-100", sans-serif; }
 
 .form-mail {
   background-color: #def8ff;
@@ -305,10 +326,12 @@ h3 {
       background-image: url("../img/2x/bgmail.jpg"); } }
   .form-mail h3 {
     font-size: 26px;
-    color: #4e92c6; }
+    color: #4e92c6;
+    font-family: "MuseoSans-300", sans-serif; }
   .form-mail p {
     color: #4c4c4c;
-    font-size: 18px; }
+    font-size: 18px;
+    font-family: "MuseoSans-100", sans-serif; }
   .form-mail input {
     height: 40px;
     border: 0;
@@ -884,6 +907,11 @@ hr {
     font-size: 36px;
     font-family: "MuseoSans-300", sans-serif; }
 
+.page.detalles {
+  background-color: #fcfcfc; }
+  .page.detalles .masprod {
+    background-color: #fff; }
+
 .detalle-cont p {
   font-size: 18px;
   line-height: 160%;
@@ -909,17 +937,19 @@ hr {
   .detalle-cont .item:after {
     content: " ";
     height: 1px;
-    background: #ccc;
+    background: #eaeaea;
     width: 70%;
     display: inline-block;
     margin-bottom: -30px; }
   .detalle-cont .item img {
     margin-bottom: 30px; }
+  .detalle-cont .item.pro-title:after {
+    display: none; }
 .detalle-cont .post {
   padding-top: 30px; }
   .detalle-cont .post h4 {
     font-size: 18px;
-    font-family: "MuseoSans", serif;
+    font-family: "MuseoSans-500", serif;
     text-align: left; }
     .detalle-cont .post h4 span.fecha {
       font-family: "MuseoSans-100", sans-serif;
@@ -941,8 +971,8 @@ hr {
   -webkit-transition: 0.15s;
   transition: 0.15s; }
   .prod a:hover {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05); }
+    transform: scale(0.96);
+    -webkit-transform: scale(0.96); }
 
 .blog, .destacados, .testimonio {
   padding-top: 60px; }
@@ -983,7 +1013,9 @@ hr {
     opacity: 1; }
 
 .hagamos p {
-  width: 100% !important; }
+  width: 120% !important;
+  margin-left: -10%;
+  font-size: 20px !important; }
 
 .nosotros .text {
   vertical-align: middle;
@@ -1005,8 +1037,8 @@ hr {
   line-height: 150%;
   margin-bottom: 50px; }
 .nosotros .h1 {
-  font-size: 40px;
-  font-family: "MuseoSans-100", sans-serif;
+  font-size: 50px;
+  font-family: "MuseoSans-300", sans-serif;
   margin: 100px 0 20px 0; }
 .nosotros .mision {
   padding-top: 100px; }
@@ -1039,9 +1071,10 @@ hr {
 .contacto .info {
   padding-bottom: 100px; }
   .contacto .info p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 150%;
-    padding: 0 30px; }
+    padding: 0 30px;
+    font-family: "MuseoSans-100", sans-serif; }
 .contacto .info2 {
   padding: 100px 0; }
 .contacto .imgs.izq {
@@ -1049,6 +1082,11 @@ hr {
 .contacto .imgs.der {
   margin-left: -7%;
   margin-top: 20%; }
+
+.contacto h3 {
+  font-size: 22px; }
+.contacto h3 + p {
+  font-size: 18px; }
 
 .goin {
   animation: goin 0.3s ease-in-out;

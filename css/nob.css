@@ -1,15 +1,36 @@
-.nb-icon { width: 100px; height: 124px; display: inline-block; background: url("../img/sprite.png") 0 0 no-repeat; background-size: auto 250px; -webkit-background-size: auto 250px; text-indent: -9999px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) { .nb-icon { background-image: url("../img/sprite.png"); } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .nb-icon { background-image: url("../img/2x/sprite.png"); } }
-.nb-icon.bano { background-position: 0 0; }
-.nb-icon.bano:hover { background-position: 0 -126px; }
-.nb-icon.cocina { background-position: -100px 0px; }
-.nb-icon.cocina:hover { background-position: -100px -126px; }
-.nb-icon.industria { background-position: -200px 0px; }
-.nb-icon.industria:hover { background-position: -200px -126px; }
-.nb-icon.metales { background-position: -300px 0px; }
-.nb-icon.metales:hover { background-position: -300px -126px; }
-.nb-icon.extras { background-position: -400px 0px; }
-.nb-icon.extras:hover { background-position: -400px -126px; }
+.nb-icon {
+  width: 100px;
+  height: 124px;
+  display: inline-block;
+  background: url("../img/sprite.png") 0 0 no-repeat;
+  background-size: auto 250px;
+  -webkit-background-size: auto 250px;
+  text-indent: -9999px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+    .nb-icon {
+      background-image: url("../img/sprite.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .nb-icon {
+      background-image: url("../img/2x/sprite.png"); } }
+  .nb-icon.bano {
+    background-position: 0 0; }
+    .nb-icon.bano:hover {
+      background-position: 0 -126px; }
+  .nb-icon.cocina {
+    background-position: -100px 0px; }
+    .nb-icon.cocina:hover {
+      background-position: -100px -126px; }
+  .nb-icon.industria {
+    background-position: -200px 0px; }
+    .nb-icon.industria:hover {
+      background-position: -200px -126px; }
+  .nb-icon.metales {
+    background-position: -300px 0px; }
+    .nb-icon.metales:hover {
+      background-position: -300px -126px; }
+  .nb-icon.extras {
+    background-position: -400px 0px; }
+    .nb-icon.extras:hover {
+      background-position: -400px -126px; }
 
 /*# sourceMappingURL=nob.css.map */
