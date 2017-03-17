@@ -1,9 +1,9 @@
 @if( $banner )
-        <aside class="banner home" style="background-color: {{
+        <a href="{{ $banner->getUrl() }}" class="banner home" target="_blank" style="background-color: {{
             $banner->color }}; background-image: url('{{
             $banner->image->getImage(1)
         }}');">
 
-        </aside>
+        </a>
 
 @endif

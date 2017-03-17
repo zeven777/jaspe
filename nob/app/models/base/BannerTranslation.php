@@ -12,6 +12,7 @@ class Base_BannerTranslation extends NobBase
 
     protected $rules = [
         'titulo' => 'required',
-        'color' => 'required'
+        'color' => 'required',
+        'url' => 'url'
     ];
 }

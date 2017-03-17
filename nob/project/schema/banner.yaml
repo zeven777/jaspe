@@ -14,6 +14,13 @@ fields:
     rules:
       - required
     translatable:  no
+  url:
+    type: string[2048]
+    legend: >
+      Url Externo
+    rules:
+      - url
+    translatable:  no
   status:
     type: enum
     legend: >

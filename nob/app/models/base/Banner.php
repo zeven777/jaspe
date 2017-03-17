@@ -16,12 +16,14 @@ class Base_Banner extends NobBase
 
     protected $fillable = [
         'color',
+        'url',
         'status',
         'highlighted'
     ];
 
     protected $rules = [
         'titulo' => 'required',
-        'color' => 'required'
+        'color' => 'required',
+        'url' => 'url'
     ];
 }

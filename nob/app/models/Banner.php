@@ -17,4 +17,9 @@ class Banner extends Base_Banner
 
         return $items;
     }
+
+    public function getUrl()
+    {
+        return ! empty($this->url) ? $this->url : 'javascript:;';
+    }
 }
