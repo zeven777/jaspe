@@ -2,21 +2,25 @@
 
                         <a href="javascript:;">
 
-@for( $i = 1; $i <= 2; $i++ )
                             <picture>
 
-                                <source srcset="{{ $testimonial->image->getUrlRetinableImages($i) }}" />
+                                <source srcset="{{ $testimonial->image->getUrlRetinableImages(1) }}" />
 
-                                <img src="{{ $testimonial->image->getUrlRetinableImages($i) }}" alt="{{ $testimonial->nombre }}"{{
-                                    HTML::classes([
-                                        'img-item' => $i == 1,
-                                        'hover' => $i == 2,
-                                    ])
-                                }} />
+                                <img src="{{ $testimonial->image->getUrlRetinableImages(1) }}" alt="{{
+                                    $testimonial->nombre
+                                }}" class="img-item" />
 
                             </picture>
 
-@endfor
+                            <picture>
+
+                                <source srcset="{{ $testimonial->imageText->getUrlRetinableImages(1) }}" />
+
+                                <img src="{{ $testimonial->imageText->getUrlRetinableImages(1) }}" alt="{{
+                                    $testimonial->nombre
+                                }}" class="hover" />
+
+                            </picture>
 
                         </a>
 

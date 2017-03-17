@@ -29,6 +29,32 @@ setup:
   head:
     - nombre
   image:
+    title: >
+      Imagen de la Persona (Avatar)
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:=173,=250
+      - >
+        image_size:<=600,<=600
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      cropped: no
+      limit: 1
+      retinable: 2x
+    info: |
+      Resoluci&oacute;n exacta: 346x500 p&iacute;xeles.
+  sizes:
+    - e600x600
+    - c173x250
+    - a140x140
+  text:
+    title: >
+      Imagen del Mensaje
     rules:
       - image
       - >
@@ -44,17 +70,11 @@ setup:
       limit: 1
       retinable: 2x
     info: |
-      Resoluci&oacute;n recomendada: 692x500 p&iacute;xeles.
-
-      El lienzo debe contener 2 im&aacute;genes (346x500 c/u):
-
-      1. El avatar
-      2. El mensaje
-  sizes:
-    - e600x600
-    - c173x250
-    - c173x250
-    - a140x140
+      Resoluci&oacute;n exacta: 346x500 p&iacute;xeles.
+    sizes:
+      - e600x600
+      - c173x250
+      - a140x140
   legend:
     field: status
     values:

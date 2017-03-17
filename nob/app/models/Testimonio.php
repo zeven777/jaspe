@@ -2,7 +2,7 @@
 
 class Testimonio extends Base_Testimonio
 {
-    protected $with = ['images','image'];
+    protected $with = ['images','image','imageText'];
 
     public static function getTestimonials($paginate = false)
     {
@@ -11,7 +11,7 @@ class Testimonio extends Base_Testimonio
 
     public static function getItems($paginate = false)
     {
-        $items = static::hasImages()->active();
+        $items = static::hasImages()->hasImagesText()->active();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();
 
