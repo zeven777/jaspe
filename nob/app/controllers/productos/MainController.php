@@ -13,5 +13,7 @@ class Productos_MainController extends Main_MainController
     public function index($category = null)
     {
         $this->data['products'] = Producto::getProducts($this->paginate, $category);
+
+        $this->data['iconCategory'] = $category;
     }
 }

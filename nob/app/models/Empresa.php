@@ -16,7 +16,22 @@ class Empresa extends Base_Empresa
 
     public static function getEnterprises()
     {
-        return static::getItems();
+        $items = static::getItems();
+
+        if( $items->count() > 0 )
+        {
+            $items = $items->filter(function($i)
+            {
+                return (bool) ($i->getTranslation()->slug !== 'vision');
+            });
+
+            foreach($items as $item)
+            {
+                if($item->getTranslation()->slug === 'mision') $item->getTranslation()->titulo .= ' y Visi&oacute;n';
+            }
+        }
+
+        return $items;
     }
 
     public static function getItems($paginate = false)
