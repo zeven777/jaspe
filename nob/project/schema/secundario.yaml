@@ -37,6 +37,7 @@ setup:
     Banner Secundario
   head:
     - titulo
+  tabulate: seccion
   image:
     rules:
       - image
@@ -62,6 +63,31 @@ setup:
     - e3840x3840
     - p3840x690
     - a140x140
+  text:
+    title: >
+      Imagen de T&iacute;tulo (Ref: "Hace 30 a&ntilde;os")
+    tab:
+      - nosotros
+    rules:
+      - image
+      - >
+        mimes:jpeg,png
+      - >
+        image_size:=1110,=535
+      - >
+        image_size:<=1110,<=1110
+    params:
+      maxlength: 1
+      accept: jpg|jpeg|png
+      output: jpg
+      retinable: 2x
+      limit: 1
+    info: |
+      Resoluci&oacute;n Exacta (Nosotros): 2220x1070 p&iacute;xeles
+    sizes:
+      - e1110x1110
+      - c1110x535
+      - a140x140
   legend:
     field: status
     values:

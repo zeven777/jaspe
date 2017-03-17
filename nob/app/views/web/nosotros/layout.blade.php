@@ -11,18 +11,22 @@
 
             <div class="container">
 
+@if( $banner->imageText )
                 <div class="col-md-12 col-xs-12 text-center">
 
                     <picture>
 
-                        <source srcset="{{ retina_url('img', 'titlenos.jpg', 2) }}" />
+                        <source srcset="{{ $banner->imageText->getUrlRetinableImages(1) }}" />
 
-                        <img src="{{ url('img/titlenos.jpg') }}" alt="Jaspe" class="titlenos"/>
+                        <img src="{{ $banner->imageText->getImage(1) }}" alt="{{ $banner->titulo }}" class="titlenos"/>
 
                     </picture>
 
                 </div>
 
+                <div class="clearfix"></div>
+
+@endif
                 <div class="col-md-8 center-block col-xs-12 text-center">
 
                     <h1>

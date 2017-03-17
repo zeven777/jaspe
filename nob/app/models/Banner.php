@@ -2,7 +2,7 @@
 
 class Banner extends Base_Banner
 {
-    protected $with = ['images', 'image'];
+    protected $with = ['images', 'image','imageText'];
 
     public static function getBanner()
     {

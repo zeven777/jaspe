@@ -1,0 +1,1 @@
+<script data-login="false">window.parent.location.href='{{ route("admin.login") }}';</script>
