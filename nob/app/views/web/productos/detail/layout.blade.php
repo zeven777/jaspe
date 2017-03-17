@@ -12,14 +12,28 @@
 
                     <div class="pro-title item col-md-10 text-center center-block">
 
-                        <picture>
+@if( $product->images->count() == 3 )
+                        <div class="pro-image">
 
-                            <source srcset="{{ $product->images->last()->getUrlRetinableImages(1) }}" />
+                            <picture>
 
-                            <img src="{{ $product->images->last()->getImage(1) }}" alt="{{ $product->nombre }}"/>
+                                <source srcset="{{ $product->images->get(1)->getUrlRetinableImages(1) }}" />
 
-                        </picture>
+                                <img src="{{ $product->images->get(1)->getImage(1) }}" alt="{{ $product->nombre }}" class="img-pro"/>
 
+                            </picture>
+
+                            <picture>
+
+                                <source srcset="{{ $product->images->last()->getUrlRetinableImages(1) }}" />
+
+                                <img src="{{ $product->images->last()->getImage(1) }}" alt="{{ $product->nombre }}" class="hover"/>
+
+                            </picture>
+
+                        </div>
+
+@endif
                         <h1>{{ $product->nombre }}</h1>
 
                     </div>

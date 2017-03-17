@@ -95,10 +95,10 @@ setup:
       - >
         image_size:<=800,<=800
     params:
-      maxlength: 2
+      maxlength: 3
       accept: jpg|jpeg|png
       output: jpg
-      limit: 2
+      limit: 3
       retinable: 2x
       cropped: no
     info: |
@@ -107,6 +107,7 @@ setup:
       Las im&aacute;genes deben subirse en el siguiente orden:
       1. La imagen que aparece en la Lista: (540x780 p&iacute;xeles)
       2. La imagen de la marca del Producto: (700x700 p&iacute;xeles)
+      3. La imagen de la animaci&oacute;n de la marca: (700x700 p&iacute;xeles)
   sizes:
     - e800x800
     - p270x350
