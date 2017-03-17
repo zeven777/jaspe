@@ -24,9 +24,9 @@
 
                     </div>
 
-@if( $product->categoria->image )
                     <div class="pro-cont item col-md-10 text-center center-block">
 
+@if( $product->categoria->image )
                         <picture>
 
                             <source srcset="{{ $product->categoria->image->getUrlRetinableImages(1) }}" />
@@ -35,11 +35,11 @@
 
                         </picture>
 
+@endif
                         {{ HTML::decode($product->descripcion) }}
 
                     </div>
 
-@endif
                     <div class="caract item col-md-10 text-center center-block">
 
                         {{ HTML::decode($product->caracteristicas) }}

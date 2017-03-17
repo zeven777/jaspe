@@ -16,7 +16,7 @@ fields:
     rules:
       - required
   rank:
-    type: integer
+    type: enum
     legend: >
       Puntuaci&oacute;n (Estrellas)
     role: radios
@@ -26,6 +26,12 @@ fields:
       - 3
       - 4
       - 5
+    labels:
+      1: 1
+      2: 2
+      3: 3
+      4: 4
+      5: 5
     rules:
       - required
   status:

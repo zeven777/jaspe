@@ -2,7 +2,7 @@
 
 class Producto extends Base_Producto
 {
-    protected $with = ['comentario', 'translations','images','image'];
+    protected $with = ['translations','images','image'];
 
     public static function getProduct($slug)
     {
@@ -14,7 +14,10 @@ class Producto extends Base_Producto
                 'caracteristicas',
                 'tip'
             ]);
-        })->hasImages()->hasImagesText()->active()->first();
+        })->with(['comentario' => function($q)
+        {
+            $q->active();
+        }])->hasImages()->hasImagesText()->active()->first();
     }
 
     public static function getProducts($paginate = false, $current = null)

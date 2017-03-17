@@ -20,7 +20,12 @@
 
     @include('web.commons.header')
 
-    <div class="page">
+    <div{{
+        HTML::classes([
+            'page',
+            'detalles' => (bool) ($action === 'productos_detail')
+        ])
+    }}>
 
 @yield('content')
         @include('web.commons.footer')
