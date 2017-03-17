@@ -63,6 +63,7 @@ h3 {
   .banner img {
     vertical-align: middle; }
   .banner.home {
+    background-position: center top;
     background-size: cover;
     -webkit-background-size: cover; }
   .banner.nosotros, .banner.blog {
@@ -916,6 +917,39 @@ hr {
   font-size: 18px;
   line-height: 160%;
   margin-bottom: 30px; }
+.detalle-cont .pro-image {
+  display: block;
+  margin: auto;
+  max-width: 350px;
+  width: auto;
+  position: relative; }
+  .detalle-cont .pro-image .img-pro {
+    position: relative;
+    z-index: 2; }
+  .detalle-cont .pro-image .hover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition-property: opacity, filter, z-index;
+    -moz-transition-property: opacity, filter, z-index;
+    -ms-transition-property: opacity, filter, z-index;
+    -o-transition-property: opacity, filter, z-index;
+    transition-property: opacity, filter, z-index;
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -ms-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear; }
+  .detalle-cont .pro-image:hover .hover {
+    z-index: 3;
+    opacity: 1; }
 .detalle-cont .pro-title {
   padding-top: 130px; }
   .detalle-cont .pro-title img {
@@ -926,8 +960,6 @@ hr {
     margin-bottom: 60px; }
 .detalle-cont .pro-cont img {
   margin-bottom: 40px; }
-.detalle-cont .caract p {
-  text-align: left; }
 .detalle-cont .valora:after {
   display: none !important; }
 .detalle-cont .item {

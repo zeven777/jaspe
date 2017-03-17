@@ -13,7 +13,13 @@
 
                 <div class="col-md-12 col-xs-12 text-center">
 
-                    <div class="h-titlenos">{{ text2htmlbr(p_system('nosotros_titulo',$lang)) }}</div>
+                    <picture>
+
+                        <source srcset="{{ retina_url('img', 'titlenos.jpg', 2) }}" />
+
+                        <img src="{{ url('img/titlenos.jpg') }}" alt="Jaspe" class="titlenos"/>
+
+                    </picture>
 
                 </div>
 

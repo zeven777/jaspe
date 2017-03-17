@@ -31,6 +31,31 @@
        line-height: 160%;
        margin-bottom: 30px;
   }
+  .pro-image {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+    width: auto;
+    position: relative;
+    .img-pro{
+      position: relative;
+      z-index: 2;
+    }
+    .hover{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      @include opacity(0);
+      @include transition-custom('opacity, filter, z-index',200ms);
+    }
+    &:hover {
+      .hover {
+        z-index: 3;
+        @include opacity(1);
+      }
+    }
+  }
   .pro-title{
     padding-top : 130px;
     img{
@@ -46,13 +71,6 @@
     img{
       margin-bottom: 40px;
     }
-  }
-  .caract{
-    p{
-        text-align: left;
-
-    }
-
   }
 
   .valora{

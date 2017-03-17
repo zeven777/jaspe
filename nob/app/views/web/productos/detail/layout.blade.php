@@ -12,7 +12,7 @@
 
                     <div class="pro-title item col-md-10 text-center center-block">
 
-@if( $product->images->count() == 3 )
+@if( $product->images->count() >= 2 )
                         <div class="pro-image">
 
                             <picture>
@@ -23,6 +23,7 @@
 
                             </picture>
 
+@if( $product->images->count() == 3 )
                             <picture>
 
                                 <source srcset="{{ $product->images->last()->getUrlRetinableImages(1) }}" />
@@ -31,6 +32,7 @@
 
                             </picture>
 
+@endif
                         </div>
 
 @endif
