@@ -216,7 +216,7 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 
 hr { border: 0; border-top: solid 1px #ccc; }
 
-.masprod { background: #fff; position: relative; z-index: 0; text-align: center; margin-bottom: -70px; padding-bottom: 70px; }
+.masprod { background: #fff; position: relative; z-index: 10; text-align: center; margin-bottom: -70px; padding-bottom: 70px; }
 .masprod h3 { padding: 60px 0; display: inline-block; font-size: 36px; font-family: "MuseoSans-300", sans-serif; }
 
 .page.detalles { background-color: #fcfcfc; }
