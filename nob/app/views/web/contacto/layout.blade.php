@@ -15,7 +15,7 @@
 
             <div class="container">
 
-                <div class="col-md-9 text-center center-block info">
+                <div class="col-md-10 text-center center-block info">
 
                     {{ HTML::decode($contact->contenido) }}
 

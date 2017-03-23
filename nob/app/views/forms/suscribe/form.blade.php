@@ -5,7 +5,9 @@
                           target="_self"
                           class="form-mail" novalidate>
 
-                        <h3>{{ p_system('suscripcion_titulo', $lang) }}</h3>
+                        <!--h3>{{ p_system('suscripcion_titulo', $lang) }}</h3-->
+
+                        <h3>Para fanátic@s<br /> de la limpieza</h3>
 
                         <p>{{ p_system('suscripcion_subtitulo', $lang) }}</p>
 

@@ -963,6 +963,7 @@ hr {
 .detalle-cont .valora:after {
   display: none !important; }
 .detalle-cont .item {
+  max-width: 450px;
   padding-bottom: 40px;
   text-align: center;
   margin-bottom: 30px; }
@@ -1005,6 +1006,39 @@ hr {
   .prod a:hover {
     transform: scale(0.96);
     -webkit-transform: scale(0.96); }
+
+.bcont {
+  position: relative;
+  display: inline-block; }
+  .bcont:hover .thover {
+    opacity: 1; }
+  .bcont img {
+    max-width: 100% !important; }
+
+.thover {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(241, 241, 241, 0.9);
+  text-align: center;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  opacity: 0; }
+  .thover b {
+    display: inline-block;
+    margin-top: -40px;
+    font-size: 28px;
+    width: 100%;
+    color: #454545;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15%;
+    font-family: "MuseoSans-100", sans-serif; }
 
 .blog, .destacados, .testimonio {
   padding-top: 60px; }

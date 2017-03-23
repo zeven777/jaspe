@@ -6,7 +6,7 @@
 
         <section class="main detalle">
 
-            <div class="container">
+            <div class="container-fluid">
 
                 <div class="detalle-cont col-md-6">
 

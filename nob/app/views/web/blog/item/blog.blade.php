@@ -1,6 +1,10 @@
-            <div class="col-sm-6 col-xs-12 prod">
+            <div class="col-sm-6 col-xs-12">
 
-                <a href="{{ route('blog.detail',$blog->slug) }}">
+                <a href="{{ route('blog.detail',$blog->slug) }}" class="bcont">
+
+                  <span class="thover">
+                  	<b>{{ $blog->titulo }}</b>
+                  </span>
 
                     <picture>
 

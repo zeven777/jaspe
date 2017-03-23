@@ -1,8 +1,8 @@
                 <div class="col-md-3 text-center">
 
-                    <h3>{{ $s->nombre }}</h3>
+                    <h3><a href="mailto:{{ $s->email }}">{{ $s->nombre }}</a></h3>
 
-                    <p>{{ $s->lugar }}</p>
+                    <p><a href="mailto:{{ $s->email }}">{{ $s->lugar }}</a></p>
 
                     <p>
                         <a href="mailto:{{ $s->email }}">{{ $s->email }}</a> <br />
