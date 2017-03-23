@@ -107,3 +107,10 @@
 @endif
         </section>
 @stop
+@section('script')
+    <script>
+        $(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+@stop
