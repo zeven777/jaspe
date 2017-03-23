@@ -124,11 +124,11 @@ setup:
       - >
         image_size:<=2000,<=2000
     params:
-      maxlength: 1
+      maxlength: 2
       accept: jpg|jpeg|png
       output: jpg
-      limit: 1
-    info: >
+      limit: 5
+    info: |
       Resoluci&oacute;n m&iacute;nima: 1600x1600 p&iacute;xeles.
       Resoluci&oacute;n m&aacute;xima: 2000x2000 p&iacute;xeles.
     sizes:

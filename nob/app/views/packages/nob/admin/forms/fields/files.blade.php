@@ -1,5 +1,5 @@
 @if( $files->count() )
-            <div class="form-group" id="{{ $list }}s">
+            <div class="form-group file-container" id="{{ $list }}s">
                 <div>
                     <div class="file-gallery">
 @foreach($files as $file)

@@ -106,12 +106,7 @@ h3 {
     height: 100%;
     width: 50%;
     right: 0;
-    z-index: -1;
-    background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover; }
+    z-index: -1; }
     .banner.detalle .before {
       content: " ";
       position: absolute;
@@ -119,7 +114,49 @@ h3 {
       width: 100%;
       left: 0;
       background-color: inherit; }
+  .banner .banner-reel {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+    .banner .banner-reel .banner-item {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      opacity: 0; }
 
+@media (min-width: 992px) {
+  .banner .banner-reel .banner-item {
+    -webkit-transition-property: opacity, filter;
+    -moz-transition-property: opacity, filter;
+    -ms-transition-property: opacity, filter;
+    -o-transition-property: opacity, filter;
+    transition-property: opacity, filter;
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -ms-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear; }
+    .banner .banner-reel .banner-item.active {
+      opacity: 1; } }
+@media (max-width: 991px) {
+  .banner .banner-reel .banner-item:first-child {
+    opacity: 1; } }
 .blog p, .destacados p, .testimonio p {
   font-size: 20px;
   font-family: "MuseoSans-100", sans-serif; }

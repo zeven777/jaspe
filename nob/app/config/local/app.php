@@ -30,7 +30,7 @@ return array(
 
     'providers' => array(
 
-        'Barryvdh\Debugbar\ServiceProvider',
+//        'Barryvdh\Debugbar\ServiceProvider',
 
     ),
 

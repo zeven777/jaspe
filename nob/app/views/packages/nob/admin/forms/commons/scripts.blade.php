@@ -25,7 +25,7 @@ $(function(){
                             $.each(data.deleted,function(i,v){
                                 Sthis.find('.file').has('input[value="'+v+'"]').fadeOut(1000,function(){
                                     $(this).remove();
-                                    if(Sthis.children().size()===0) Sthis.parents('.form-group').remove();
+                                    if(Sthis.children().size()===0) Sthis.parents('.form-group.file-container').remove();
                                 });
                             });
                         });
