@@ -4,17 +4,24 @@
 
                 <div id="carousel" class="carousel slide" data-ride="carousel">
 
+@if(
+    $product->imagesText instanceof \Illuminate\Database\Eloquent\Collection &&
+    $product->imagesText->count() > 1
+)
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
+
 @foreach( $product->imagesText as $i => $img )
                         <li{{
                             HTML::classes([
                                 'active' => ($i == 0)
                             ])
                         }} data-target="#carousel" data-slide-to="{{ $i }}"></li>
+
 @endforeach
                     </ol>
 
+@endif
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
 
@@ -29,6 +36,10 @@
 @endforeach
                     </div>
 
+@if(
+    $product->imagesText instanceof \Illuminate\Database\Eloquent\Collection &&
+    $product->imagesText->count() > 1
+)
                     <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -39,6 +50,7 @@
                         <span class="sr-only">Next</span>
                     </a>
 
+@endif
                 </div>
 
             </div>
