@@ -70,9 +70,9 @@ fields:
         no
     labels:
       yes: >
-        S&iacute;
+        Destacado
       no: >
-        No
+        No destacado
     translatable: no
 setup:
   type: multifile
@@ -80,6 +80,10 @@ setup:
   head:
     - nombre
   translatable: yes
+  orderable: yes
+  order:
+    field: ordered
+    type: asc
   tinymce:
     global:
       content_css: >

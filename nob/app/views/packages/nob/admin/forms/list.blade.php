@@ -105,6 +105,8 @@ $(function(){
         sortable.option("disabled", !state);
         if( ! state ){
             var data = {
+                pages: {{ $rows->getLastPage() }},
+                perPage: {{ $paginate }},
                 page: {{ Input::get('page') ?: 1 }},
                 id: []
             };
@@ -126,6 +128,43 @@ $(function(){
         $(this).toggleClass('sortable-save');
         $('#items').toggleClass('active');
         $(this).find('span').html( text );
+    });
+    $('body').on('click.bs.dropdown','.pagelist .dropdown-toggle',function(e){
+        var i;
+        var cl = $(this).parents('.pagelist').find('.dropdown-menu');
+        $('.pagelist .dropdown-menu').empty();
+        for( i = 1; i <= {{ $rows->getLastPage() }}; i++ ){
+            if( i != {{ Input::get('page') ?: 1 }} ) {
+                var li = $('<li></li>');
+                var a = $('<a href="javascript:;" data-page="'+i+'">'+i+'</a>');
+                li.append(a);
+                cl.append(li);
+            }
+        }
+    });
+    $('body').on('click','.pagelist .dropdown-menu a',function(e){
+        var id = $(this).parents('.draggable').data('id');
+        var page = $(this).data('page');
+        var data = {
+            pageTo: page,
+            pages: {{ $rows->getLastPage() }},
+            perPage: {{ $paginate }},
+            page: {{ Input::get('page') ?: 1 }},
+            id: id
+        };
+        $.ajax({
+            url: "{{ route('admin.form.order',$form) }}",
+            type: 'POST',
+            data: data,
+            dataType: 'json'
+        }).done(function(data){
+            if(data.ok){
+                notification(data.message,data.type);
+                setTimeout(function(){
+                    window.location.reload();
+                },2000);
+            }
+        });
     });
 });
 @endif

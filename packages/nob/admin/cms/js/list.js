@@ -1,5 +1,5 @@
 $(function(){
-    $('body').on('click','a[data-command]',function(e){
+    $('body').on('click','*[data-command]',function(e){
         e.preventDefault();
         var Sthis = $(this);
         switch($(this).data('command')){
@@ -9,11 +9,21 @@ $(function(){
                     return true;
                 });
             break;
+            case "filter":
+                $.ajax({
+                    url: Sthis.data('url'),
+                    type: 'POST',
+                    data: Sthis.data(),
+                    dataType: 'json'
+                }).done(function(d){
+                    if(d.redirect) window.location.href = d.redirect;
+                });
+                break;
         }
     });
     $('*[data-toggle="popover"]').each(function(i,v){
         var mdata = $(v).data();
-        if(mdata.content===undefined){
+        if( mdata.content === undefined ){
             mdata.html = true;
             mdata.content = function(){
                 var image = $('<div class="text-center"><img src="'+$(this).data('image')+'" /></div>');

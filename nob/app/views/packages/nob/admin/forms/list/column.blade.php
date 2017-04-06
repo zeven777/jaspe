@@ -1,6 +1,6 @@
                     <td{{
                         HTML::classes([
-                            'num',
+                            'num no-wrap',
                             (
                                 array_key_exists('legend',$schema['setup']) &&
                                 ! empty($schema['setup']['legend']) &&
@@ -19,7 +19,15 @@
 @if( $group )
                         <span>{{ ($i + 1) }}</span>
 @else
-                        <i class="fa fa-{{ (p_schema($form.".setup.orderable")) ? 'arrows-v':'circle' }}"></i>
+                        <i class="fa fa-{{ (p_schema($form.".setup.orderable")) ? 'arrows-v' : 'circle' }}"></i>
+@if( $rows->getLastPage() > 1  )
+                        <div class="btn-group pagelist">
+                            <a href="javascript:;" type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-list-ol"></i>
+                            </a>
+                            <ul class="dropdown-menu"></ul>
+                        </div>
+@endif
 @endif
                     </td>
 @foreach( (array) $schema['setup']['head'] as $field )
@@ -32,12 +40,19 @@
 
 @if(
     array_key_exists($field,$schema['fields']) &&
-    $schema['fields'][$field]['type']==='relationship'
+    $schema['fields'][$field]['type'] === 'relationship'
 )
 @if( ! is_null( $r->getRelation($field) ) )
-                        <a href="{{
-                            route('admin.form.edit',[ $field, $r->getRelation($field)->getKey() ])
-                        }}">{{
+                        <a{{
+                            HTML::attributes([
+                                'href' => 'javascript:;',
+                                'title' => trans("admin::admin.labels.form.filter.title"),
+                                'data-command' => 'filter',
+                                'data-url' => route('admin.form.filter.relation.insert',$form),
+                                'data-relation' => $field,
+                                'data-key' => $r->getRelation($field)->getKey()
+                            ])
+                        }}>{{
                             $r->getRelation($field)->getListField(p_schema("{$field}.setup.head"), true)
                         }}</a>
 
@@ -56,7 +71,13 @@
         )
     )
 )
-                        <i class="{{ $schema['setup']['info']['icon'] }}" @if(array_key_exists('title',$schema['setup']['info'])) title="{{$schema['setup']['info']['title']}}" @endif></i>
+                        <i{{
+                            HTML::attributes([
+                                'class' => $schema['setup']['info']['icon'],
+                                'title' => array_key_exists('title',$schema['setup']['info']) ?
+                                    $schema['setup']['info']['title'] : NULL
+                            ])
+                        }}></i>
 @endif
                         {{ $r->getListfield($field) }}
 

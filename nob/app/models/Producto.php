@@ -22,7 +22,7 @@ class Producto extends Base_Producto
 
     public static function getProducts($paginate = false, $current = null)
     {
-        return static::getItems($paginate, false, $current);
+        return static::getItems($paginate, false, $current, true);
     }
 
     public static function getHighlightedProducts($paginate = false)
@@ -30,7 +30,7 @@ class Producto extends Base_Producto
         return static::getItems($paginate, true);
     }
 
-    public static function getItems($paginate = false, $highlighted = false, $current = null)
+    public static function getItems($paginate = false, $highlighted = false, $current = null, $ordered = false)
     {
         $items = static::whereHas('categoria',function($q) use ($current)
         {
@@ -47,6 +47,8 @@ class Producto extends Base_Producto
         if( $current instanceof \Illuminate\Database\Eloquent\Model ) $items->where('id','<>', $current->getKey());
 
         if( $highlighted ) $items->highlighted();
+
+        if( $ordered ) $items->ordered();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();
 

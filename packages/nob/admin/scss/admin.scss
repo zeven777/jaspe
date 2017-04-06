@@ -82,6 +82,7 @@ body {
 
 .dropdown-menu {
     font-size: 14px;
+    min-width: 10px;
 }
 
 .nav-list {
@@ -159,29 +160,35 @@ body {
         text-align: center;
         vertical-align: middle;
         width: 40px;
-        .fa {
+        padding-left: 15px;
+        padding-right: 15px;
+        & > .fa {
             font-size: 14px;
             color: transparent;
         }
         &.success {
-            .fa {
+            & > .fa {
                 color: #5cb85c;
             }
         }
         &.danger {
-            .fa {
+            & > .fa {
                 color: #d9534f;
             }
         }
         &.info {
-            .fa {
+            & > .fa {
                 color: #31b0d5;
             }
         }
         &.warning {
-            .fa {
+            & > .fa {
                 color: #ec971f;
             }
+        }
+        .btn-group {
+            display: none;
+            margin-left: 10px;
         }
     }
     thead th {
@@ -206,8 +213,11 @@ body {
         * {
             -webkit-user-select: none;
         }
+        .btn-group {
+            display: inline-block;
+        }
         .num {
-            .fa {
+            & > .fa {
                 color: #5bc0de;
                 cursor: move;
                 cursor: -webkit-grabbing;
@@ -504,6 +514,14 @@ span.input-group-addon {
         &:focus, &:active{
             border: 1px solid lighten(#abc607, 6%) !important;
         }
+    }
+}
+
+.form-title {
+    .label {
+        display: inline-block;
+        padding: .4em .6em;
+        font-size: 14px;
     }
 }
 
