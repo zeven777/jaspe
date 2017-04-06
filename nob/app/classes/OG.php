@@ -4,8 +4,12 @@ class OG
 {
     protected $attributes = [];
 
+    private $lang;
+
     public function __construct($lang = 'es')
     {
+        $this->lang = $lang;
+
         $this->setAttribute('title', p_config('app.project'));
 
         $this->setAttribute('description', p_system('description',$lang));
@@ -31,6 +35,11 @@ class OG
 
     public function setAttribute($name, $value)
     {
+        if( in_array($name,['keywords','description']) )
+        {
+            app('config')->set('system.description.' . $this->lang, $value);
+        }
+
         $this->attributes["og{$name}"] = $value;
     }
 

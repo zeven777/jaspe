@@ -1,3 +1,4 @@
+{{ HTML::style('humans.txt',['rel' => 'author', 'type' => 'text/plain']) }}
 {{ HTML::style('css/bootstrap.min.css') }}
 {{ HTML::style('css/style.css') }}
 {{ HTML::style('css/font-awesome.min.css') }}
