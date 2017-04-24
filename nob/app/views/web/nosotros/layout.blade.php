@@ -11,7 +11,7 @@
 
             <div class="container">
 
-@if( $banner->imageText )
+@if( $banner && $banner->imageText )
                 <div class="col-md-12 col-xs-12 text-center">
 
                     <picture>

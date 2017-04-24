@@ -20,7 +20,7 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 .banner { height: 690px; display: block; width: 100%; text-align: center; line-height: 690px; padding-top: 30px; }
 .banner img { vertical-align: middle; }
 .banner.home { background-position: center top; background-size: cover; -webkit-background-size: cover; }
-.banner.nosotros, .banner.blog { -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; background-repeat: no-repeat; }
+.banner.nosotros, .banner.blog { -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: center top; }
 .banner.productos, .banner.contacto { height: auto; line-height: initial; padding: 160px 0 50px 0; }
 .banner.productos h1, .banner.contacto h1 { font-size: 50px; font-family: "MuseoSans-300", sans-serif; font-weight: normal; }
 .banner.blog { height: 360px; padding: 160px 0 50px 0; color: #fff; }
