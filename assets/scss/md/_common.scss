@@ -58,9 +58,11 @@
 }
 
 .contacto .imgs.der{
-	    margin-left: initial;
+  	margin-left: initial;
     margin-top: -20%;
     text-align: center;
+    padding-left: 30px;
+  padding-right: 30px;
     img{
     	display: inline-block;
     	max-width: 100%;
@@ -119,4 +121,8 @@
 
 .logo {
   margin-top: 15px;
+}
+
+.mapa {
+  max-width: 100%;
 }

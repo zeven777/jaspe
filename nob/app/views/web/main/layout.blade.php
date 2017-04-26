@@ -1,8 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<!--[if lt IE 10]>     <html class="lt-ie9 lt-ie8 lt-ie7" itemscope itemtype="http://schema.org/Article"> <![endif]-->
-
-<!--[if gt IE 9]><!--> <html itemscope itemtype="http://schema.org/Article"> <!--<![endif]-->
+<html itemscope itemtype="http://schema.org/Article">
 
 <head>
 
@@ -39,7 +37,6 @@
 
     {{ HTML::script('js/plugins.js') }}
     {{ HTML::script('js/main.js') }}
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

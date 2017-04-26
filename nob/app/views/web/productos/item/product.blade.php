@@ -1,4 +1,4 @@
-                <div class="col-md-3 col-sm-6 col-xs-12 text-center prod">
+                <div class="col-xs-6 col-md-3 text-center prod">
 
                     <a href="{{ route('products.detail', $product->slug) }}">
 

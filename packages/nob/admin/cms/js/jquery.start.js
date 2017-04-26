@@ -18,9 +18,7 @@ var TinyMCE = {
         table: {title: 'Table', items: 'inserttable tableprops deletetable | cell row column'}
     },
     style_formats: [
-        { title: 'header 2', block: 'h2', styles: { fontSize: '22px' } },
-        { title: 'header 3', block: 'h3', styles: { fontSize: '20px' } },
-        { title: 'header 4', block: 'h4', styles: { fontSize: '18px' } }
+        { title: 'header 4', block: 'h4', styles: { fontSize: '16px' } }
     ],
     selector: "textarea.tinymce",
     plugins: [

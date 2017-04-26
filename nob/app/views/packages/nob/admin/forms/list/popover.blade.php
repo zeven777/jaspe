@@ -2,7 +2,7 @@
                     <td>
                         <i class="fa fa-picture-o"
                            title="{{
-                               $r->{$schema['setup']['popover']['data']['title']}
+                               $r->getAttribute($schema['setup']['popover']['data']['title'])
                            }}"
                            data-toggle="popover"
 @if( p_schema($form.".setup.popover.data.html.image") && $r->file)

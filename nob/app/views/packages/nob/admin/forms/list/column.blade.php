@@ -8,12 +8,12 @@
                                     ! array_key_exists('filter',$schema['setup']['legend']) ||
                                     (
                                         in_array(
-                                            $r->{$schema['setup']['legend']['filter']['field']},
+                                            $r->getAttribute($schema['setup']['legend']['filter']['field']),
                                             (array) $schema['setup']['legend']['filter']['values']
                                         )
                                     )
                                 )
-                            ) ? "{$schema['setup']['legend']['colors'][$r->{$schema['setup']['legend']['field']}]}" : ''
+                            ) ? "{$schema['setup']['legend']['colors'][$r->getAttribute($schema['setup']['legend']['field'])]}" : ''
                         ])
                     }}>
 @if( $group )
@@ -66,7 +66,7 @@
         ) ||
         (
             array_key_exists('value',$schema['setup']['info']) &&
-            $r->$schema['setup']['info']['field'] === $schema['setup']['info']['value']
+            $r->getAttribute($schema['setup']['info']['field']) === $schema['setup']['info']['value']
         )
     )
 )

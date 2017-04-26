@@ -153,4 +153,11 @@ setup:
         P&uacute;blico
       inactive: >
         Borrador
+  info:
+    field: highlighted
+    value: >
+      yes
+    icon: fa fa-star
+    title: >
+      Destacado
 order: 30

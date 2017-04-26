@@ -249,8 +249,7 @@
 
 .hagamos{
   p{
-    width: 120% !important;
-    margin-left: -10%;
+    width: 100% !important;
     font-size: 20px !important;
   }
 }
@@ -369,4 +368,12 @@
   }
 }
 
-
+.staff {
+  padding-bottom: 10px;
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    line-height: 1.5;
+  }
+}

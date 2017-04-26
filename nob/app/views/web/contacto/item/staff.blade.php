@@ -1,4 +1,4 @@
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 staff text-center">
 
                     <h3><a href="mailto:{{ $s->email }}">{{ $s->nombre }}</a></h3>
 
