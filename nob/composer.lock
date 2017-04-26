@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "809371acd3d0fcc8c5c4f918e262b964",
-    "content-hash": "4e0143ceef0e6998ea25bdc775ea81eb",
+    "hash": "1502ecde3f6ca2f92a91979e68ed4001",
+    "content-hash": "d7104452c540e15ad5a32d0d34b9eabf",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -578,7 +578,7 @@
             "version": "v2.0.70",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:dctrndrk/admin.git",
+                "url": "https://dctrndrk@bitbucket.org/dctrndrk/admin.git",
                 "reference": "b1f9292bdbab6568db12c71fdf06df50b45ce538"
             },
             "require": {
@@ -621,7 +621,7 @@
             "version": "v1.0.3",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:dctrndrk/command.git",
+                "url": "https://dctrndrk@bitbucket.org/dctrndrk/command.git",
                 "reference": "292c6669647f298c5d48f8c0737a2051630ad6ed"
             },
             "require": {
