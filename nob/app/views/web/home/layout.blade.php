@@ -1,7 +1,5 @@
 @extends('web.main.layout')
 @section('content')
-        @include('web.commons.nav')
-
         @include('web.home.section.banner')
 
         <section class="main home">

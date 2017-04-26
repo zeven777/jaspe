@@ -22,7 +22,7 @@ class Producto extends Base_Producto
 
     public static function getProducts($paginate = false, $current = null)
     {
-        return static::getItems($paginate, false, $current, true);
+        return static::getItems($paginate, false, $current, false);
     }
 
     public static function getHighlightedProducts($paginate = false)
@@ -48,7 +48,7 @@ class Producto extends Base_Producto
 
         if( $highlighted ) $items->highlighted();
 
-        if( $ordered ) $items->ordered();
+        $items = $ordered ? $items->ordered() : $items->random();
 
         $items = $paginate ? $items->paginate($paginate) : $items->get();
 

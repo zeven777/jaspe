@@ -18,6 +18,8 @@
 
 <body>
 
+    @include('web.commons.nav')
+
     @include('web.commons.header')
 
     <div{{

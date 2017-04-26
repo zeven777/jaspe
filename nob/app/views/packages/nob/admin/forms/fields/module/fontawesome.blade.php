@@ -8,7 +8,7 @@
                         </button>
                     </div>
 @section('moduleFontawesomeScript')
-{{ HTML::script('packages/nob/admin/bootstrap/iconpicker/js/iconset/iconset-fontawesome-4.3.0.min.js') }}
+{{ HTML::script('packages/nob/admin/bootstrap/iconpicker/js/iconset/iconset-fontawesome-4.7.0.min.js') }}
 {{ HTML::script('packages/nob/admin/bootstrap/iconpicker/js/bootstrap-iconpicker.min.js') }}
 @stop
 @section('moduleFontawesomeStyle')

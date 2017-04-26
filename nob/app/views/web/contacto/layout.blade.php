@@ -1,7 +1,5 @@
 @extends('web.main.layout')
 @section('content')
-        @include('web.commons.nav')
-
 @if( $contact )
         <aside class="banner contacto">
 

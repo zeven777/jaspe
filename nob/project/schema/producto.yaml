@@ -78,6 +78,7 @@ setup:
   type: multifile
   title: Productos
   head:
+    - categoria
     - nombre
   translatable: yes
   orderable: yes

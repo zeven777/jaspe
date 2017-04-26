@@ -70,11 +70,11 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .logo { background-image: url("../img/2x/logo.png"); } }
 .logo a { display: block; margin: 0; width: 100%; height: 100%; text-indent: -9999px; outline: none; }
 
-.menu-main { position: absolute; z-index: 0; width: 321px; right: 0; display: block; padding-left: 30px; color: #fff; }
+.menu-main { position: fixed; z-index: 0; width: 321px; right: 0; top: 0; display: block; padding-left: 30px; color: #fff; }
 .menu-main .menu-foot { padding-top: 20px; }
 .menu-main .menu-foot u { color: #fff; font-size: 20px; }
 .menu-main .menu-foot a { margin-bottom: 10px; color: #fff; }
-.menu-main:before { content: " "; position: fixed; width: 320px; height: 100%; right: 0; z-index: -1; display: block; background: #6c31a0; }
+.menu-main:before { content: " "; position: fixed; width: 320px; height: 100%; right: 0; z-index: -1; display: block; top: 0; background: #6c31a0; }
 
 .social { margin-top: 25px; }
 .social a { display: inline-block; margin: 0 10px 8px 0px; width: 37px; height: 37px; line-height: 42px; text-align: center; vertical-align: middle; color: #4c4c4c; background: transparent; -webkit-border-radius: 38px; -moz-border-radius: 38px; -ms-border-radius: 38px; -o-border-radius: 38px; border-radius: 38px; font-size: 22px; -webkit-transition: 0.15s; transition: 0.15s; }
@@ -92,25 +92,30 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .form-mail { background-image: url("../img/2x/bgmail.jpg"); } }
 .form-mail h3 { font-size: 26px; color: #4e92c6; font-family: "MuseoSans-300", sans-serif; }
 .form-mail p { color: #4c4c4c; font-size: 18px; font-family: "MuseoSans-100", sans-serif; }
-.form-mail input { height: 40px; border: 0; padding: 0 20px; }
+.form-mail input { height: 40px; border: 0; padding: 0 15px; width: 200px; }
 .form-mail button { height: 40px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; background-color: #4e92c6; color: #fff; }
 .form-mail p { padding: 10px 0; }
 
-.bmc { position: absolute; top: 30px; right: 30px; }
+.navbar.header { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0; z-index: 2; }
 
-.expand .bmc { position: fixed; }
-.expand .btn-menu { transform: translate(320px, 0); -webkit-transform: translate(320px, 0); }
-.expand .btn-menu span { background: #fff; }
-.expand .btn-menu span.bar1 { top: 9px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-.expand .btn-menu span.bar2 { width: 0; }
-.expand .btn-menu span.bar3 { top: 9px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
-
-.btn-menu { -webkit-transition: 0.15s; transition: 0.15s; position: relative; width: 30px; height: 20px; display: block; }
-.btn-menu span { -webkit-transition: 0.15s; transition: 0.15s; width: 30px; height: 2px; background: #ff5f5f; display: block; position: absolute; left: 0px; }
+.btn-menu { display: block; position: fixed; top: 30px; right: 20px; width: 30px; height: 20px; z-index: 5; }
+.btn-menu span { -webkit-transition: 0.15s; transition: 0.15s; width: 30px; height: 2px; background: #ff5f5f; position: absolute; left: 0px; }
 .btn-menu span.bar1 { top: 0px; }
 .btn-menu span.bar2 { top: 9px; }
 .btn-menu span.bar3 { top: 18px; }
+.btn-menu .menu-text { display: initial; background: none !important; color: #ff5f5f; font-size: 26px; width: auto; left: auto; right: 0; font-family: "MuseoSans-500", serif; }
+.btn-menu.navbar-expand span { background: #fff; opacity: 1; }
+.btn-menu.navbar-expand span.bar1 { top: 9px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.btn-menu.navbar-expand span.bar2 { width: 0; }
+.btn-menu.navbar-expand span.bar3 { top: 9px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.btn-menu.navbar-expand .menu-text { -webkit-transition: 0.15s; transition: 0.15s; opacity: 0; }
 
+@media (min-width: 992px) { .btn-menu span { opacity: 0; }
+  .btn-menu .menu-text { opacity: 1; }
+  .btn-menu.navbar-expand span { background: #fff; opacity: 1; }
+  .btn-menu.navbar-expand .menu-text { opacity: 0; }
+  .navbar.header .container { -webkit-transition: 0.15s; transition: 0.15s; }
+  .navbar.header.navbar-expand .container { transform: translate(-320px, 0); -webkit-transform: translate(-320px, 0); } }
 .form { display: inline-block; }
 .form input { height: 35px; }
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form select, .form textarea { width: 100%; border: 0; background: #fff; padding: 2px 6px; margin-bottom: 15px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
@@ -347,7 +352,15 @@ hr { border: 0; border-top: solid 1px #ccc; }
   .contacto .imgs.izq img { display: inline-block; max-width: 100%; }
   .detalle-cont .item { padding-top: 0; }
   .detalle-cont .item img { max-width: 100%; margin-bottom: 0; }
-  .detalle-cont .item h1 { margin-bottom: 10px; } }
+  .detalle-cont .item h1 { margin-bottom: 10px; }
+  .page { padding-top: 104px; }
+  .btn-menu { top: 42px; right: 30px; }
+  .btn-menu span { display: block; background: #ff5f5f !important; }
+  .btn-menu .menu-text { display: none !important; }
+  .navbar.header { position: fixed; background: #fff; }
+  .menu-main { top: 104px; }
+  .menu-main:before { top: inherit; }
+  .logo { margin-top: 15px; } }
 @media (max-width: 767px) { .banner { height: auto; line-height: initial; padding: 90px 0 30px 0; }
   .banner.productos h1 { font-size: 30px; }
   .banner.nosotros { height: 300px; background-position: center top; }

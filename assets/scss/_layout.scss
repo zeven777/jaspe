@@ -41,10 +41,11 @@
 }
 
 .menu-main{
-  position: absolute;
+  position: fixed;
   z-index: 0;
   width : 321px;
   right : 0;
+  top: 0;
   display: block;
   padding-left : 30px;
   color : #fff;
@@ -67,6 +68,7 @@
     right : 0;
     z-index: -1;
     display: block;
+    top: 0;
     background: $morado;
   }
 }
@@ -164,7 +166,8 @@
   input{
     height : 40px;
     border : 0;
-    padding : 0 20px;
+    padding : 0 15px;
+    width: 200px;
   }
   button{
      height: 40px;
@@ -178,55 +181,27 @@
 
 }
 
-.bmc{
-  position: absolute;
-  top : 30px;
-  right: 30px;
-}
-
-.expand{
-  .bmc{
-    position: fixed;
+.navbar {
+  &.header {
+    @include radius(0);
+    border: 0;
+    z-index: 2;
   }
-.btn-menu{
-    transform: translate(320px,0);
-    -webkit-transform: translate(320px,0);
-  span{
-    background: #fff;
-    &.bar1{
-      top : 9px;
-      -webkit-transform: rotate(45deg); 
-      transform: rotate(45deg); 
-
-    }
-    &.bar2{
-      width : 0;
-    }
-    &.bar3{
-      top : 9px;
-      -webkit-transform: rotate(-45deg); 
-      transform: rotate(-45deg); 
-    }
-  }
-}
 }
 
 .btn-menu{
-  @include transition();
-  position: relative;
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 20px;
   width: 30px;
   height : 20px;
-  display: block;
-  &:hover{
-
-
-  }
+  z-index: 5;
   span{
     @include transition();
     width : 30px;
     height : 2px;
     background: $red;
-    display: block;
     position: absolute;
     left: 0px;
     &.bar1{
@@ -239,5 +214,70 @@
       top : 18px;
     }
   }
+  .menu-text {
+    display: initial;
+    background: none !important;
+    color: $red;
+    font-size: 26px;
+    width: auto;
+    left: auto;
+    right: 0;
+    font-family: $title-font;
+  }
+  &.navbar-expand {
+    span{
+      background: #fff;
+      @include opacity(1);
+      &.bar1{
+        top : 9px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &.bar2{
+        width : 0;
+      }
+      &.bar3{
+        top : 9px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+    .menu-text {
+      @include transition();
+      @include opacity(0);
+    }
+  }
 }
 
+@media (min-width: 992px){
+  .btn-menu {
+    span {
+      @include opacity(0);
+    }
+    .menu-text {
+      @include opacity(1);
+    }
+    &.navbar-expand {
+      span {
+        background: #fff;
+        @include opacity(1);
+      }
+      .menu-text {
+        @include opacity(0);
+      }
+    }
+  }
+  .navbar {
+    &.header{
+      .container {
+        @include transition();
+      }
+      &.navbar-expand {
+        .container {
+          transform: translate(-320px, 0);
+          -webkit-transform: translate(-320px, 0);
+        }
+      }
+    }
+  }
+}

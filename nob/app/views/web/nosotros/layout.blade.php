@@ -1,7 +1,5 @@
 @extends('web.main.layout')
 @section('content')
-        @include('web.commons.nav')
-
 @if( $banner )
         <aside class="banner nosotros" style="background-image: url('{{ $banner->image->getImage(1) }}');">
         </aside>

@@ -87,4 +87,36 @@
 	}
 }
 
+.page {
+  	padding-top: 104px;
+}
 
+
+.btn-menu{
+  top: 42px;
+  right: 30px;
+  span {
+	display: block;
+	background: $red !important;
+  }
+  .menu-text{
+	display: none !important;
+  }
+}
+.navbar {
+  &.header{
+	position: fixed;
+	background: $white;
+  }
+}
+
+.menu-main {
+  top: 104px;
+  &:before {
+	top: inherit;
+  }
+}
+
+.logo {
+  margin-top: 15px;
+}

@@ -51,6 +51,8 @@ $(document).ready(function(){
     $('.btn-menu').click(function(e){
         $('.page').toggleClass('expand');
         e.preventDefault();
+        $('.navbar.header').toggleClass('navbar-expand');
+        $('.btn-menu').toggleClass('navbar-expand');
         if( $(window).width() <= 1024 ) return;
         var height = $('.banner.detalle + .main.detalle > .container').height();
         height = height - $(window).height();

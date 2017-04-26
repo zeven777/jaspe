@@ -20,14 +20,13 @@
                         <span>{{ ($i + 1) }}</span>
 @else
                         <i class="fa fa-{{ (p_schema($form.".setup.orderable")) ? 'arrows-v' : 'circle' }}"></i>
-@if( $rows->getLastPage() > 1  )
+
                         <div class="btn-group pagelist">
                             <a href="javascript:;" type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-list-ol"></i>
                             </a>
                             <ul class="dropdown-menu"></ul>
                         </div>
-@endif
 @endif
                     </td>
 @foreach( (array) $schema['setup']['head'] as $field )
