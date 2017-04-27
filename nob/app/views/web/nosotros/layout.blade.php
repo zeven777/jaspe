@@ -41,7 +41,7 @@
 @if( $i == 0 )
                 <div class="text-center">
 
-                    <h2 class="h1">{{ text2htmlbr(p_system('nosotros_slogan',$lang), '<br class="hidden-xs" />') }}</h2>
+                    <h2 class="h1">{{ text2htmlbr(p_system('nosotros_slogan',$lang)) }}</h2>
 
                 </div>
 

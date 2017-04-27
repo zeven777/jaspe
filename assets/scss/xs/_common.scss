@@ -1,5 +1,5 @@
 .banner{
-	height : auto;
+	height : 500px;
 	line-height: initial;
 	padding  : 90px 0 30px 0;
 	&.productos{
@@ -20,5 +20,8 @@
 
 	.h1 {
 	  	font-size: 30px;
+		br {
+		  	display: none;
+		}
 	}
 }
