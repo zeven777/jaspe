@@ -111,7 +111,7 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 
 .logo a { display: block; margin: 0; width: 100%; height: 100%; text-indent: -9999px; outline: none; }
 
-.menu-main { position: fixed; z-index: 0; width: 321px; right: 0; top: 0; display: block; padding-left: 15px; color: #fff; }
+.menu-main { position: fixed; z-index: 0; width: 321px; right: 0; top: 0; display: block; padding-left: 15px; color: #fff; opacity: 0; }
 
 .menu-main .menu-foot { padding-top: 20px; }
 
@@ -119,7 +119,9 @@ h3 { font-family: "MuseoSans-500", serif; font-size: 20px; }
 
 .menu-main .menu-foot a { margin-bottom: 10px; color: #fff; }
 
-.menu-main:before { content: " "; position: fixed; width: 320px; height: 100%; right: 0; z-index: -1; display: block; top: 0; background: #6c31a0; }
+.menu-main:before { content: " "; position: fixed; width: 320px; height: 100%; right: 0; z-index: -1; display: inherit !important; top: 0; background: #6c31a0; }
+
+.menu-expanded .menu-main { opacity: 1; }
 
 .social { margin-top: 25px; }
 
@@ -565,6 +567,22 @@ hr { border: 0; border-top: solid 1px #ccc; }
 
 @-webkit-keyframes fadein { 0% { opacity: 0; }
   100% { opacity: 1; } }
+
+@keyframes show-in { 0% { opacity: 0; }
+  0.1% { opacity: 1; }
+  100% { opacity: 1; } }
+
+@-webkit-keyframes show-in { 0% { opacity: 0; }
+  0.1% { opacity: 1; }
+  100% { opacity: 1; } }
+
+@keyframes show-out { 0% { opacity: 1; }
+  99.9% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes show-out { 0% { opacity: 1; }
+  99.9% { opacity: 1; }
+  100% { opacity: 0; } }
 
 @media (max-width: 1366px) and (max-width: 1280px) { .banner.blog { background-size: auto 100%; -webkit-background-size: auto 100%; } }
 

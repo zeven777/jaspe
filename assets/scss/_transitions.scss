@@ -3,18 +3,18 @@
 
 
 .goin{
-	  animation:goin 0.3s ease-in-out;
-      -webkit-animation:goin 0.3s ease-in-out; /* Safari and Chrome */ 
+    animation:goin 0.3s ease-in-out;
+      -webkit-animation:goin 0.3s ease-in-out; /* Safari and Chrome */
 }
 
 .goinup{
     animation:goinup 0.3s ease-in-out;
-      -webkit-animation:goinup 0.3s ease-in-out; /* Safari and Chrome */ 
+      -webkit-animation:goinup 0.3s ease-in-out; /* Safari and Chrome */
 }
 
 .gout{
-	  animation:gout 0.21s ease-in-out;
-      -webkit-animation:gout 0.21s ease-in-out; /* Safari and Chrome */ 
+    animation:gout 0.21s ease-in-out;
+      -webkit-animation:gout 0.21s ease-in-out; /* Safari and Chrome */
 }
 
 .rotate{
@@ -24,7 +24,7 @@
 
 .fadein{
     animation:fadein 0.3s linear;
-    -webkit-animation:fadein 0.3s linear; /* Safari and Chrome */ 
+    -webkit-animation:fadein 0.3s linear; /* Safari and Chrome */
 }
 
 .modal-backdrop.in{
@@ -150,3 +150,56 @@
     }
 }
 
+
+@keyframes show-in
+{
+    0% {
+      @include opacity(0);
+    }
+    0.1% {
+      @include opacity(1);
+    }
+    100%{
+      @include opacity(1);
+    }
+}
+
+@-webkit-keyframes show-in
+{
+    0% {
+      @include opacity(0);
+    }
+    0.1% {
+      @include opacity(1);
+    }
+    100%{
+      @include opacity(1);
+    }
+}
+
+
+@keyframes show-out
+{
+    0% {
+      @include opacity(1);
+    }
+    99.9% {
+      @include opacity(1);
+    }
+    100%{
+      @include opacity(0);
+    }
+}
+
+@-webkit-keyframes show-out
+{
+    0% {
+      @include opacity(1);
+    }
+    99.9% {
+      @include opacity(1);
+    }
+    100%{
+      @include opacity(0);
+    }
+}

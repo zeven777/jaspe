@@ -49,8 +49,9 @@
   display: block;
   padding-left : 15px;
   color : #fff;
+  @include opacity(0);
   .menu-foot{
-      padding-top: 20px;
+    padding-top: 20px;
     u{
       color : #fff;
       font-size: 20px;
@@ -67,9 +68,15 @@
     height: 100%;
     right : 0;
     z-index: -1;
-    display: block;
+    display: inherit !important;
     top: 0;
     background: $morado;
+  }
+}
+
+.menu-expanded {
+  .menu-main {
+    @include opacity(1);
   }
 }
 

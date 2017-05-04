@@ -50,7 +50,8 @@ $(document).ready(function(){
 
     $('.btn-menu').click(function(e){
         $('.page').toggleClass('expand');
-        $('body').toggleClass('menu-expanded');
+        if( $('body.menu-expanded').size() == 1 ) timeout = setTimeout(function(){ $('body').toggleClass('menu-expanded'); },151);
+        if( $('body.menu-expanded').size() == 0 ) $('body').toggleClass('menu-expanded');
         e.preventDefault();
         $('.navbar.header').toggleClass('navbar-expand');
         $('.btn-menu').toggleClass('navbar-expand');
