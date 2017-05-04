@@ -50,6 +50,7 @@ $(document).ready(function(){
 
     $('.btn-menu').click(function(e){
         $('.page').toggleClass('expand');
+        $('body').toggleClass('menu-expanded');
         e.preventDefault();
         $('.navbar.header').toggleClass('navbar-expand');
         $('.btn-menu').toggleClass('navbar-expand');

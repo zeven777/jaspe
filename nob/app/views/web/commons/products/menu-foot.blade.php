@@ -1,4 +1,4 @@
-                        <ul class="row menu-foot">
+                        <ul class="menu-foot">
 
                             <u>Productos</u>
 

@@ -20,13 +20,21 @@
 
                     <div class="col-xs-6">
 
-                        @include('web.commons.products.menu-foot')
+                        <div class="row">
+
+                            @include('web.commons.products.menu-foot')
+
+                        </div>
 
                     </div>
 
                     <div class="col-xs-6">
 
-                        @include('web.commons.about.menu-foot')
+                        <div class="row">
+
+                            @include('web.commons.about.menu-foot')
+
+                        </div>
 
                     </div>
 

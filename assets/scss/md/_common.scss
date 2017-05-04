@@ -6,25 +6,25 @@
       height: 400px;
    }
     &.detalle{
-    	position: relative !important;
-    	width: 100% !important;
-    	min-height : 500px; 
+      position: relative !important;
+      width: 100% !important;
+      min-height : 500px;
     }
 
 
 }
 
 .nosotros p{
-	padding : 0 5px;
-	width: 100%;
+  padding : 0 5px;
+  width: 100%;
 }
 
 .nosotros h1{
-	font-size: 30px;
+  font-size: 30px;
 }
 
 .nosotros img{
-	max-width: 100%;
+  max-width: 100%;
 }
 
 .nosotros img.titlenos{
@@ -32,65 +32,65 @@
 }
 
 .nosotros .text-cont{
-	line-height: initial;
-	height: initial;
+  line-height: initial;
+  height: initial;
 }
 
 .nosotros .mision .imgs.izq{
-	margin-right: initial;
-	text-align: center;
-	img{
-		display: inline-block;
-	}
+  margin-right: initial;
+  text-align: center;
+  img{
+    display: inline-block;
+  }
 }
 
 .nosotros .mision .imgs.der{
-	margin-left: initial;
-	margin-right: initial;
-	text-align: center;
-	img{
-		display: inline-block;
-	}
+  margin-left: initial;
+  margin-right: initial;
+  text-align: center;
+  img{
+    display: inline-block;
+  }
 }
 
 .nosotros .mision .info{
-	margin-top: -25%;
+  margin-top: -25%;
 }
 
 .contacto .imgs.der{
-  	margin-left: initial;
+    margin-left: initial;
     margin-top: -20%;
     text-align: center;
     padding-left: 30px;
   padding-right: 30px;
     img{
-    	display: inline-block;
-    	max-width: 100%;
+      display: inline-block;
+      max-width: 100%;
     }
 }
 
 .contacto .imgs.izq{
-	margin-right: initial;
-	text-align: center;
-	img{
-		display: inline-block;
-		max-width: 100%;
-	}
+  margin-right: initial;
+  text-align: center;
+  img{
+    display: inline-block;
+    max-width: 100%;
+  }
 }
 
 .detalle-cont .item{
-	padding-top: 0;
-	img{
-		max-width: 100%;
-		margin-bottom: 0;
-	}
-	h1{
-		margin-bottom: 10px;
-	}
+  padding-top: 0;
+  img{
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  h1{
+    margin-bottom: 10px;
+  }
 }
 
 .page {
-  	padding-top: 104px;
+    padding-top: 104px;
 }
 
 
@@ -98,24 +98,31 @@
   top: 42px;
   right: 30px;
   span {
-	display: block;
-	background: $red !important;
+  display: block;
+  background: $red !important;
   }
   .menu-text{
-	display: none !important;
+  display: none !important;
   }
 }
+
 .navbar {
   &.header{
-	position: fixed;
-	background: $white;
+  position: fixed;
+  background: $white;
   }
 }
 
 .menu-main {
   top: 104px;
+  background: $morado;
+  overflow: auto;
+  height: auto;
+  bottom: 0;
+  padding-bottom: 15px;
   &:before {
-	top: inherit;
+    display: none;
+    top: inherit;
   }
 }
 
@@ -125,4 +132,10 @@
 
 .mapa {
   max-width: 100%;
+}
+
+body {
+  &.menu-expanded {
+    overflow: hidden;
+  }
 }

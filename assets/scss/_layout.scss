@@ -13,20 +13,20 @@
   width : 186px;
   height : 79px;
   margin-top: 25px;
-  
+
   display : inline-block;
 
   background-size: 100%;
   -webkit-background-size: 100%;
 
   vertical-align: middle;
-    
+
   @include pixel-ratio("md") {
     background-image: url("../img/logo.png");
   }
 
   @include pixel-ratio("hd-2x") {
-    background-image: url("../img/2x/logo.png");        
+    background-image: url("../img/2x/logo.png");
   }
 
   a {
@@ -37,7 +37,7 @@
     text-indent: -9999px;
     outline: none;
   }
-  
+
 }
 
 .menu-main{
@@ -47,7 +47,7 @@
   right : 0;
   top: 0;
   display: block;
-  padding-left : 30px;
+  padding-left : 15px;
   color : #fff;
   .menu-foot{
       padding-top: 20px;
@@ -98,7 +98,7 @@
 .footer{
   position: relative;
   z-index: 10;
-  background: #f8f8f8; 
+  background: #f8f8f8;
   padding : 70px 0 50px 0;
   margin-top: 70px;
   .logo{
@@ -114,7 +114,7 @@
   list-style: none;
   padding-left: 30px;
   margin-top: 20px;
-  
+
   u{
     text-decoration: none;
     font-family: $title-font;
@@ -147,7 +147,7 @@
   }
 
   @include pixel-ratio("hd-2x") {
-    background-image: url("../img/2x/bgmail.jpg");        
+    background-image: url("../img/2x/bgmail.jpg");
   }
 
   padding : 20px 30px 110px 30px;

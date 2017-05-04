@@ -20,14 +20,19 @@ class Producto extends Base_Producto
         }])->hasImages()->hasImagesText()->active()->first();
     }
 
-    public static function getProducts($paginate = false, $current = null)
+    public static function getRandomProducts($paginate = false, $current = null)
     {
         return static::getItems($paginate, false, $current, false);
     }
 
+    public static function getProducts($paginate = false, $current = null)
+    {
+        return static::getItems($paginate, false, $current, true);
+    }
+
     public static function getHighlightedProducts($paginate = false)
     {
-        return static::getItems($paginate, true);
+        return static::getItems($paginate, true, null, true);
     }
 
     public static function getItems($paginate = false, $highlighted = false, $current = null, $ordered = false)
